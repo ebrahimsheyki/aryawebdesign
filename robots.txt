@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ebrahimsheyki.github.io/estech/sitemap.xml
