@@ -1,0 +1,31 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+>
+  <defs>
+    <linearGradient
+      id="aryaGradient"
+      x1="0%"
+      y1="0%"
+      x2="100%"
+      y2="100%"
+    >
+      <stop offset="0%" stop-color="#c4b5fd" />
+      <stop offset="24%" stop-color="#a78bfa" />
+      <stop offset="58%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#5b21b6" />
+    </linearGradient>
+  </defs>
+
+  <rect
+    width="64"
+    height="64"
+    rx="14"
+    fill="#070b14"
+  />
+
+  <path
+    d="M32 11 L54 50 H10 Z"
+    fill="url(#aryaGradient)"
+  />
+</svg>
