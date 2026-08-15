@@ -28,7 +28,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: ${{ secrets.FTP_PORT }}
-          server-dir: /
+          server-dir: ./
           local-dir: ./
           dry-run: false
           security: strict
