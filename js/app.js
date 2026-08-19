@@ -1,7 +1,7 @@
 "use strict";
 
 /* =========================================================
- * Arya Web Design
+ * X Web Design
  * Production Main JavaScript
  * Architecture:
  * Config
