@@ -12,8 +12,7 @@ const TRANSLATIONS = Object.freeze({
     heroTitle: "طراحی سایت و نرم‌افزار اختصاصی",
     heroTitleHighlight: "برای رشد کسب‌وکار شما",
     heroDescriptionDesktop:
-      "آریا با طراحی سایت، فروشگاه اینترنتی و توسعه نرم‌افزار اختصاصی، راهکارهای دیجیتال متناسب با نیاز و مسیر رشد برندها ارائه می‌دهد.",
-
+      "طراحی سایت ایکس با طراحی سایت، فروشگاه اینترنتی و توسعه نرم‌افزار اختصاصی، راهکارهای دیجیتال متناسب با نیاز و مسیر رشد برندها ارائه می‌دهد.",
     heroDescription: [
       "طراحی سایت حرفه‌ای برای برند شما",
       "حضور حرفه‌ای‌تر در گوگل",
@@ -30,7 +29,7 @@ const TRANSLATIONS = Object.freeze({
     marqueeCRM: "CRM اختصاصی",
     marqueeERP: "ERP سازمانی",
 
-    trustBadge: "چرا کسب وکارها آریا را انتخاب می کنند؟",
+    trustBadge: "چرا کسب‌وکارها طراحی سایت ایکس را انتخاب می‌کنند؟",
     trustTitle: "راهکارهای نرم افزاری قابل اعتماد برای رشد بلندمدت",
     trustSubtitle:
       "راهکارهای نرم افزاری ما بر پایه نیازهای واقعی کسب وکارها طراحی می شوند؛ با تمرکز بر پایداری، مقیاس پذیری و توسعه ای که بتواند همراه رشد آینده شما حرکت کند.",
@@ -44,7 +43,7 @@ const TRANSLATIONS = Object.freeze({
     trustPillar3Desc:
       "از مرحله تحلیل و طراحی تا توسعه، استقرار و بهبودهای آینده، در کنار شما خواهیم بود تا فناوری به یک مزیت رقابتی پایدار تبدیل شود.",
 
-    servicesBadge: "راهکارهای آریا",
+    servicesBadge: "راهکارهای طراحی سایت ایکس",
     servicesTitle: "خدمات دیجیتال برای هر نوع کسب‌وکار",
     servicesSubtitle:
       "از طراحی سایت حرفه‌ای و فروشگاه اینترنتی تا نرم‌افزارهای اختصاصی، راهکارهایی متناسب با نیاز، حوزه فعالیت و اهداف کسب‌وکار شما را طراحی و توسعه می‌دهیم.",
@@ -78,7 +77,7 @@ const TRANSLATIONS = Object.freeze({
     process4Desc:
       "پس از راه‌اندازی نیز در کنار شما خواهیم بود تا راهکار توسعه پیدا کند و همراه رشد کسب‌وکار باقی بماند.",
 
-    whyBadge: "مزیت همکاری با آریا",
+    whyBadge: "مزیت همکاری با طراحی سایت ایکس",
     whyTitle: "فراتر از توسعه نرم‌افزار، یک شریک فناوری برای رشد کسب‌وکار",
     whySubtitle:
       "هدف ما صرفاً تحویل یک پروژه نیست؛ بلکه ایجاد راهکارهایی است که بتوانند در بلندمدت به رشد، بهره‌وری و توسعه کسب‌وکار شما کمک کنند.",
@@ -99,7 +98,7 @@ const TRANSLATIONS = Object.freeze({
     faqTitle: "پاسخ به سوالات پیش از شروع همکاری",
     faqSubtitle:
       "پاسخ به برخی از سوالاتی که معمولاً پیش از انتخاب راهکار و آغاز پروژه مطرح می‌شوند.",
-    faq1Question: "آیا خدمات آریا برای کسب‌وکار من مناسب است؟",
+    faq1Question: "آیا خدمات طراحی سایت ایکس برای کسب‌وکار من مناسب است؟",
     faq1Answer:
       "راهکارهای ما برای طیف گسترده‌ای از کسب‌وکارها، از استارتاپ‌ها و فروشگاه‌های اینترنتی تا شرکت‌ها و سازمان‌ها قابل ارائه هستند. هر پروژه بر اساس نیازهای واقعی همان کسب‌وکار طراحی می‌شود.",
     faq2Question: "هزینه پروژه چگونه تعیین می‌شود؟",
@@ -118,7 +117,7 @@ const TRANSLATIONS = Object.freeze({
       "ایده خود را با ما در میان بگذارید. در اولین گفتگو نیازهای پروژه را بررسی می کنیم و بهترین مسیر همکاری را پیشنهاد می دهیم.",
     ctaPrimaryButton: "شروع همکاری",
 
-    contactBadge: "ارتباط با تیم آریا",
+    contactBadge: "ارتباط با تیم طراحی سایت ایکس",
     contactTitle: "بیایید درباره پروژه شما گفتگو کنیم",
     contactSubtitle:
       "برای شروع همکاری یا طرح پرسش، از طریق اطلاعات زیر با ما در ارتباط باشید.",
@@ -135,7 +134,7 @@ const TRANSLATIONS = Object.freeze({
 
     footerCompanyTitle: "شرکت",
     footerCompanyProcess: "فرآیند همکاری",
-    footerCompanyWhy: "چرا آریا",
+    footerCompanyWhy: "چرا طراحی سایت ایکس",
     footerCompanyFaq: "سوالات متداول",
     footerCompanyContact: "تماس با ما",
 
@@ -153,7 +152,7 @@ const TRANSLATIONS = Object.freeze({
   en: Object.freeze({
     navServices: "Services",
     navProcess: "Our Process",
-    navWhy: "Why Arya",
+    navWhy: "Why X Web Design",
     navContact: "Contact",
     navbarCTA: "Start Your Project",
     mobileNavigationTitle: "Main navigation",
@@ -161,7 +160,7 @@ const TRANSLATIONS = Object.freeze({
     heroTitle: "Software Solutions",
     heroTitleHighlight: "Built for Business Growth",
     heroDescriptionDesktop:
-      "Arya builds professional websites, e-commerce experiences, and custom software tailored to the needs and growth of modern brands.",
+      "X Web Design builds professional websites, e-commerce experiences, and custom software tailored to the needs and growth of modern brands.",
 
     heroDescription: [
       "Professional websites for your brand",
@@ -179,7 +178,7 @@ const TRANSLATIONS = Object.freeze({
     marqueeCRM: "Custom CRM",
     marqueeERP: "Enterprise ERP",
 
-    trustBadge: "Why Businesses Choose Arya",
+    trustBadge: "Why Businesses Choose X Web Design",
     trustTitle: "Reliable Technology for Long-Term Growth",
     trustSubtitle:
       "Our software solutions are built around real business needs, with a focus on reliability, scalability, and long-term growth.",
@@ -227,7 +226,7 @@ const TRANSLATIONS = Object.freeze({
     process4Desc:
       "After launch, we continue to support and enhance your solution so it evolves alongside your business.",
 
-    whyBadge: "Why Arya",
+    whyBadge: "Why X Web Design",
     whyTitle:
       "More Than Software Development—Your Technology Partner for Growth",
     whySubtitle:
@@ -248,8 +247,8 @@ const TRANSLATIONS = Object.freeze({
     faqBadge: "Frequently Asked Questions",
     faqTitle: "Everything You Need to Know Before Getting Started",
     faqSubtitle:
-      "Find answers to the questions most businesses ask before starting a software project with Arya.",
-    faq1Question: "Are Arya's services the right fit for my business?",
+      "Find answers to the questions most businesses ask before starting a software project with X Web Design.",
+    faq1Question: "Are X Web Design's services the right fit for my business?",
     faq1Answer:
       "Our solutions are designed for businesses of all sizes—from startups and e-commerce stores to established companies and enterprises. Every project is tailored to your unique business needs.",
     faq2Question: "How is the project cost determined?",
@@ -285,7 +284,7 @@ const TRANSLATIONS = Object.freeze({
 
     footerCompanyTitle: "Company",
     footerCompanyProcess: "Our Process",
-    footerCompanyWhy: "Why Arya",
+    footerCompanyWhy: "Why X Web Design",
     footerCompanyFaq: "FAQ",
     footerCompanyContact: "Contact Us",
 

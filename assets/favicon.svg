@@ -4,7 +4,7 @@
 >
   <defs>
     <linearGradient
-      id="aryaGradient"
+      id="xGradient"
       x1="0%"
       y1="0%"
       x2="100%"
@@ -26,6 +26,6 @@
 
   <path
     d="M32 11 L54 50 H10 Z"
-    fill="url(#aryaGradient)"
+    fill="url(#xGradient)"
   />
 </svg>
