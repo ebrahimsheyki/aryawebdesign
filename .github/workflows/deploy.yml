@@ -11,6 +11,9 @@ concurrency:
   group: production-deploy
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     name: Deploy to cPanel
@@ -18,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Deploy website via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
@@ -32,11 +35,13 @@ jobs:
           local-dir: ./
           dry-run: false
           security: strict
+          log-level: standard
 
           exclude: |
             **/.git*
             **/.git*/**
             **/.github/**
             **/README.md
+            **/aryawebdesign.zip
             **/.DS_Store
             **/node_modules/**

@@ -2284,3 +2284,21 @@ body.menu-open .mobile-menu-footer {
   transform: translateY(0);
   will-change: auto;
 }
+
+.breadcrumb {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 1rem auto 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+}
+
+.breadcrumb span:last-child {
+  font-weight: 600;
+}

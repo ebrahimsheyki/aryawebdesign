@@ -1,0 +1,868 @@
+<!doctype html>
+<html
+  lang="fa"
+  dir="rtl"
+  data-language="fa"
+  data-direction="rtl"
+  data-theme="dark"
+>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="آموزش Java، Spring و Spring Boot با تمرکز بر مفاهیم واقعی توسعه نرم‌افزار، Backend، API، معماری و ساخت پروژه‌های کاربردی."
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta name="author" content="طراحی سایت ایکس" />
+
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta name="theme-color" content="#0B1120" />
+
+    <title>آموزش Java، Spring و Spring Boot | طراحی سایت ایکس</title>
+
+    <link
+      rel="canonical"
+      href="https://aryawebdesign.ir/training/java-spring-spring-boot.html"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fa_IR" />
+
+    <meta
+      property="og:title"
+      content="آموزش Java، Spring و Spring Boot | طراحی سایت ایکس"
+    />
+
+    <meta
+      property="og:description"
+      content="آموزش Java، Spring و Spring Boot با تمرکز بر Backend، API، معماری نرم‌افزار و پروژه‌های کاربردی."
+    />
+
+    <meta property="og:site_name" content="طراحی سایت ایکس" />
+
+    <meta
+      property="og:url"
+      content="https://aryawebdesign.ir/training/java-spring-spring-boot.html"
+    />
+
+    <meta name="twitter:card" content="summary" />
+
+    <meta
+      name="twitter:title"
+      content="آموزش Java، Spring و Spring Boot | طراحی سایت ایکس"
+    />
+
+    <meta
+      name="twitter:description"
+      content="آموزش Java، Spring و Spring Boot با تمرکز بر توسعه Backend، API و ساخت پروژه‌های واقعی."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://aryawebdesign.ir/#organization",
+        "name": "طراحی سایت ایکس",
+        "alternateName": "X Web Design",
+        "url": "https://aryawebdesign.ir/",
+        "email": "mailto:ebrahim.sheyki@gmail.com",
+        "telephone": "+989193661477"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://aryawebdesign.ir/#website",
+        "url": "https://aryawebdesign.ir/",
+        "name": "طراحی سایت ایکس",
+        "alternateName": "X Web Design",
+        "publisher": {
+          "@id": "https://aryawebdesign.ir/#organization"
+        },
+        "inLanguage": "fa-IR"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://aryawebdesign.ir/training/java-spring-spring-boot.html#service",
+        "url": "https://aryawebdesign.ir/training/java-spring-spring-boot.html",
+        "name": "آموزش Java، Spring و Spring Boot",
+        "description": "آموزش Java، Spring و Spring Boot با تمرکز بر توسعه Backend، طراحی API، معماری نرم‌افزار و ساخت پروژه‌های کاربردی.",
+        "provider": {
+          "@id": "https://aryawebdesign.ir/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Iran"
+        },
+        "inLanguage": "fa-IR"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://aryawebdesign.ir/training/java-spring-spring-boot.html#webpage",
+        "url": "https://aryawebdesign.ir/training/java-spring-spring-boot.html",
+        "name": "آموزش Java، Spring و Spring Boot",
+        "description": "آموزش Java، Spring و Spring Boot با تمرکز بر Backend، API و پروژه‌های کاربردی.",
+        "isPartOf": {
+          "@id": "https://aryawebdesign.ir/#website"
+        },
+        "inLanguage": "fa-IR"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://aryawebdesign.ir/training/java-spring-spring-boot.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "خانه",
+            "item": "https://aryawebdesign.ir/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "خدمات",
+            "item": "https://aryawebdesign.ir/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "آموزش Java، Spring و Spring Boot",
+            "item": "https://aryawebdesign.ir/training/java-spring-spring-boot.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <header id="mainHeader" class="header">
+      <div id="progressBar" class="progress-bar" aria-hidden="true"></div>
+
+      <div class="header-nav">
+        <div class="container">
+          <div class="header-inner">
+            <a href="/" class="logo" aria-label="طراحی سایت ایکس - صفحه اصلی">
+              <span class="logo-mark" aria-hidden="true"> X </span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="ناوبری اصلی">
+              <ul class="desktop-nav-list">
+                <li class="nav-item">
+                  <a href="../services.html" class="desktop-nav-link">
+                    خدمات
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="../process.html" class="desktop-nav-link">
+                    فرآیند همکاری
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="../why-us.html" class="desktop-nav-link">
+                    چرا ایکس
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="../faq.html" class="desktop-nav-link">
+                    سوالات متداول
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="../contact.html" class="desktop-nav-link"> تماس </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="header-actions">
+              <div class="header-controls">
+                <button
+                  id="themeToggle"
+                  class="icon-btn theme-toggle"
+                  type="button"
+                  aria-label="تغییر حالت نمایش"
+                >
+                  <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <a href="../contact.html" class="btn btn-primary navbar-cta">
+                شروع همکاری
+              </a>
+
+              <button
+                id="menuToggle"
+                class="icon-btn menu-toggle"
+                type="button"
+                aria-label="باز کردن منو"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+              >
+                <span class="menu-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true"></div>
+
+    <aside
+      id="mobileMenu"
+      class="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="mobileMenuTitle"
+      tabindex="-1"
+      inert
+    >
+      <div class="mobile-menu-content">
+        <div class="container">
+          <div class="mobile-menu-header">
+            <h2 id="mobileMenuTitle" class="visually-hidden">ناوبری سایت</h2>
+
+            <a href="/" class="logo" aria-label="طراحی سایت ایکس - صفحه اصلی">
+              <span class="logo-mark" aria-hidden="true"> X </span>
+            </a>
+
+            <button
+              id="mobileMenuClose"
+              class="icon-btn mobile-menu-close"
+              type="button"
+              aria-label="بستن منو"
+            >
+              <span class="menu-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <nav class="mobile-menu-nav" aria-label="ناوبری موبایل">
+          <ul class="mobile-menu-list">
+            <li>
+              <a href="../services.html"> خدمات </a>
+            </li>
+
+            <li>
+              <a href="../process.html"> فرآیند همکاری </a>
+            </li>
+
+            <li>
+              <a href="../why-us.html"> چرا ایکس </a>
+            </li>
+
+            <li>
+              <a href="../faq.html"> سوالات متداول </a>
+            </li>
+
+            <li>
+              <a href="../contact.html"> تماس با ما </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu-footer">
+          <div class="mobile-menu-controls">
+            <button
+              id="mobileThemeToggle"
+              class="icon-btn theme-toggle"
+              type="button"
+              aria-label="تغییر حالت نمایش"
+            >
+              <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <a href="../contact.html" class="btn btn-primary mobile-menu-cta">
+            شروع همکاری
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <main id="main-content">
+      <section class="hero section" aria-labelledby="training-page-title">
+        <div class="hero-background">
+          <div class="hero-glow"></div>
+        </div>
+
+        <div class="container">
+          <div class="hero-wrapper">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <span class="hero-badge-mark" aria-hidden="true"> X </span>
+                آموزش برنامه‌نویسی Backend
+              </div>
+
+              <h1 id="training-page-title">آموزش Java، Spring و Spring Boot</h1>
+
+              <p class="hero-description">
+                آموزش با تمرکز بر درک عمیق Java، توسعه Backend، طراحی API،
+                Spring Framework، Spring Boot و ساخت پروژه‌های واقعی؛ مناسب برای
+                یادگیری اصولی و حرکت به سمت توسعه نرم‌افزار حرفه‌ای.
+              </p>
+
+              <div class="hero-actions">
+                <a href="../contact.html" class="btn btn-primary">
+                  درباره آموزش سوال کنید
+                </a>
+
+                <a href="../services.html" class="btn btn-secondary">
+                  خدمات توسعه نرم‌افزار
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services section" aria-labelledby="training-topics-title">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">مسیر یادگیری</div>
+
+            <h2 id="training-topics-title" class="section-title">
+              در این مسیر چه چیزهایی یاد می‌گیرید؟
+            </h2>
+
+            <p class="section-subtitle">
+              آموزش از مفاهیم پایه شروع می‌شود و به سمت ساخت Backend، API و
+              پروژه‌های واقعی حرکت می‌کند.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card featured-service ui-card reveal">
+              <div class="service-icon ui-icon">
+                <i class="fa-brands fa-java" aria-hidden="true"></i>
+              </div>
+
+              <h3>Java Core</h3>
+
+              <p>
+                مفاهیم اصلی Java، شی‌گرایی، کلاس‌ها، inheritance، polymorphism،
+                exception handling، collections، generics و اصول مهم
+                برنامه‌نویسی.
+              </p>
+            </article>
+
+            <article class="service-card ui-card reveal">
+              <div class="service-icon ui-icon">
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+              </div>
+
+              <h3>Spring Framework</h3>
+
+              <p>
+                مفاهیم اصلی Spring مانند dependency injection، inversion of
+                control، configuration و ساختار مناسب برای توسعه برنامه‌های
+                Backend.
+              </p>
+            </article>
+
+            <article class="service-card ui-card reveal">
+              <div class="service-icon ui-icon">
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+              </div>
+
+              <h3>Spring Boot</h3>
+
+              <p>
+                ساخت سرویس‌های Backend با Spring Boot، مدیریت configuration،
+                ساخت REST API، validation، exception handling و آماده‌سازی سرویس
+                برای اجرا.
+              </p>
+            </article>
+
+            <article class="service-card ui-card reveal">
+              <div class="service-icon ui-icon">
+                <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+              </div>
+
+              <h3>Backend و API</h3>
+
+              <p>
+                طراحی و پیاده‌سازی API، ارتباط با دیتابیس، مدیریت کاربران،
+                authentication، authorization و اصول توسعه سرویس‌های قابل
+                نگهداری.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust section" aria-labelledby="training-method-title">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">رویکرد آموزشی</div>
+
+            <h2 id="training-method-title" class="section-title">
+              هدف فقط حفظ کردن syntax نیست
+            </h2>
+
+            <p class="section-subtitle">
+              تمرکز اصلی روی درک علت تصمیم‌های فنی و توانایی استفاده از مفاهیم
+              در پروژه واقعی است.
+            </p>
+          </div>
+
+          <div class="trust-pillars">
+            <article class="trust-pillar ui-card reveal">
+              <div class="trust-icon ui-icon">
+                <i class="fa-solid fa-brain" aria-hidden="true"></i>
+              </div>
+
+              <div class="trust-content">
+                <h3>درک عمیق مفاهیم</h3>
+
+                <p>
+                  مفاهیم Java و Spring به‌جای حفظ کردن دستورات، با منطق و کاربرد
+                  واقعی آنها بررسی می‌شوند.
+                </p>
+              </div>
+            </article>
+
+            <article class="trust-pillar ui-card reveal">
+              <div class="trust-icon ui-icon">
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+              </div>
+
+              <div class="trust-content">
+                <h3>تمرکز بر کدنویسی واقعی</h3>
+
+                <p>
+                  مثال‌ها و تمرین‌ها با هدف تبدیل دانش نظری به توانایی
+                  پیاده‌سازی Backend و API طراحی می‌شوند.
+                </p>
+              </div>
+            </article>
+
+            <article class="trust-pillar ui-card reveal">
+              <div class="trust-icon ui-icon">
+                <i class="fa-solid fa-gears" aria-hidden="true"></i>
+              </div>
+
+              <div class="trust-content">
+                <h3>معماری و Best Practice</h3>
+
+                <p>
+                  در کنار syntax، درباره ساختار پروژه، separation of concerns،
+                  maintainability، امنیت و تصمیم‌های معماری نیز صحبت می‌شود.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process section" aria-labelledby="training-path-title">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">مسیر پیشنهادی</div>
+
+            <h2 id="training-path-title" class="section-title">
+              مسیر یادگیری Java تا Spring Boot
+            </h2>
+
+            <p class="section-subtitle">
+              یک مسیر منظم باعث می‌شود مفاهیم جدید روی پایه‌های درست ساخته شوند.
+            </p>
+          </div>
+
+          <div class="process-timeline">
+            <article class="process-step reveal">
+              <div class="process-marker">
+                <span class="process-number">01</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Java و برنامه‌نویسی شی‌گرا</h3>
+
+                <p>
+                  ابتدا پایه‌های Java و مفاهیم مهم برنامه‌نویسی شی‌گرا تثبیت
+                  می‌شوند.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-step reveal">
+              <div class="process-marker">
+                <span class="process-number">02</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Java پیشرفته و ساختار پروژه</h3>
+
+                <p>
+                  collections، exception handling، generics و موضوعات موردنیاز
+                  برای توسعه برنامه‌های جدی‌تر بررسی می‌شوند.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-step reveal">
+              <div class="process-marker">
+                <span class="process-number">03</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Spring Framework</h3>
+
+                <p>
+                  dependency injection، IoC و اصول معماری Spring آموزش داده
+                  می‌شوند.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-step reveal">
+              <div class="process-marker">
+                <span class="process-number">04</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Spring Boot و REST API</h3>
+
+                <p>
+                  ساخت سرویس‌های واقعی، API و اتصال لایه‌های مختلف برنامه
+                  پیاده‌سازی می‌شود.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-step reveal">
+              <div class="process-marker">
+                <span class="process-number">05</span>
+              </div>
+
+              <div class="process-content">
+                <h3>پروژه کاربردی</h3>
+
+                <p>
+                  مفاهیم آموخته‌شده در قالب یک پروژه کاربردی کنار هم قرار
+                  می‌گیرند.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-us section" aria-labelledby="training-audience-title">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">مناسب چه کسانی است؟</div>
+
+            <h2 id="training-audience-title" class="section-title">
+              آموزش برای یادگیری اصولی Backend
+            </h2>
+
+            <p class="section-subtitle">
+              مسیر آموزش می‌تواند بر اساس سطح فعلی، هدف و تجربه قبلی دانشجو
+              تنظیم شود.
+            </p>
+          </div>
+
+          <div class="why-layout">
+            <article class="why-card why-card-featured ui-card reveal">
+              <h3>شروع یادگیری Java</h3>
+
+              <p>
+                برای افرادی که می‌خواهند Java را اصولی یاد بگیرند و بعد به سمت
+                توسعه Backend حرکت کنند.
+              </p>
+            </article>
+
+            <article class="why-card why-card-featured ui-card reveal">
+              <h3>ورود به Spring Boot</h3>
+
+              <p>
+                برای افرادی که Java را می‌دانند و می‌خواهند توسعه Backend و REST
+                API را با Spring و Spring Boot یاد بگیرند.
+              </p>
+            </article>
+
+            <article class="why-card ui-card reveal">
+              <h3>ساخت پروژه واقعی</h3>
+
+              <p>
+                برای افرادی که می‌خواهند آموخته‌های خود را در یک ساختار پروژه
+                واقعی به کار بگیرند.
+              </p>
+            </article>
+
+            <article class="why-card ui-card reveal">
+              <h3>درک معماری و Best Practice</h3>
+
+              <p>
+                برای توسعه‌دهندگانی که می‌خواهند فقط کدنویسی نکنند و درباره
+                ساختار قابل نگهداری نرم‌افزار نیز فکر کنند.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section" aria-labelledby="training-faq-title">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">سوالات آموزشی</div>
+
+            <h2 id="training-faq-title" class="section-title">
+              سوالات متداول درباره آموزش
+            </h2>
+          </div>
+
+          <div class="faq-grid">
+            <details class="faq-item reveal">
+              <summary>
+                <span> آیا برای شروع باید Java را بلد باشم؟ </span>
+
+                <i
+                  class="fa-solid fa-chevron-down faq-chevron"
+                  aria-hidden="true"
+                ></i>
+              </summary>
+
+              <p>
+                سطح آموزش می‌تواند بر اساس دانش فعلی تنظیم شود. برای مسیر کامل
+                Java تا Spring Boot، ابتدا مبانی Java بررسی می‌شوند و سپس مباحث
+                Spring آموزش داده می‌شوند.
+              </p>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span> آیا آموزش شامل Spring Boot و REST API است؟ </span>
+
+                <i
+                  class="fa-solid fa-chevron-down faq-chevron"
+                  aria-hidden="true"
+                ></i>
+              </summary>
+
+              <p>
+                بله. Spring Boot، ساخت REST API، لایه‌های Backend و مفاهیم
+                موردنیاز برای ساخت سرویس‌های واقعی در مسیر آموزشی قرار می‌گیرند.
+              </p>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span> آیا آموزش پروژه‌محور است؟ </span>
+
+                <i
+                  class="fa-solid fa-chevron-down faq-chevron"
+                  aria-hidden="true"
+                ></i>
+              </summary>
+
+              <p>
+                تمرکز مسیر بر کاربرد عملی مفاهیم است و می‌توان آموخته‌ها را در
+                قالب پروژه و تمرین واقعی پیاده‌سازی کرد.
+              </p>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span>
+                  آیا درباره معماری و Best Practice هم آموزش داده می‌شود؟
+                </span>
+
+                <i
+                  class="fa-solid fa-chevron-down faq-chevron"
+                  aria-hidden="true"
+                ></i>
+              </summary>
+
+              <p>
+                بله. علاوه بر syntax و framework، موضوعاتی مانند ساختار پروژه،
+                separation of concerns، maintainability و تصمیم‌های معماری نیز
+                مورد توجه قرار می‌گیرند.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner section" aria-labelledby="training-cta-title">
+        <div class="container">
+          <div class="cta-surface reveal">
+            <div class="cta-content">
+              <div class="section-badge">شروع یادگیری</div>
+
+              <h2 id="training-cta-title">
+                برای یادگیری Java و Spring آماده‌اید؟
+              </h2>
+
+              <p>
+                درباره سطح فعلی، هدف آموزشی و مسیری که می‌خواهید طی کنید صحبت
+                کنید.
+              </p>
+
+              <div class="cta-actions">
+                <a href="../contact.html" class="btn btn-primary">
+                  تماس درباره آموزش
+                </a>
+
+                <a href="../services.html" class="btn btn-secondary">
+                  خدمات توسعه نرم‌افزار
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="logo" aria-label="طراحی سایت ایکس - صفحه اصلی">
+              <span class="logo-mark" aria-hidden="true"> X </span>
+            </a>
+          </div>
+
+          <nav class="footer-links" aria-labelledby="footer-company-title">
+            <h2 id="footer-company-title">شرکت</h2>
+
+            <a href="../process.html"> فرآیند همکاری </a>
+
+            <a href="../why-us.html"> چرا ایکس </a>
+
+            <a href="../faq.html"> سوالات متداول </a>
+
+            <a href="../contact.html"> تماس با ما </a>
+          </nav>
+
+          <nav class="footer-links" aria-labelledby="footer-solutions-title">
+            <h2 id="footer-solutions-title">خدمات</h2>
+
+            <a href="../services.html"> طراحی سایت </a>
+
+            <a href="../services.html"> فروشگاه اینترنتی </a>
+
+            <a href="../services.html"> نرم‌افزار اختصاصی </a>
+
+            <a href="java-spring-spring-boot.html" aria-current="page">
+              آموزش Java و Spring
+            </a>
+          </nav>
+
+          <address class="footer-contact">
+            <h2>ارتباط</h2>
+
+            <a
+              href="mailto:ebrahim.sheyki@gmail.com"
+              class="footer-contact-item"
+            >
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              <span> ebrahim.sheyki@gmail.com </span>
+            </a>
+
+            <a href="tel:+989193661477" class="footer-contact-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+
+              <span dir="ltr"> +98&nbsp;919&nbsp;366&nbsp;1477 </span>
+            </a>
+
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+
+              <span> Tehran, Iran </span>
+            </div>
+
+            <a
+              href="https://www.linkedin.com/in/EbrahimSheyki"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              class="footer-contact-item"
+            >
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+
+              <span> LinkedIn </span>
+            </a>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p class="footer-copyright">
+            <span
+              class="footer-copyright-year"
+              dir="ltr"
+              data-current-year
+            ></span>
+
+            <span class="footer-copyright-text"> تمامی حقوق محفوظ است. </span>
+          </p>
+
+          <a
+            href="#main-content"
+            id="backToTop"
+            class="footer-back-to-top"
+            aria-label="بازگشت به بالای صفحه"
+          >
+            <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/translations.js" defer></script>
+
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>
