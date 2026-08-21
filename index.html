@@ -26,7 +26,6 @@
 
     <title>طراحی سایت ایکس | طراحی سایت حرفه‌ای و توسعه نرم‌افزار</title>
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://aryawebdesign.ir/" />
 
     <!-- Open Graph -->
@@ -82,7 +81,7 @@
 
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
 
-    <!-- Organization Schema -->
+    <!-- Organization -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -96,6 +95,7 @@
       }
     </script>
 
+    <!-- WebSite -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -113,26 +113,24 @@
   </head>
 
   <body>
-    <!-- ====================
-     HEADER
-======================== -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
     <header id="mainHeader" class="header">
-      <!-- Scroll Progress -->
       <div id="progressBar" class="progress-bar" aria-hidden="true"></div>
 
-      <!--  PRIMARY NAVIGATION -->
       <div class="header-nav">
         <div class="container">
           <div class="header-inner">
-            <!-- BRAND -->
+            <!-- Brand -->
             <a href="/" class="logo" aria-label="طراحی سایت ایکس - صفحه اصلی">
-              <span class="logo-mark" aria-hidden="true">▲</span>
+              <span class="logo-mark" aria-hidden="true"> ▲ </span>
             </a>
 
-            <!-- DESKTOP NAVIGATION -->
+            <!-- Desktop navigation -->
             <nav
               class="desktop-nav"
-              aria-label="Primary navigation"
+              aria-label="ناوبری اصلی"
               data-lang-aria="navPrimary"
             >
               <ul class="desktop-nav-list">
@@ -140,7 +138,6 @@
                   <a
                     href="services.html"
                     class="desktop-nav-link"
-                    data-scroll
                     data-lang-key="navServices"
                   >
                     خدمات
@@ -151,7 +148,6 @@
                   <a
                     href="process.html"
                     class="desktop-nav-link"
-                    data-scroll
                     data-lang-key="navProcess"
                   >
                     فرآیند همکاری
@@ -162,13 +158,23 @@
                   <a
                     href="why-us.html"
                     class="desktop-nav-link"
-                    data-scroll
                     data-lang-key="navWhy"
                   >
-                    مزیت رقابتی
+                    چرا ایکس
                   </a>
                 </li>
-                <li>
+
+                <li class="nav-item">
+                  <a
+                    href="training/java-spring-spring-boot.html"
+                    class="desktop-nav-link"
+                    data-lang-key="navTraining"
+                  >
+                    آموزش Java و Spring
+                  </a>
+                </li>
+
+                <li class="nav-item">
                   <a
                     href="faq.html"
                     class="desktop-nav-link"
@@ -177,6 +183,7 @@
                     سوالات متداول
                   </a>
                 </li>
+
                 <li class="nav-item">
                   <a
                     href="contact.html"
@@ -189,48 +196,43 @@
               </ul>
             </nav>
 
-            <!-- HEADER ACTIONS -->
+            <!-- Header actions -->
             <div class="header-actions">
-              <!-- Controls -->
               <div class="header-controls">
-                <!-- Theme Toggle -->
                 <button
                   id="themeToggle"
                   class="icon-btn theme-toggle"
                   type="button"
-                  aria-label="Switch to light mode"
+                  aria-label="تغییر حالت نمایش"
                 >
                   <i class="fa-solid fa-sun" aria-hidden="true"></i>
                 </button>
 
-                <!-- Language Switcher -->
                 <button
                   id="languageToggle"
                   class="icon-btn language-switcher"
                   type="button"
-                  aria-label="Switch to English"
+                  aria-label="تغییر زبان"
                 >
                   <i class="fa-solid fa-globe" aria-hidden="true"></i>
-                  <span class="language-label">EN</span>
+
+                  <span class="language-label"> EN </span>
                 </button>
               </div>
 
-              <!-- Primary CTA -->
               <a
                 href="contact.html"
                 class="btn btn-primary navbar-cta"
-                data-scroll
                 data-lang-key="navbarCTA"
               >
                 شروع همکاری
               </a>
 
-              <!-- Mobile Navigation Trigger -->
               <button
                 id="menuToggle"
                 class="icon-btn menu-toggle"
                 type="button"
-                aria-label="Open navigation"
+                aria-label="باز کردن منو"
                 aria-haspopup="dialog"
                 aria-expanded="false"
                 aria-controls="mobileMenu"
@@ -246,10 +248,14 @@
       </div>
     </header>
 
-    <!--  MOBILE OVERLAY -->
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
     <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true"></div>
 
-    <!-- MOBILE NAVIGATION DRAWER -->
+    <!-- =====================================================
+         MOBILE NAVIGATION
+    ====================================================== -->
     <aside
       id="mobileMenu"
       class="mobile-menu"
@@ -260,29 +266,26 @@
       tabindex="-1"
       inert
     >
-      <!-- Drawer Content -->
       <div class="mobile-menu-content">
-        <!-- Container -->
         <div class="container">
-          <!-- Drawer Header -->
           <div class="mobile-menu-header">
             <h2
               id="mobileMenuTitle"
               class="visually-hidden"
               data-lang-key="mobileNavigationTitle"
             >
-              ناوبری
+              ناوبری سایت
             </h2>
 
             <a href="/" class="logo" aria-label="طراحی سایت ایکس - صفحه اصلی">
-              <span class="logo-mark" aria-hidden="true">▲</span>
+              <span class="logo-mark" aria-hidden="true"> ▲ </span>
             </a>
 
             <button
               id="mobileMenuClose"
               class="icon-btn mobile-menu-close"
               type="button"
-              aria-label="Close navigation"
+              aria-label="بستن منو"
             >
               <span class="menu-icon" aria-hidden="true">
                 <span></span>
@@ -291,10 +294,10 @@
             </button>
           </div>
         </div>
-        <!-- Drawer Navigation -->
+
         <nav
           class="mobile-menu-nav"
-          aria-label="Mobile navigation"
+          aria-label="ناوبری موبایل"
           data-lang-aria="navMobile"
         >
           <ul class="mobile-menu-list">
@@ -309,7 +312,16 @@
             </li>
 
             <li>
-              <a href="why-us.html" data-lang-key="navWhy"> مزیت رقابتی </a>
+              <a href="why-us.html" data-lang-key="navWhy"> چرا ایکس </a>
+            </li>
+
+            <li>
+              <a
+                href="training/java-spring-spring-boot.html"
+                data-lang-key="navTraining"
+              >
+                آموزش Java و Spring
+              </a>
             </li>
 
             <li>
@@ -322,14 +334,13 @@
           </ul>
         </nav>
 
-        <!-- Mobile Footer -->
         <div class="mobile-menu-footer">
           <div class="mobile-menu-controls">
             <button
               id="mobileThemeToggle"
               class="icon-btn theme-toggle"
               type="button"
-              aria-label="Switch to light mode"
+              aria-label="تغییر حالت نمایش"
             >
               <i class="fa-solid fa-sun" aria-hidden="true"></i>
             </button>
@@ -338,17 +349,17 @@
               id="mobileLanguageToggle"
               class="icon-btn language-switcher"
               type="button"
-              aria-label="Switch to English"
+              aria-label="تغییر زبان"
             >
               <i class="fa-solid fa-globe" aria-hidden="true"></i>
-              <span class="language-label">EN</span>
+
+              <span class="language-label"> EN </span>
             </button>
           </div>
 
           <a
             href="contact.html"
             class="btn btn-primary mobile-menu-cta"
-            data-scroll
             data-lang-key="navbarCTA"
           >
             شروع همکاری
@@ -358,10 +369,10 @@
     </aside>
 
     <main id="main-content">
-      <!-- =====================
-    HERO
-======================== -->
-      <section id="hero" class="hero" aria-labelledby="hero-title">
+      <!-- =================================================
+           HERO
+      ================================================== -->
+      <section id="hero" class="hero section" aria-labelledby="hero-title">
         <div class="hero-background">
           <div class="hero-glow"></div>
         </div>
@@ -369,18 +380,15 @@
         <div class="container">
           <div class="hero-wrapper">
             <div class="hero-content">
-              <!-- HERO BADGE -->
               <div class="hero-badge" data-lang-key="heroBadge">
                 <span class="hero-badge-mark" aria-hidden="true">▲</span>
-                <span>طراحی سایت و توسعه نرم‌افزار</span>
+                طراحی سایت و توسعه نرم‌افزار
               </div>
 
-              <!-- HERO TITLE -->
-              <h1 id="hero-title">
-                <span data-lang-key="heroTitle"> طراحی سایت حرفه‌ای </span>
-
-                <span class="hero-highlight" data-lang-key="heroTitleHighlight">
-                  برای رشد کسب‌وکار شما
+              <h1 id="hero-title" data-lang-key="heroTitle">
+                طراحی سایت حرفه‌ای
+                <span class="hero-highlight" data-lang-key="heroHighlight">
+                  برای رشد کسب‌وکار
                 </span>
               </h1>
 
@@ -393,51 +401,37 @@
                 </span>
               </p>
 
-              <!-- HERO ACTIONS -->
               <div class="hero-actions">
                 <a
                   href="contact.html"
                   class="btn btn-primary"
-                  data-lang-key="heroCtaPrimary"
+                  data-lang-key="heroPrimaryCTA"
                 >
-                  دریافت مشاوره رایگان
+                  شروع همکاری
                 </a>
 
                 <a
                   href="services.html"
                   class="btn btn-secondary"
-                  data-lang-key="heroCtaSecondary"
+                  data-lang-key="heroSecondaryCTA"
                 >
                   مشاهده خدمات
                 </a>
               </div>
 
-              <!-- HERO MARQUEE -->
-              <div class="hero-marquee" aria-label="Software solutions">
+              <!-- Hero marquee -->
+              <div
+                class="hero-marquee"
+                aria-label="راهکارهای دیجیتال"
+                data-lang-aria="heroMarquee"
+              >
                 <div class="marquee-track">
                   <div class="marquee-group">
                     <span class="marquee-item">
-                      <i class="fa-solid fa-building" aria-hidden="true"></i>
-
-                      <span data-lang-key="marqueeEnterprise">
-                        نرم‌افزارهای سازمانی
-                      </span>
-                    </span>
-
-                    <span class="marquee-item">
-                      <i class="fa-solid fa-gears" aria-hidden="true"></i>
-
-                      <span data-lang-key="marqueeAutomation">
-                        اتوماسیون اداری
-                      </span>
-                    </span>
-
-                    <span class="marquee-item">
-                      <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
-
-                      <span data-lang-key="marqueeMedical">
-                        سیستم‌های پزشکی
-                      </span>
+                      <i class="fa-solid fa-hospital" aria-hidden="true"></i>
+                      <span data-lang-key="marqueeMedical"
+                        >سیستم‌های پزشکی</span
+                      >
                     </span>
 
                     <span class="marquee-item">
@@ -445,48 +439,47 @@
                         class="fa-solid fa-cart-shopping"
                         aria-hidden="true"
                       ></i>
-
-                      <span data-lang-key="marqueeCommerce">
-                        فروشگاه‌های دیجیتال
-                      </span>
-                    </span>
-
-                    <span class="marquee-item">
-                      <i class="fa-solid fa-users" aria-hidden="true"></i>
-
-                      <span data-lang-key="marqueeCRM"> CRM اختصاصی </span>
+                      <span data-lang-key="marqueeEcommerce"
+                        >فروشگاه اینترنتی</span
+                      >
                     </span>
 
                     <span class="marquee-item">
                       <i
-                        class="fa-solid fa-diagram-project"
+                        class="fa-solid fa-calendar-check"
                         aria-hidden="true"
                       ></i>
+                      <span data-lang-key="marqueeAppointment"
+                        >نوبت‌دهی آنلاین</span
+                      >
+                    </span>
 
-                      <span data-lang-key="marqueeERP"> ERP سازمانی </span>
+                    <span class="marquee-item">
+                      <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                      <span data-lang-key="marqueeCustomSoftware"
+                        >نرم‌افزارهای اختصاصی</span
+                      >
+                    </span>
+
+                    <span class="marquee-item">
+                      <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                      <span data-lang-key="marqueeQR">خدمات QR</span>
+                    </span>
+
+                    <span class="marquee-item">
+                      <i class="fa-solid fa-building" aria-hidden="true"></i>
+                      <span data-lang-key="marqueeEnterprise"
+                        >راهکارهای سازمانی</span
+                      >
                     </span>
                   </div>
 
                   <div class="marquee-group" aria-hidden="true">
                     <span class="marquee-item">
-                      <i class="fa-solid fa-building" aria-hidden="true"></i>
-                      <span data-lang-key="marqueeEnterprise">
-                        نرم‌افزارهای سازمانی
-                      </span>
-                    </span>
-
-                    <span class="marquee-item">
-                      <i class="fa-solid fa-gears" aria-hidden="true"></i>
-                      <span data-lang-key="marqueeAutomation">
-                        اتوماسیون اداری
-                      </span>
-                    </span>
-
-                    <span class="marquee-item">
-                      <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
-                      <span data-lang-key="marqueeMedical">
-                        سیستم‌های پزشکی
-                      </span>
+                      <i class="fa-solid fa-hospital" aria-hidden="true"></i>
+                      <span data-lang-key="marqueeMedical"
+                        >سیستم‌های پزشکی</span
+                      >
                     </span>
 
                     <span class="marquee-item">
@@ -494,22 +487,38 @@
                         class="fa-solid fa-cart-shopping"
                         aria-hidden="true"
                       ></i>
-                      <span data-lang-key="marqueeCommerce">
-                        فروشگاه‌های دیجیتال
-                      </span>
-                    </span>
-
-                    <span class="marquee-item">
-                      <i class="fa-solid fa-users" aria-hidden="true"></i>
-                      <span data-lang-key="marqueeCRM"> CRM اختصاصی </span>
+                      <span data-lang-key="marqueeEcommerce"
+                        >فروشگاه اینترنتی</span
+                      >
                     </span>
 
                     <span class="marquee-item">
                       <i
-                        class="fa-solid fa-diagram-project"
+                        class="fa-solid fa-calendar-check"
                         aria-hidden="true"
                       ></i>
-                      <span data-lang-key="marqueeERP"> ERP سازمانی </span>
+                      <span data-lang-key="marqueeAppointment"
+                        >نوبت‌دهی آنلاین</span
+                      >
+                    </span>
+
+                    <span class="marquee-item">
+                      <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                      <span data-lang-key="marqueeCustomSoftware"
+                        >نرم‌افزارهای اختصاصی</span
+                      >
+                    </span>
+
+                    <span class="marquee-item">
+                      <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                      <span data-lang-key="marqueeQR">خدمات QR</span>
+                    </span>
+
+                    <span class="marquee-item">
+                      <i class="fa-solid fa-building" aria-hidden="true"></i>
+                      <span data-lang-key="marqueeEnterprise"
+                        >راهکارهای سازمانی</span
+                      >
                     </span>
                   </div>
                 </div>
@@ -518,687 +527,421 @@
           </div>
         </div>
       </section>
-      <!-- ======================
-TRUST
-========================= -->
-      <section id="trust" class="trust section" aria-labelledby="trust-title">
+
+      <!-- =================================================
+           POSITIONING
+      ================================================== -->
+      <section class="trust section" aria-labelledby="positioning-title">
         <div class="container">
-          <!-- Section Header -->
           <div class="section-header reveal">
-            <div class="section-badge" data-lang-key="trustBadge">
-              چرا کسب وکارها ایکس را انتخاب می کنند؟
+            <div class="section-badge" data-lang-key="positioningBadge">
+              رویکرد ایکس
             </div>
 
             <h2
-              id="trust-title"
+              id="positioning-title"
               class="section-title"
-              data-lang-key="trustTitle"
+              data-lang-key="positioningTitle"
             >
-              راهکارهای نرم افزاری قابل اعتماد برای رشد بلندمدت
+              یک راهکار خوب فقط زیبا نیست
             </h2>
 
-            <p class="section-subtitle" data-lang-key="trustSubtitle">
-              راهکارهای نرم افزاری ما بر پایه نیازهای واقعی کسب وکارها طراحی می
-              شوند؛ با تمرکز بر پایداری، مقیاس پذیری و توسعه ای که بتواند همراه
-              رشد آینده شما حرکت کند.
+            <p class="section-subtitle" data-lang-key="positioningSubtitle">
+              محصول باید برای کاربر ساده، برای کسب‌وکار مفید و برای آینده قابل
+              توسعه باشد.
             </p>
           </div>
 
-          <!-- Trust Pillars -->
           <div class="trust-pillars">
-            <article
-              class="trust-pillar ui-card reveal"
-              style="--stagger-delay: 50ms"
-            >
+            <article class="trust-pillar ui-card reveal">
               <div class="trust-icon ui-icon">
-                <i class="fa-solid fa-puzzle-piece"> </i>
+                <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
               </div>
 
               <div class="trust-content">
-                <h3 data-lang-key="trustPillar1Title">
-                  متناسب با کسب وکار شما
-                </h3>
+                <h3 data-lang-key="positioningRealProblemTitle">مسئله واقعی</h3>
 
-                <p data-lang-key="trustPillar1Desc">
-                  هر پروژه بر اساس اهداف، فرآیندها و نیازهای واقعی کسب وکار شما
-                  طراحی می شود؛ نه بر اساس قالب های آماده و راهکارهای عمومی.
+                <p data-lang-key="positioningRealProblemDescription">
+                  پروژه از نیاز و هدف واقعی کسب‌وکار شروع می‌شود.
                 </p>
               </div>
             </article>
 
-            <article
-              class="trust-pillar ui-card reveal"
-              style="--stagger-delay: 100ms"
-            >
+            <article class="trust-pillar ui-card reveal">
               <div class="trust-icon ui-icon">
-                <i class="fa-solid fa-layer-group"> </i>
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
               </div>
 
               <div class="trust-content">
-                <h3 data-lang-key="trustPillar2Title">
-                  فناوری‌های پایدار و مقیاس‌پذیر
+                <h3 data-lang-key="positioningTechnicalQualityTitle">
+                  کیفیت فنی
                 </h3>
 
-                <p data-lang-key="trustPillar2Desc">
-                  راهکارها با استفاده از فناوری‌های مدرن و معماری‌های استاندارد
-                  توسعه می‌یابند تا پاسخگوی نیازهای امروز و رشد آینده کسب‌وکار
-                  شما باشند.
+                <p data-lang-key="positioningTechnicalQualityDescription">
+                  عملکرد، امنیت و قابلیت نگهداری بخشی از محصول هستند.
                 </p>
               </div>
             </article>
 
-            <article
-              class="trust-pillar ui-card reveal"
-              style="--stagger-delay: 150ms"
-            >
+            <article class="trust-pillar ui-card reveal">
               <div class="trust-icon ui-icon">
-                <i class="fa-solid fa-handshake"></i>
+                <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
               </div>
 
               <div class="trust-content">
-                <h3 data-lang-key="trustPillar3Title">همکاری بلندمدت</h3>
+                <h3 data-lang-key="positioningGrowthTitle">آماده برای رشد</h3>
 
-                <p data-lang-key="trustPillar3Desc">
-                  از مرحله تحلیل و طراحی تا توسعه، استقرار و بهبودهای آینده، در
-                  کنار شما خواهیم بود تا فناوری به یک مزیت رقابتی پایدار تبدیل
-                  شود.
+                <p data-lang-key="positioningGrowthDescription">
+                  ساختار راهکار برای نیازهای آینده نیز در نظر گرفته می‌شود.
                 </p>
               </div>
             </article>
           </div>
         </div>
       </section>
-      <!-- ===================
-SERVICES
-===================== -->
+
+      <!-- =================================================
+           SERVICES SUMMARY
+      ================================================== -->
       <section
         id="services"
         class="services section"
-        aria-labelledby="services-title"
+        aria-labelledby="home-services-title"
       >
         <div class="container">
-          <!-- Section Header -->
           <div class="section-header reveal">
-            <div class="section-badge" data-lang-key="servicesBadge">
-              راهکارهای ایکس
-            </div>
+            <div class="section-badge" data-lang-key="servicesBadge">خدمات</div>
 
             <h2
-              id="services-title"
+              id="home-services-title"
               class="section-title"
               data-lang-key="servicesTitle"
             >
-              خدمات دیجیتال برای هر نوع کسب‌وکار
+              چه چیزی می‌سازیم؟
             </h2>
 
             <p class="section-subtitle" data-lang-key="servicesSubtitle">
-              از طراحی سایت حرفه‌ای و فروشگاه اینترنتی تا نرم‌افزارهای اختصاصی،
-              راهکارهایی متناسب با نیاز، حوزه فعالیت و اهداف کسب‌وکار شما را
-              طراحی و توسعه می‌دهیم.
+              سه مسیر اصلی برای ساخت یا توسعه راهکار دیجیتال.
             </p>
           </div>
 
-          <!-- Services Grid -->
           <div class="services-grid">
-            <!-- Featured Service -->
-            <article
-              class="service-card featured-service ui-card"
-              style="--stagger-delay: 50ms"
+            <a
+              href="services.html"
+              class="service-card featured-service ui-card reveal"
             >
               <div class="service-icon ui-icon">
-                <i class="fa-solid fa-code"></i>
+                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
               </div>
 
-              <h3 data-lang-key="service1Title">نرم‌افزارهای اختصاصی</h3>
+              <h3 data-lang-key="serviceWebsiteTitle">طراحی سایت</h3>
 
-              <p data-lang-key="service1Desc">
-                نرم‌افزارهایی متناسب با فرآیندها و نیازهای خاص کسب‌وکار شما؛
-                برای افزایش بهره‌وری، کاهش کارهای تکراری و ایجاد مزیت رقابتی.
+              <p data-lang-key="serviceWebsiteDescription">
+                وب‌سایت حرفه‌ای برای معرفی برند و جذب مشتری.
               </p>
-            </article>
+            </a>
 
-            <!-- Service 2 -->
-            <article
-              class="service-card ui-card"
-              style="--stagger-delay: 100ms"
-            >
+            <a href="services.html" class="service-card ui-card reveal">
               <div class="service-icon ui-icon">
-                <i class="fa-solid fa-globe"> </i>
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
               </div>
 
-              <h3 data-lang-key="service2Title">طراحی سایت حرفه‌ای</h3>
+              <h3 data-lang-key="serviceEcommerceTitle">فروشگاه اینترنتی</h3>
 
-              <p data-lang-key="service2Desc">
-                طراحی سایت‌های سریع، مدرن و واکنش‌گرا برای معرفی کسب‌وکار، جذب
-                مشتری، افزایش اعتبار برند و ایجاد حضور حرفه‌ای در فضای دیجیتال.
+              <p data-lang-key="serviceEcommerceDescription">
+                تجربه خرید آنلاین متناسب با نیاز کسب‌وکار.
               </p>
-            </article>
+            </a>
 
-            <!-- Service 3 -->
-            <article
-              class="service-card ui-card"
-              style="--stagger-delay: 150ms"
-            >
+            <a href="services.html" class="service-card ui-card reveal">
               <div class="service-icon ui-icon">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
               </div>
 
-              <h3 data-lang-key="service3Title">فروشگاه اینترنتی</h3>
-
-              <p data-lang-key="service3Desc">
-                فروشگاه‌های اینترنتی حرفه‌ای با تجربه کاربری مناسب، مدیریت آسان
-                و زیرساختی آماده برای رشد و توسعه کسب‌وکار شما.
-              </p>
-            </article>
-
-            <!-- Service 4 -->
-            <article
-              class="service-card ui-card"
-              style="--stagger-delay: 200ms"
-            >
-              <div class="service-icon ui-icon">
-                <i class="fa-solid fa-building"></i>
-              </div>
-
-              <h3 data-lang-key="service4Title">
-                سامانه‌ها و سیستم‌های اختصاصی
+              <h3 data-lang-key="serviceCustomSoftwareTitle">
+                نرم‌افزار اختصاصی
               </h3>
 
-              <p data-lang-key="service4Desc">
-                طراحی و توسعه سامانه‌های اختصاصی برای مدیریت فرآیندها، اطلاعات و
-                عملیات کسب‌وکارها و سازمان‌ها.
+              <p data-lang-key="serviceCustomSoftwareDescription">
+                Backend، API و سیستم‌های اختصاصی.
               </p>
-            </article>
+            </a>
+          </div>
 
-            <article class="service-card ui-card">
-              <div class="service-icon ui-icon">
-                <i class="fa-brands fa-java" aria-hidden="true"></i>
-              </div>
-
-              <h3>آموزش Java، Spring و Spring Boot</h3>
-
-              <p>
-                آموزش Java، Spring و Spring Boot با تمرکز بر توسعه Backend،
-                طراحی API، معماری نرم‌افزار و ساخت پروژه‌های کاربردی.
-              </p>
-
-              <a
-                href="training/java-spring-spring-boot.html"
-                class="btn btn-secondary"
-              >
-                مشاهده صفحه آموزش
-              </a>
-            </article>
+          <div class="section-actions">
+            <a
+              href="services.html"
+              class="btn btn-secondary"
+              data-lang-key="servicesViewAll"
+            >
+              همه خدمات
+            </a>
           </div>
         </div>
       </section>
 
-      <div class="section-actions">
-        <a
-          href="services.html"
-          class="btn btn-secondary"
-          data-lang-key="servicesViewAll"
-        >
-          مشاهده همه خدمات
-        </a>
-      </div>
-      <!-- ======================
-PROCESS
-========================= -->
+      <!-- =================================================
+           WHY X SUMMARY
+      ================================================== -->
+      <section id="why-x" class="why-us section" aria-labelledby="why-x-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-badge" data-lang-key="whyBadge">چرا ایکس</div>
+
+            <h2 id="why-x-title" class="section-title" data-lang-key="whyTitle">
+              راهکار درست، فقط با تکنولوژی بیشتر ساخته نمی‌شود
+            </h2>
+
+            <p class="section-subtitle" data-lang-key="whySubtitle">
+              ما ابتدا مسئله کسب‌وکار را درک می‌کنیم و سپس طراحی و فناوری مناسب
+              را برای ساخت یک راهکار قابل استفاده و قابل توسعه انتخاب می‌کنیم.
+            </p>
+          </div>
+
+          <div class="why-layout">
+            <article class="why-card ui-card reveal">
+              <div class="why-card-icon ui-icon">
+                <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+              </div>
+
+              <h3 data-lang-key="whyResultTitle">تمرکز روی نتیجه</h3>
+
+              <p data-lang-key="whyResultDescription">
+                طراحی و توسعه باید به یک هدف واقعی کسب‌وکار کمک کند؛ نه اینکه
+                فقط یک محصول از نظر فنی پیچیده‌تر شود.
+              </p>
+            </article>
+
+            <article class="why-card ui-card reveal">
+              <div class="why-card-icon ui-icon">
+                <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+              </div>
+
+              <h3 data-lang-key="whyArchitectureTitle">معماری برای رشد</h3>
+
+              <p data-lang-key="whyArchitectureDescription">
+                ساختار پروژه با توجه به نیاز امروز و امکان توسعه قابلیت‌های جدید
+                در آینده طراحی می‌شود.
+              </p>
+            </article>
+
+            <article class="why-card ui-card reveal">
+              <div class="why-card-icon ui-icon">
+                <i class="fa-solid fa-comments" aria-hidden="true"></i>
+              </div>
+
+              <h3 data-lang-key="whyCommunicationTitle">
+                ارتباط مستقیم و شفاف
+              </h3>
+
+              <p data-lang-key="whyCommunicationDescription">
+                تصمیم‌های مهم، اولویت‌ها و مسیر پروژه شفاف هستند تا نتیجه نهایی
+                با نیاز واقعی شما همسو بماند.
+              </p>
+            </article>
+          </div>
+
+          <div class="section-actions">
+            <a
+              href="why-us.html"
+              class="btn btn-secondary"
+              aria-label="درباره رویکرد طراحی سایت ایکس بیشتر بدانید"
+              data-lang-key="whyApproachCTA"
+            >
+              درباره رویکرد ایکس
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+           PROCESS SUMMARY
+      ================================================== -->
       <section
         id="process"
         class="process section"
-        aria-labelledby="process-title"
+        aria-labelledby="home-process-title"
       >
         <div class="container">
-          <!-- Header -->
-          <div class="section-header">
+          <div class="section-header reveal">
             <div class="section-badge" data-lang-key="processBadge">
               فرآیند همکاری
             </div>
 
             <h2
-              id="process-title"
+              id="home-process-title"
               class="section-title"
               data-lang-key="processTitle"
             >
-              مسیری شفاف از ایده تا راهکار نهایی
+              از ایده تا راهکار
             </h2>
 
             <p class="section-subtitle" data-lang-key="processSubtitle">
-              هر پروژه با شناخت دقیق نیازهای کسب‌وکار آغاز می‌شود و با توسعه،
-              استقرار و پشتیبانی مستمر ادامه پیدا می‌کند.
+              یک مسیر روشن برای تبدیل نیاز کسب‌وکار به محصول واقعی.
             </p>
           </div>
 
-          <!-- Timeline -->
           <div class="process-timeline">
-            <!-- Step 1 -->
-            <article class="process-step reveal" style="--stagger-delay: 0ms">
+            <article class="process-step reveal">
               <div class="process-marker">
                 <span class="process-number"> 01 </span>
               </div>
 
               <div class="process-content">
-                <h3 data-lang-key="process1Title">شناخت و تحلیل</h3>
+                <h3 data-lang-key="processAnalysisTitle">تحلیل</h3>
 
-                <p data-lang-key="process1Desc">
-                  اهداف، چالش‌ها و نیازهای کسب‌وکار شما را بررسی می‌کنیم تا
-                  تصویری دقیق از مسیر پیش رو به دست آوریم.
+                <p data-lang-key="processAnalysisDescription">
+                  شناخت هدف، کاربر و نیاز پروژه.
                 </p>
               </div>
             </article>
 
-            <!-- Step 2 -->
-            <article class="process-step reveal" style="--stagger-delay: 120ms">
+            <article class="process-step reveal">
               <div class="process-marker">
                 <span class="process-number"> 02 </span>
               </div>
 
               <div class="process-content">
-                <h3 data-lang-key="process2Title">طراحی راهکار</h3>
+                <h3 data-lang-key="processDesignTitle">طراحی</h3>
 
-                <p data-lang-key="process2Desc">
-                  معماری، قابلیت‌ها و مسیر اجرای پروژه را متناسب با اهداف و
-                  اولویت‌های کسب‌وکار طراحی می‌کنیم.
+                <p data-lang-key="processDesignDescription">
+                  تعیین معماری و مسیر اجرای مناسب.
                 </p>
               </div>
             </article>
 
-            <!-- Step 3 -->
-            <article class="process-step reveal" style="--stagger-delay: 240ms">
+            <article class="process-step reveal">
               <div class="process-marker">
                 <span class="process-number"> 03 </span>
               </div>
 
               <div class="process-content">
-                <h3 data-lang-key="process3Title">توسعه و استقرار</h3>
+                <h3 data-lang-key="processDevelopmentTitle">توسعه</h3>
 
-                <p data-lang-key="process3Desc">
-                  راهکار موردنظر با فناوری‌های مدرن توسعه یافته و پس از آزمایش و
-                  بهینه‌سازی آماده بهره‌برداری می‌شود.
+                <p data-lang-key="processDevelopmentDescription">
+                  پیاده‌سازی و بررسی کیفیت محصول.
                 </p>
               </div>
             </article>
 
-            <!-- Step 4 -->
-            <article class="process-step reveal" style="--stagger-delay: 360ms">
+            <article class="process-step reveal">
               <div class="process-marker">
                 <span class="process-number"> 04 </span>
               </div>
 
               <div class="process-content">
-                <h3 data-lang-key="process4Title">پشتیبانی و توسعه آینده</h3>
+                <h3 data-lang-key="processDeploymentTitle">انتشار</h3>
 
-                <p data-lang-key="process4Desc">
-                  پس از راه‌اندازی نیز در کنار شما خواهیم بود تا راهکار توسعه
-                  پیدا کند و همراه رشد کسب‌وکار باقی بماند.
+                <p data-lang-key="processDeploymentDescription">
+                  استقرار و ادامه توسعه در صورت نیاز.
                 </p>
               </div>
             </article>
           </div>
-        </div>
-      </section>
 
-      <div class="section-actions">
-        <a
-          href="process.html"
-          class="btn btn-secondary"
-          data-lang-key="processViewAll"
-        >
-          مشاهده فرآیند همکاری
-        </a>
-      </div>
-      <!-- ======================
-  WHY X WEB DESIGN
-========================= -->
-      <section id="why-us" class="why-us section" aria-labelledby="why-title">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge" data-lang-key="whyBadge">
-              مزیت همکاری با ایکس
-            </div>
-
-            <h2 id="why-title" class="section-title" data-lang-key="whyTitle">
-              فراتر از توسعه نرم‌افزار، یک شریک فناوری برای رشد کسب‌وکار
-            </h2>
-
-            <p class="section-subtitle" data-lang-key="whySubtitle">
-              هدف ما صرفاً تحویل یک پروژه نیست؛ بلکه ایجاد راهکارهایی است که
-              بتوانند در بلندمدت به رشد، بهره‌وری و توسعه کسب‌وکار شما کمک کنند.
-            </p>
-          </div>
-
-          <div class="why-layout">
-            <!-- Featured -->
-            <article
-              class="why-card why-card-featured ui-card reveal"
-              style="--stagger-delay: 50ms"
+          <div class="section-actions">
+            <a
+              href="process.html"
+              class="btn btn-secondary"
+              data-lang-key="processViewFull"
             >
-              <h3 data-lang-key="why1Title">تمرکز بر نتایج واقعی کسب‌وکار</h3>
-
-              <p data-lang-key="why1Desc">
-                هر تصمیم فنی با در نظر گرفتن اهداف تجاری، بهره‌وری و رشد بلندمدت
-                کسب‌وکار شما اتخاذ می‌شود.
-              </p>
-            </article>
-
-            <!-- Featured -->
-            <article
-              class="why-card why-card-featured ui-card reveal"
-              style="--stagger-delay: 100ms"
-            >
-              <h3 data-lang-key="why2Title">معماری آماده رشد</h3>
-
-              <p data-lang-key="why2Desc">
-                راهکارها به گونه‌ای طراحی می‌شوند که بتوانند همراه توسعه آینده
-                کسب‌وکار بدون بازطراحی‌های پرهزینه رشد کنند.
-              </p>
-            </article>
-
-            <!-- Compact -->
-
-            <article
-              class="why-card ui-card reveal"
-              style="--stagger-delay: 150ms"
-            >
-              <h3 data-lang-key="why3Title">ارتباط مستقیم و شفاف</h3>
-
-              <p data-lang-key="why3Desc">
-                فرآیندها، تصمیم‌ها و وضعیت پروژه همواره شفاف و قابل پیگیری
-                هستند.
-              </p>
-            </article>
-
-            <!-- Compact -->
-            <article
-              class="why-card ui-card reveal"
-              style="--stagger-delay: 200ms"
-            >
-              <h3 data-lang-key="why4Title">همراهی فراتر از تحویل پروژه</h3>
-
-              <p data-lang-key="why4Desc">
-                پس از راه‌اندازی نیز در کنار شما می‌مانیم تا راهکار توسعه پیدا
-                کند و ارزش بیشتری ایجاد کند.
-              </p>
-            </article>
+              فرآیند کامل
+            </a>
           </div>
         </div>
       </section>
 
-      <div class="section-actions">
-        <a
-          href="why-us.html"
-          class="btn btn-secondary"
-          data-lang-key="whyViewAll"
-        >
-          چرا ایکس؟
-        </a>
-      </div>
-      <!-- ==================
-FAQ
-===================== -->
-      <section id="faq" class="faq section" aria-labelledby="faq-title">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge" data-lang-key="faqBadge">
-              سوالات متداول
-            </div>
-
-            <h2 id="faq-title" class="section-title" data-lang-key="faqTitle">
-              پاسخ به سوالات پیش از شروع همکاری
-            </h2>
-
-            <p class="section-subtitle" data-lang-key="faqSubtitle">
-              پاسخ به برخی از سوالاتی که معمولاً پیش از انتخاب راهکار و آغاز
-              پروژه مطرح می‌شوند.
-            </p>
-          </div>
-
-          <div class="faq-grid">
-            <!-- FAQ 1 -->
-            <details class="faq-item reveal" style="--stagger-delay: 50ms">
-              <summary>
-                <span data-lang-key="faq1Question">
-                  آیا خدمات ایکس برای کسب‌وکار من مناسب است؟
-                </span>
-                <i class="fa-solid fa-chevron-down faq-chevron"></i>
-              </summary>
-
-              <p data-lang-key="faq1Answer">
-                راهکارهای ما برای طیف گسترده‌ای از کسب‌وکارها، از استارتاپ‌ها و
-                فروشگاه‌های اینترنتی تا شرکت‌ها و سازمان‌ها قابل ارائه هستند. هر
-                پروژه بر اساس نیازهای واقعی همان کسب‌وکار طراحی می‌شود.
-              </p>
-            </details>
-
-            <!-- FAQ 2 -->
-            <details class="faq-item reveal" style="--stagger-delay: 100ms">
-              <summary>
-                <span data-lang-key="faq2Question">
-                  هزینه پروژه چگونه تعیین می‌شود؟
-                </span>
-                <i class="fa-solid fa-chevron-down faq-chevron"></i>
-              </summary>
-
-              <p data-lang-key="faq2Answer">
-                هزینه هر پروژه به اهداف، امکانات موردنیاز، پیچیدگی راهکار و زمان
-                توسعه بستگی دارد. پس از بررسی نیازها، پیشنهاد و برآورد شفاف
-                ارائه می‌شود.
-              </p>
-            </details>
-
-            <!-- FAQ 3 -->
-            <details class="faq-item reveal" style="--stagger-delay: 150ms">
-              <summary>
-                <span data-lang-key="faq3Question">
-                  مدت زمان اجرای پروژه چقدر است؟
-                </span>
-                <i class="fa-solid fa-chevron-down faq-chevron"></i>
-              </summary>
-
-              <p data-lang-key="faq3Answer">
-                زمان اجرا به نوع پروژه و دامنه نیازمندی‌ها بستگی دارد. پس از
-                مرحله تحلیل، برنامه زمانی مشخص و قابل پیگیری ارائه خواهد شد.
-              </p>
-            </details>
-
-            <!-- FAQ 4 -->
-            <details class="faq-item reveal" style="--stagger-delay: 200ms">
-              <summary>
-                <span data-lang-key="faq4Question">
-                  آیا پس از راه‌اندازی پشتیبانی نیز ارائه می‌شود؟
-                </span>
-                <i class="fa-solid fa-chevron-down faq-chevron"></i>
-              </summary>
-
-              <p data-lang-key="faq4Answer">
-                بله. همکاری با تحویل پروژه پایان نمی‌یابد. خدمات پشتیبانی، بهبود
-                و توسعه‌های آینده متناسب با نیاز هر پروژه قابل ارائه است.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-actions">
-        <a href="faq.html" class="btn btn-secondary" data-lang-key="faqViewAll">
-          مشاهده سوالات متداول
-        </a>
-      </div>
-      <!-- =================
-CTA BANNER
-=================== -->
-      <section class="cta-banner section" aria-labelledby="cta-title">
+      <!-- =================================================
+           TRAINING FEATURED OFFERING
+      ================================================== -->
+      <section class="section" aria-labelledby="training-promo-title">
         <div class="container">
           <div class="cta-surface reveal">
             <div class="cta-content">
-              <div class="section-badge" data-lang-key="ctaBadge">
+              <div class="section-badge" data-lang-key="trainingBadge">
+                آموزش تخصصی
+              </div>
+
+              <h2 id="training-promo-title" data-lang-key="trainingTitle">
+                تدریس Java، Spring و Spring Boot
+              </h2>
+
+              <p data-lang-key="trainingDescription">
+                یک مسیر آموزشی تخصصی برای توسعه‌دهندگانی که می‌خواهند Java و
+                Backend را عمیق‌تر یاد بگیرند و با Spring و Spring Boot
+                نرم‌افزار واقعی بسازند.
+              </p>
+
+              <div class="cta-actions">
+                <a
+                  href="training/java-spring-spring-boot.html"
+                  class="btn btn-primary"
+                  data-lang-key="trainingCTA"
+                >
+                  مشاهده صفحه آموزش
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+           FINAL CTA
+      ================================================== -->
+      <section class="cta-banner section" aria-labelledby="home-cta-title">
+        <div class="container">
+          <div class="cta-surface reveal">
+            <div class="cta-content">
+              <div class="section-badge" data-lang-key="finalCtaBadge">
                 شروع همکاری
               </div>
 
-              <h2 id="cta-title" data-lang-key="ctaTitle">
-                برای کسب و کار شما راهکاری ارزشمند می سازیم
+              <h2 id="home-cta-title" data-lang-key="finalCtaTitle">
+                آماده شروع پروژه هستید؟
               </h2>
 
-              <p data-lang-key="ctaDescription">
-                ایده خود را با ما در میان بگذارید. در اولین گفتگو نیازهای پروژه
-                را بررسی می کنیم و بهترین مسیر همکاری را پیشنهاد می دهیم.
+              <p data-lang-key="finalCtaDescription">
+                درباره هدف و نیاز پروژه صحبت کنید تا مسیر مناسب را پیدا کنیم.
               </p>
 
               <div class="cta-actions">
                 <a
                   href="contact.html"
                   class="btn btn-primary"
-                  data-lang-key="ctaPrimaryButton"
+                  data-lang-key="finalCtaStart"
                 >
-                  شروع همکاری
+                  شروع گفتگو
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==================
-CONTACT
-===================== -->
-      <section
-        id="contact"
-        class="contact section"
-        aria-labelledby="contact-title"
-      >
-        <div class="container">
-          <!-- Section Header -->
-          <div class="section-header">
-            <div class="section-badge" data-lang-key="contactBadge">
-              ارتباط با تیم ایکس
-            </div>
-
-            <h2
-              id="contact-title"
-              class="section-title"
-              data-lang-key="contactTitle"
-            >
-              بیایید درباره پروژه شما گفتگو کنیم
-            </h2>
-
-            <p class="section-subtitle" data-lang-key="contactSubtitle">
-              برای شروع همکاری یا طرح پرسش، از طریق اطلاعات زیر با ما در ارتباط
-              باشید.
-            </p>
-          </div>
-
-          <!-- Contact Surface -->
-          <div class="contact-surface reveal">
-            <!-- Left -->
-            <div class="contact-conversation">
-              <h3
-                class="contact-heading"
-                data-lang-key="contactConversationTitle"
-              >
-                شروع همکاری
-              </h3>
-
-              <p
-                class="contact-description"
-                data-lang-key="contactConversationDescription"
-              >
-                برای شروع همکاری و دریافت مشاوره، با ما تماس بگیرید
-              </p>
-
-              <!-- CTA -->
-              <div class="contact-actions">
-                <a
-                  href="tel:+989193661477"
-                  class="btn btn-primary"
-                  data-lang-key="contactButton"
-                >
-                  تماس با ما
-                </a>
-              </div>
-            </div>
-
-            <!-- Right -->
-            <aside
-              class="contact-methods"
-              aria-label="اطلاعات تماس"
-              data-lang-aria="contactInformation"
-            >
-              <div class="contact-method">
-                <span class="contact-label" data-lang-key="contactEmailLabel">
-                  ایمیل
-                </span>
-
-                <a href="mailto:ebrahim.sheyki@gmail.com" class="contact-link">
-                  ebrahim.sheyki@gmail.com
-                </a>
-              </div>
-
-              <div class="contact-method">
-                <span class="contact-label" data-lang-key="contactPhoneLabel">
-                  تلفن
-                </span>
 
                 <a
-                  href="tel:+989193661477"
-                  class="contact-link"
-                  data-bidi="ltr"
+                  href="faq.html"
+                  class="btn btn-secondary"
+                  data-lang-key="finalCtaFaq"
                 >
-                  +98 919 366 1477
+                  سوالات متداول
                 </a>
               </div>
-
-              <div class="contact-method">
-                <span
-                  class="contact-label"
-                  data-lang-key="contactLocationLabel"
-                >
-                  موقعیت
-                </span>
-
-                <span
-                  class="contact-value"
-                  data-lang-key="contactLocationValue"
-                >
-                  تهران، ایران
-                </span>
-              </div>
-
-              <div class="contact-method">
-                <span
-                  class="contact-label"
-                  data-lang-key="contactAvailabilityLabel"
-                >
-                  وضعیت همکاری
-                </span>
-
-                <span
-                  class="contact-value"
-                  data-lang-key="contactAvailabilityValue"
-                >
-                  آماده پذیرش پروژه
-                </span>
-              </div>
-            </aside>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ===================
-FOOTER
-==================== -->
+    <!-- =====================================================
+         SHARED FOOTER
+    ====================================================== -->
     <footer class="footer">
       <div class="container">
         <div class="footer-grid">
-          <!-- BRAND -->
+          <!-- Brand -->
           <div class="footer-brand">
             <a href="/" class="logo" aria-label="طراحی سایت ایکس - صفحه اصلی">
-              <span class="logo-mark" aria-hidden="true">▲</span>
+              <span class="logo-mark" aria-hidden="true"> ▲ </span>
             </a>
           </div>
-          <!--  COMPANY  -->
+
+          <!-- Company -->
           <nav class="footer-links" aria-labelledby="footer-company-title">
             <h2 id="footer-company-title" data-lang-key="footerCompanyTitle">
               شرکت
@@ -1221,7 +964,7 @@ FOOTER
             </a>
           </nav>
 
-          <!-- SOLUTIONS  -->
+          <!-- Solutions -->
           <nav class="footer-links" aria-labelledby="footer-solutions-title">
             <h2
               id="footer-solutions-title"
@@ -1231,7 +974,7 @@ FOOTER
             </h2>
 
             <a href="services.html" data-lang-key="footerSolutionWebsite">
-              طراحی وب سایت
+              طراحی وب‌سایت
             </a>
 
             <a href="services.html" data-lang-key="footerSolutionEcommerce">
@@ -1242,34 +985,46 @@ FOOTER
               href="services.html"
               data-lang-key="footerSolutionCustomSoftware"
             >
-              نرم افزارهای سفارشی
+              نرم‌افزارهای سفارشی
             </a>
 
             <a href="services.html" data-lang-key="footerSolutionEnterprise">
               راهکارهای سازمانی
             </a>
+
+            <a
+              href="training/java-spring-spring-boot.html"
+              data-lang-key="footerCompanyTrainingJava"
+            >
+              آموزش Java و Spring
+            </a>
           </nav>
 
-          <!--  CONTACT  -->
+          <!-- Contact -->
           <address class="footer-contact">
             <h2 data-lang-key="footerContactTitle">ارتباط</h2>
 
-            <a
-              href="mailto:ebrahim.sheyki@gmail.com"
-              class="footer-contact-item"
-            >
-              <i class="fa-regular fa-envelope" aria-hidden="true"> </i>
-              <span> ebrahim.sheyki@gmail.com </span>
+            <a href="tel:+989193661477" class="footer-contact-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+
+              <span dir="ltr"> +98&nbsp;919&nbsp;366&nbsp;1477 </span>
             </a>
 
-            <a href="tel:+989193661477" class="footer-contact-item">
-              <i class="fa-solid fa-phone" aria-hidden="true"> </i>
+            <a
+              href="https://wa.me/989193661477"
+              class="footer-contact-item"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="تماس با ما در WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
 
-              <span dir="ltr"> +98&nbsp;919&nbsp;366&nbsp;1477</span>
+              <span> WhatsApp </span>
             </a>
 
             <div class="footer-contact-item">
-              <i class="fa-solid fa-location-dot" aria-hidden="true"> </i>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+
               <span data-lang-key="footerLocation"> Tehran, Iran </span>
             </div>
 
@@ -1280,7 +1035,7 @@ FOOTER
               aria-label="LinkedIn"
               class="footer-contact-item"
             >
-              <i class="fa-brands fa-linkedin-in" aria-hidden="true"> </i>
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
 
               <span> LinkedIn </span>
             </a>
@@ -1288,7 +1043,7 @@ FOOTER
         </div>
       </div>
 
-      <!--  FOOTER BOTTOM -->
+      <!-- Footer bottom -->
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
           <p class="footer-copyright">
@@ -1307,16 +1062,16 @@ FOOTER
             href="#hero"
             id="backToTop"
             class="footer-back-to-top"
-            data-scroll
             aria-label="بازگشت به بالای صفحه"
             data-lang-aria="backToTop"
           >
-            <i class="fa-solid fa-chevron-up" aria-hidden="true"> </i>
+            <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="js/translations.js" defer></script>
 
     <script src="js/app.js" defer></script>
