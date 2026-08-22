@@ -1,4 +1,4 @@
-name: Deploy Arya Website
+name: Deploy X Website
 
 on:
   push:
