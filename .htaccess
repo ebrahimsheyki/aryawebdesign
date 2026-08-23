@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Force the legacy site root to the default Persian locale.
+RewriteRule ^$ /fa/ [R=301,L]
+RewriteRule ^index\.html$ /fa/ [R=301,L]
+
+# Preserve existing indexed/backlinked page URLs.
+RewriteRule ^services\.html$ /fa/services/ [R=301,L]
+RewriteRule ^process\.html$ /fa/process/ [R=301,L]
+RewriteRule ^why-us\.html$ /fa/why-us/ [R=301,L]
+RewriteRule ^faq\.html$ /fa/faq/ [R=301,L]
+RewriteRule ^contact\.html$ /fa/contact/ [R=301,L]
+RewriteRule ^training/java-spring-spring-boot\.html$ /fa/training/java-spring-spring-boot/ [R=301,L]

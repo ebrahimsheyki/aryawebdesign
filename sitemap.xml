@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://aryawebdesign.ir/</loc>
-  </url>
-
-  <url>
-    <loc>https://aryawebdesign.ir/services.html</loc>
-  </url>
-
-  <url>
-    <loc>https://aryawebdesign.ir/process.html</loc>
-  </url>
-
-  <url>
-    <loc>https://aryawebdesign.ir/why-us.html</loc>
-  </url>
-
-  <url>
-    <loc>https://aryawebdesign.ir/faq.html</loc>
-  </url>
-
-  <url>
-    <loc>https://aryawebdesign.ir/contact.html</loc>
-  </url>
-
-  <url>
-    <loc>https://aryawebdesign.ir/training/java-spring-spring-boot.html</loc>
-  </url>
+  <url><loc>https://aryawebdesign.ir/fa/</loc></url>
+  <url><loc>https://aryawebdesign.ir/en/</loc></url>
+  <url><loc>https://aryawebdesign.ir/fa/services/</loc></url>
+  <url><loc>https://aryawebdesign.ir/en/services/</loc></url>
+  <url><loc>https://aryawebdesign.ir/fa/process/</loc></url>
+  <url><loc>https://aryawebdesign.ir/en/process/</loc></url>
+  <url><loc>https://aryawebdesign.ir/fa/why-us/</loc></url>
+  <url><loc>https://aryawebdesign.ir/en/why-us/</loc></url>
+  <url><loc>https://aryawebdesign.ir/fa/faq/</loc></url>
+  <url><loc>https://aryawebdesign.ir/en/faq/</loc></url>
+  <url><loc>https://aryawebdesign.ir/fa/contact/</loc></url>
+  <url><loc>https://aryawebdesign.ir/en/contact/</loc></url>
+  <url><loc>https://aryawebdesign.ir/fa/training/java-spring-spring-boot/</loc></url>
+  <url><loc>https://aryawebdesign.ir/en/training/java-spring-spring-boot/</loc></url>
 </urlset>
