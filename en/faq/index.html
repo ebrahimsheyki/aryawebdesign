@@ -1,343 +1,553 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html data-theme="dark" dir="ltr" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Answers to common questions about website development, e-commerce, custom software, project pricing, timelines, and support." name="description"/>
-<meta content="X Web Design" name="author"/>
-<meta content="strict-origin-when-cross-origin" name="referrer"/>
-<meta content="#0B1120" name="theme-color"/>
-<title>Frequently Asked Questions | X Web Design</title>
-<link href="https://aryawebdesign.ir/en/faq/" rel="canonical"/><link href="https://aryawebdesign.ir/fa/faq/" hreflang="x-default" rel="alternate"/><link href="https://aryawebdesign.ir/en/faq/" hreflang="en" rel="alternate"/><link href="https://aryawebdesign.ir/fa/faq/" hreflang="fa" rel="alternate"/>
-<!-- Open Graph -->
-<meta content="website" property="og:type"/>
-<meta content="en_US" property="og:locale"/>
-<meta content="Frequently Asked Questions | X Web Design" property="og:title"/>
-<meta content="Answers to common questions about website development, e-commerce, custom software, project pricing, timelines, and support." property="og:description"/>
-<meta content="X Web Design" property="og:site_name"/>
-<meta content="https://aryawebdesign.ir/en/faq/" property="og:url"/>
-<!-- Twitter / X -->
-<meta content="summary" name="twitter:card"/>
-<meta content="Frequently Asked Questions | X Web Design" name="twitter:title"/>
-<meta content="Answers to common questions about website development, e-commerce, custom software, project pricing, timelines, and support." name="twitter:description"/>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
-<!-- Main CSS -->
-<link href="/css/style.css" rel="stylesheet"/>
-<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-<!-- Organization -->
-<!-- WebPage -->
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://aryawebdesign.ir/#organization",
-      "name": "X Web Design",
-      "alternateName": "طراحی سایت ایکس",
-      "url": "https://aryawebdesign.ir/",
-      "email": "mailto:ebrahim.sheyki@gmail.com",
-      "telephone": "+989193661477"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://aryawebdesign.ir/#website",
-      "url": "https://aryawebdesign.ir/",
-      "name": "X Web Design",
-      "publisher": {
-        "@id": "https://aryawebdesign.ir/#organization"
-      },
-      "inLanguage": "en-US"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://aryawebdesign.ir/en/faq/#webpage",
-      "url": "https://aryawebdesign.ir/en/faq/",
-      "name": "Frequently Asked Questions | X Web Design",
-      "description": "Answers to common questions about website development, e-commerce, custom software, project pricing, timelines, and support.",
-      "isPartOf": {
-        "@id": "https://aryawebdesign.ir/#website"
-      },
-      "about": {
-        "@id": "https://aryawebdesign.ir/#organization"
-      },
-      "inLanguage": "en-US"
-    }
-  ]
-}</script></head>
-<body>
-<!-- =====================================================
-         HEADER
-    ====================================================== -->
-<header class="header" id="mainHeader">
-<div aria-hidden="true" class="progress-bar" id="progressBar"></div>
-<div class="header-nav">
-<div class="container">
-<div class="header-inner">
-<a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
-<span aria-hidden="true" class="logo-mark"> ▲ </span>
-</a>
-<nav aria-label="ناوبری اصلی" class="desktop-nav">
-<ul class="desktop-nav-list">
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/services/">Services</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/process/">Our Process</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/why-us/">Why X Web Design</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
-</li>
-<li class="nav-item">
-<a aria-current="page" class="desktop-nav-link" href="/en/faq/">FAQ</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/contact/">Contact</a>
-</li>
-</ul>
-</nav>
-<div class="header-actions">
-<div class="header-controls">
-<button aria-label="Toggle color theme" class="icon-btn theme-toggle" id="themeToggle" type="button">
-<i aria-hidden="true" class="fa-solid fa-sun"></i>
-</button>
-<a aria-label="Switch to Persian" class="icon-btn language-switcher" href="/fa/faq/">
-<i aria-hidden="true" class="fa-solid fa-globe"></i>
-<span class="language-label">FA</span>
-</a>
-</div>
-<a class="btn btn-primary navbar-cta" href="/en/contact/">Start Your Project</a>
-<button aria-controls="mobileMenu" aria-expanded="false" aria-haspopup="dialog" aria-label="Open menu" class="icon-btn menu-toggle" id="menuToggle" type="button">
-<span aria-hidden="true" class="menu-icon">
-<span></span>
-<span></span>
-</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</header>
-<div aria-hidden="true" class="mobile-overlay" id="mobileOverlay"></div>
-<!-- =====================================================
-         MOBILE MENU
-    ====================================================== -->
-<aside aria-hidden="true" aria-labelledby="mobileMenuTitle" aria-modal="true" class="mobile-menu" id="mobileMenu" inert="" role="dialog" tabindex="-1">
-<div class="mobile-menu-content">
-<div class="container">
-<div class="mobile-menu-header">
-<h2 class="visually-hidden" id="mobileMenuTitle">Main navigation</h2>
-<a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
-<span aria-hidden="true" class="logo-mark"> ▲ </span>
-</a>
-<button aria-label="Close menu" class="icon-btn mobile-menu-close" id="mobileMenuClose" type="button">
-<span aria-hidden="true" class="menu-icon">
-<span></span>
-<span></span>
-</span>
-</button>
-</div>
-</div>
-<nav aria-label="ناوبری موبایل" class="mobile-menu-nav">
-<ul class="mobile-menu-list">
-<li>
-<a href="/en/services/">Services</a>
-</li>
-<li>
-<a href="/en/process/">Our Process</a>
-</li>
-<li>
-<a href="/en/why-us/">Why X Web Design</a>
-</li>
-<li>
-<a href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
-</li>
-<li>
-<a aria-current="page" href="/en/faq/">FAQ</a>
-</li>
-<li>
-<a href="/en/contact/">Contact</a>
-</li>
-</ul>
-</nav>
-<div class="mobile-menu-footer">
-<div class="mobile-menu-controls">
-<button aria-label="Toggle color theme" class="icon-btn theme-toggle" id="mobileThemeToggle" type="button">
-<i aria-hidden="true" class="fa-solid fa-sun"></i>
-</button>
-<a aria-label="Switch to Persian" class="icon-btn language-switcher" href="/fa/faq/">
-<i aria-hidden="true" class="fa-solid fa-globe"></i>
-<span class="language-label">FA</span>
-</a>
-</div>
-<a class="btn btn-primary mobile-menu-cta" href="/en/contact/">Start Your Project</a>
-</div>
-</div>
-</aside>
-<!-- =====================================================
-         MAIN
-    ====================================================== -->
-<main id="main-content">
-<!-- FAQ HERO -->
-<section aria-labelledby="faq-page-title" class="section faq-hero">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">FAQ</div>
-<h1 class="section-title" id="faq-page-title">Frequently Asked Questions About Web Design &amp; Software Development</h1>
-<p class="section-subtitle">Clear answers about services, pricing, delivery times, support, and how to start working with X.</p>
-</div>
-</div>
-</section>
-<!-- FAQ -->
-<section aria-labelledby="faq-list-title" class="faq section">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">Common Questions</div>
-<h2 class="section-title" id="faq-list-title">Frequently Asked Questions About X Projects</h2>
-</div>
-<div class="faq-grid">
-<details class="faq-item reveal">
-<summary>
-<span>What services do you provide?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>X provides professional websites, e-commerce, custom software, and enterprise solutions. The right solution is chosen based on real business needs.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>How is project pricing determined?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Project pricing depends on the goal, required features, technical complexity, design, integrations, and delivery time. A single fixed price for every project is therefore not practical.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>How long does a project take?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Delivery time depends on the project type, feature scope, design needs, integrations, and content readiness. A realistic schedule is defined after the initial analysis.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>Do you provide support and development after launch?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Yes. After launch, support, issue resolution, and further development can be provided as the project evolves.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>Can you develop custom software and APIs?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Yes. For projects with specific requirements, we can analyze, design, and develop custom software, backend services, and APIs around business processes.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>What information is needed to start?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Share the project goal, business type, core needs, expected features, and current situation. After an initial review, we will recommend the right path.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>Are websites prepared for SEO?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>The technical structure can follow SEO principles such as appropriate URLs, canonicalization, internal linking, semantic HTML, and crawlability.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>Do you also offer Java, Spring, and Spring Boot training?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Yes. Java, Spring, and Spring Boot training is offered as a separate specialized service. See the training page for more information.</p>
-<a class="faq-link" href="/en/training/java-spring-spring-boot/">View Training</a>
-</details>
-</div>
-</div>
-</section>
-<!-- CTA -->
-<section aria-labelledby="faq-cta-title" class="cta-banner section">
-<div class="container">
-<div class="cta-surface reveal">
-<div class="cta-content">
-<div class="section-badge">Still Have Questions?</div>
-<h2 id="faq-cta-title">Tell Us About Your Project</h2>
-<p>If you did not find your answer, talk directly with X about your needs.</p>
-<div class="cta-actions">
-<a class="btn btn-primary" href="/en/contact/">Contact Us</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- =====================================================
-         SHARED FOOTER
-    ====================================================== -->
-<footer class="footer">
-<div class="container">
-<div class="footer-grid">
-<div class="footer-brand">
-<a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
-<span aria-hidden="true" class="logo-mark"> ▲ </span>
-</a>
-</div>
-<nav aria-labelledby="footer-company-title" class="footer-links">
-<h2 id="footer-company-title">Company</h2>
-<a href="/en/process/">Our Process</a>
-<a href="/en/why-us/">Why X Web Design</a>
-<a aria-current="page" href="/en/faq/">FAQ</a>
-<a href="/en/contact/">Contact Us</a>
-</nav>
-<nav aria-labelledby="footer-solutions-title" class="footer-links">
-<h2 id="footer-solutions-title">Services</h2>
-<a href="/en/services/">Website Development</a>
-<a href="/en/services/">E-commerce</a>
-<a href="/en/services/">Custom Software</a>
-<a href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
-</nav>
-<address class="footer-contact">
-<h2>Contact</h2>
-<a class="footer-contact-item" href="tel:+989193661477">
-<i aria-hidden="true" class="fa-solid fa-phone"></i>
-<span dir="ltr"> +98 919 366 1477 </span>
-</a>
-<a aria-label="تماس در WhatsApp" class="footer-contact-item" href="https://wa.me/989193661477" rel="noopener noreferrer" target="_blank">
-<i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
-<span> WhatsApp </span>
-</a>
-<div class="footer-contact-item">
-<i aria-hidden="true" class="fa-solid fa-location-dot"></i>
-<span> Tehran, Iran </span>
-</div>
-<a aria-label="LinkedIn" class="footer-contact-item" href="https://www.linkedin.com/in/EbrahimSheyki" rel="noopener noreferrer" target="_blank">
-<i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
-<span> LinkedIn </span>
-</a>
-</address>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="container footer-bottom-inner">
-<p class="footer-copyright">
-<span class="footer-copyright-year" data-current-year="" dir="ltr"></span>
-<span class="footer-copyright-text">All rights reserved.</span>
-</p>
-<a aria-label="بازگشت به بالای صفحه" class="footer-back-to-top" href="#main-content" id="backToTop">
-<i aria-hidden="true" class="fa-solid fa-chevron-up"></i>
-</a>
-</div>
-</div>
-</footer>
-<script defer="" src="/js/app.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Answers to common questions about website development, e-commerce, custom software, project pricing, timelines, and support."
+      name="description"
+    />
+    <meta content="X Web Design" name="author" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="#0B1120" name="theme-color" />
+    <title>Frequently Asked Questions | X Web Design</title>
+    <link href="https://aryawebdesign.ir/en/faq/" rel="canonical" />
+    <link href="https://aryawebdesign.ir/fa/faq/" hreflang="x-default" rel="alternate" />
+    <link href="https://aryawebdesign.ir/en/faq/" hreflang="en" rel="alternate" />
+    <link href="https://aryawebdesign.ir/fa/faq/" hreflang="fa" rel="alternate" />
+
+    <!-- Open Graph -->
+    <meta content="website" property="og:type" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="Frequently Asked Questions | X Web Design" property="og:title" />
+    <meta
+      content="Answers to common questions about website development, e-commerce, custom software, project pricing, timelines, and support."
+      property="og:description"
+    />
+    <meta content="X Web Design" property="og:site_name" />
+    <meta content="https://aryawebdesign.ir/en/faq/" property="og:url" />
+
+    <!-- Twitter / X -->
+    <meta content="summary" name="twitter:card" />
+    <meta content="Frequently Asked Questions | X Web Design" name="twitter:title" />
+    <meta
+      content="Answers to common questions about website development, e-commerce, custom software, project pricing, timelines, and support."
+      name="twitter:description"
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/assets/favicon.svg" rel="icon" type="image/svg+xml" />
+
+    <!-- Organization -->
+    <!-- FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://aryawebdesign.ir/#organization",
+            "name": "X Web Design",
+            "alternateName": "طراحی سایت ایکس",
+            "url": "https://aryawebdesign.ir/",
+            "email": "mailto:ebrahim.sheyki@gmail.com",
+            "telephone": "+989193661477"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://aryawebdesign.ir/#website",
+            "url": "https://aryawebdesign.ir/",
+            "name": "X Web Design",
+            "publisher": {
+              "@id": "https://aryawebdesign.ir/#organization"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://aryawebdesign.ir/en/faq/#webpage",
+            "url": "https://aryawebdesign.ir/en/faq/",
+            "name": "Frequently Asked Questions | X Web Design",
+            "description": "Answers to common questions about website development, e-commerce, custom software, project pricing, timelines, and support.",
+            "isPartOf": {
+              "@id": "https://aryawebdesign.ir/#website"
+            },
+            "about": {
+              "@id": "https://aryawebdesign.ir/#organization"
+            },
+            "inLanguage": "en-US",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What services do you provide?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "X provides professional websites, e-commerce, custom software, and enterprise solutions. The right solution is chosen based on real business needs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is project pricing determined?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Project pricing depends on the goal, required features, technical complexity, design, integrations, and delivery time. A single fixed price for every project is therefore not practical."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does a project take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Delivery time depends on the project type, feature scope, design needs, integrations, and content readiness. A realistic schedule is defined after the initial analysis."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you provide support after launch?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. After launch, support, issue resolution, and further development can be provided as the project evolves."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you develop custom software and APIs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. For projects with specific requirements, we can analyze, design, and develop custom software, backend services, and APIs around business processes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What information is needed to start?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Share the project goal, business type, core needs, expected features, and current situation. After an initial review, we will recommend the right path."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are websites prepared for SEO?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The technical structure can follow SEO principles such as appropriate URLs, canonicalization, internal linking, semantic HTML, and crawlability."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer Java, Spring, and Spring Boot training?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Java, Spring, and Spring Boot training is offered as a separate specialized service. See the training page for more information."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="mainHeader">
+      <div aria-hidden="true" class="progress-bar" id="progressBar"></div>
+
+      <div class="header-nav">
+        <div class="container">
+          <div class="header-inner">
+            <!-- Brand -->
+            <a aria-label="X Web Design — Home" class="logo" href="/en/">
+              <span aria-hidden="true" class="logo-mark">▲</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav aria-label="Main navigation" class="desktop-nav">
+              <ul class="desktop-nav-list">
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/services/">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/process/">Our Process</a>
+                </li>
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/why-us/">Why X Web Design</a>
+                </li>
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/training/java-spring-spring-boot/"
+                    >Java &amp; Spring Training</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a aria-current="page" class="desktop-nav-link" href="/en/faq/">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/contact/">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Header actions -->
+            <div class="header-actions">
+              <a class="btn btn-primary navbar-cta" href="/en/contact/">Get Started</a>
+
+              <div class="header-controls">
+                <button
+                  aria-label="Toggle color theme"
+                  class="icon-btn theme-toggle"
+                  id="themeToggle"
+                  type="button"
+                >
+                  <i aria-hidden="true" class="fa-solid fa-sun"></i>
+                </button>
+
+                <a aria-label="Switch to Persian" class="icon-btn language-switcher" href="/fa/">
+                  <i aria-hidden="true" class="fa-solid fa-globe"></i>
+                  <span class="language-label">FA</span>
+                </a>
+              </div>
+
+              <button
+                aria-controls="mobileMenu"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                aria-label="Open menu"
+                class="icon-btn menu-toggle"
+                id="menuToggle"
+                type="button"
+              >
+                <span aria-hidden="true" class="menu-icon">
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div aria-hidden="true" class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Mobile Navigation -->
+    <aside
+      aria-hidden="true"
+      aria-labelledby="mobileMenuTitle"
+      aria-modal="true"
+      class="mobile-menu"
+      id="mobileMenu"
+      inert
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="mobile-menu-content">
+        <div class="container mobile-menu-container">
+          <div class="mobile-menu-header">
+            <h2 class="visually-hidden" id="mobileMenuTitle">Main navigation</h2>
+
+            <a aria-label="X Web Design — Home" class="logo" href="/en/">
+              <span aria-hidden="true" class="logo-mark">▲</span>
+            </a>
+
+            <button
+              aria-label="Close menu"
+              class="icon-btn mobile-menu-close"
+              id="mobileMenuClose"
+              type="button"
+            >
+              <span aria-hidden="true" class="menu-icon">
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <nav aria-label="Mobile navigation" class="mobile-menu-nav">
+          <ul class="mobile-menu-list">
+            <li>
+              <a href="/en/services/">Services</a>
+            </li>
+            <li>
+              <a href="/en/process/">Our Process</a>
+            </li>
+            <li>
+              <a href="/en/why-us/">Why X Web Design</a>
+            </li>
+            <li>
+              <a href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
+            </li>
+            <li>
+              <a aria-current="page" href="/en/faq/">FAQ</a>
+            </li>
+            <li>
+              <a href="/en/contact/">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu-footer">
+          <div class="mobile-menu-controls">
+            <button
+              aria-label="Toggle color theme"
+              class="icon-btn theme-toggle"
+              id="mobileThemeToggle"
+              type="button"
+            >
+              <i aria-hidden="true" class="fa-solid fa-sun"></i>
+            </button>
+
+            <a aria-label="Switch to Persian" class="icon-btn language-switcher" href="/fa/faq/">
+              <i aria-hidden="true" class="fa-solid fa-globe"></i>
+              <span class="language-label">FA</span>
+            </a>
+          </div>
+
+          <a class="btn btn-primary mobile-menu-cta" href="/en/contact/">Start Your Project</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main id="main-content">
+      <!-- FAQ INTRO -->
+      <section aria-labelledby="faq-page-title" class="section page-hero faq-page-hero">
+        <div class="container">
+          <div class="faq-page-intro">
+            <p class="faq-eyebrow">FAQ</p>
+
+            <h1 class="faq-page-title" id="faq-page-title">Frequently asked questions.</h1>
+
+            <p class="faq-page-description">
+              Clear answers about services, pricing, delivery, support, and working with X.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq section">
+        <div class="container">
+          <div class="faq-grid">
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>What services do you provide?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+              <p>
+                X provides professional websites, e-commerce, custom software, and enterprise
+                solutions. The right solution is chosen based on real business needs.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>How is project pricing determined?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+              <p>
+                Project pricing depends on the goal, required features, technical complexity,
+                design, integrations, and delivery time. A single fixed price for every project is
+                therefore not practical.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>How long does a project take?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+              <p>
+                Delivery time depends on the project type, feature scope, design needs,
+                integrations, and content readiness. A realistic schedule is defined after the
+                initial analysis.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>Do you provide support after launch?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+              <p>
+                Yes. After launch, support, issue resolution, and further development can be
+                provided as the project evolves.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>Can you develop custom software and APIs?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+              <p>
+                Yes. For projects with specific requirements, we can analyze, design, and develop
+                custom software, backend services, and APIs around business processes.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>What information is needed to start?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+              <p>
+                Share the project goal, business type, core needs, expected features, and current
+                situation. After an initial review, we will recommend the right path.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>Are websites prepared for SEO?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+              <p>
+                The technical structure can follow SEO principles such as appropriate URLs,
+                canonicalization, internal linking, semantic HTML, and crawlability.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>Do you offer Java, Spring, and Spring Boot training?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+              <p>
+                Yes. Java, Spring, and Spring Boot training is offered as a separate specialized
+                service. See the training page for more information.
+              </p>
+              <a class="faq-link" href="/en/training/java-spring-spring-boot/">
+                View Java &amp; Spring Training
+              </a>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section aria-labelledby="faq-cta-title" class="cta-banner section">
+        <div class="container">
+          <div class="cta-surface" data-reveal-item>
+            <div class="cta-content">
+              <p class="section-badge">Still have questions?</p>
+
+              <h2 id="faq-cta-title">Talk to X.</h2>
+
+              <p>Didn't find the answer you need? Contact us directly.</p>
+
+              <div class="cta-actions">
+                <a class="btn btn-primary" href="/en/contact/">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a aria-label="X Web Design — Home" class="logo" href="/en/">
+              <span aria-hidden="true" class="logo-mark">▲</span>
+            </a>
+          </div>
+
+          <!-- Company -->
+          <nav aria-labelledby="footer-company-title" class="footer-links">
+            <h2 id="footer-company-title">Company</h2>
+            <a href="/en/process/">Our Process</a>
+            <a href="/en/why-us/">Why X Web Design</a>
+            <a aria-current="page" href="/en/faq/">FAQ</a>
+            <a href="/en/contact/">Contact Us</a>
+          </nav>
+
+          <!-- Services -->
+          <nav aria-labelledby="footer-solutions-title" class="footer-links">
+            <h2 id="footer-solutions-title">Services</h2>
+            <a href="/en/services/">Website Development</a>
+            <a href="/en/services/">E-commerce</a>
+            <a href="/en/services/">Custom Software</a>
+            <a href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
+          </nav>
+
+          <!-- Contact -->
+          <address class="footer-contact">
+            <h2>Contact</h2>
+
+            <a class="footer-contact-item" href="tel:+989193661477">
+              <i aria-hidden="true" class="fa-solid fa-phone"></i>
+              <span dir="ltr">+98 919 366 1477</span>
+            </a>
+
+            <a
+              aria-label="Contact us on WhatsApp"
+              class="footer-contact-item"
+              href="https://wa.me/989193661477"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+
+            <div class="footer-contact-item">
+              <i aria-hidden="true" class="fa-solid fa-location-dot"></i>
+              <span>Tehran, Iran</span>
+            </div>
+
+            <a
+              aria-label="LinkedIn"
+              class="footer-contact-item"
+              href="https://www.linkedin.com/in/EbrahimSheyki"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p class="footer-copyright">
+            <span class="footer-copyright-year" data-current-year="" dir="ltr"></span>
+            <span class="footer-copyright-text">All rights reserved.</span>
+          </p>
+
+          <a
+            aria-label="Back to top"
+            class="footer-back-to-top"
+            href="#main-content"
+            id="backToTop"
+          >
+            <i aria-hidden="true" class="fa-solid fa-chevron-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script defer="" src="/js/app.js"></script>
+  </body>
 </html>

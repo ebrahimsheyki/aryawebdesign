@@ -5,14 +5,14 @@
  *
  * Architecture:
  * - HTML owns localized content and navigation.
- * - CSS owns presentation.
+ * - CSS owns presentation and animation.
  * - JavaScript owns progressive enhancement and UI behavior.
- * - Language selection is URL-based; no runtime translation engine is used.
+ * - Language selection is URL-based.
+ * - Shared reveal behavior uses data-reveal-* attributes.
  */
 
 const CONFIG = Object.freeze({
   headerScrolled: 16,
-  revealThreshold: 0.15,
   backToTopOffset: 320,
   scrollTargetOffset: 8,
   desktopBreakpoint: 1024,
@@ -22,21 +22,31 @@ const CONFIG = Object.freeze({
 const DOM = Object.freeze({
   html: document.documentElement,
   body: document.body,
+
   header: document.getElementById("mainHeader"),
   progressBar: document.getElementById("progressBar"),
+
   navItems: document.querySelectorAll(".desktop-nav-link"),
+
   themeToggles: document.querySelectorAll(".theme-toggle"),
+
   menuToggle: document.getElementById("menuToggle"),
   mobileMenu: document.getElementById("mobileMenu"),
   mobileMenuClose: document.getElementById("mobileMenuClose"),
   mobileOverlay: document.getElementById("mobileOverlay"),
+
   backToTop: document.getElementById("backToTop"),
+
   faqItems: document.querySelectorAll(".faq-item"),
-  revealItems: document.querySelectorAll(".reveal"),
+
   pageLinks: document.querySelectorAll('a[href^="#"]:not(#backToTop)'),
-  sections: document.querySelectorAll("#services, #process, #why-us, #contact"),
+
   mobileMenuLinks: document.querySelectorAll("#mobileMenu a"),
 });
+
+/* ==========================================================================
+   STORAGE
+   ========================================================================== */
 
 const Storage = Object.freeze({
   get(key, fallback = null) {
@@ -56,6 +66,10 @@ const Storage = Object.freeze({
   },
 });
 
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+
 const Utils = Object.freeze({
   prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -65,8 +79,17 @@ const Utils = Object.freeze({
     return DOM.header?.getBoundingClientRect().height ?? 0;
   },
 
+  getLanguage() {
+    return DOM.html.lang === "en" ? "en" : "fa";
+  },
+
+  normalizePath(pathname) {
+    const normalized = pathname.replace(/\/+$/, "");
+    return normalized || "/";
+  },
+
   scrollTo(target) {
-    if (!target) return;
+    if (!(target instanceof HTMLElement)) return;
 
     const targetTop =
       window.scrollY +
@@ -90,12 +113,18 @@ const Utils = Object.freeze({
   },
 });
 
+/* ==========================================================================
+   THEME
+   ========================================================================== */
+
 const ThemeController = {
   init() {
-    this.apply(Storage.get(CONFIG.themeStorageKey, "dark"));
+    this.apply(Storage.get(CONFIG.themeStorageKey, "dark"), false);
 
     DOM.themeToggles.forEach((button) => {
-      button.addEventListener("click", () => this.toggle());
+      button.addEventListener("click", () => {
+        this.toggle();
+      });
     });
   },
 
@@ -107,17 +136,21 @@ const ThemeController = {
     this.apply(this.current() === "dark" ? "light" : "dark");
   },
 
-  apply(theme) {
+  apply(theme, persist = true) {
     const normalizedTheme = theme === "light" ? "light" : "dark";
 
     DOM.html.dataset.theme = normalizedTheme;
-    Storage.set(CONFIG.themeStorageKey, normalizedTheme);
+
+    if (persist) {
+      Storage.set(CONFIG.themeStorageKey, normalizedTheme);
+    }
+
     this.updateControls(normalizedTheme);
   },
 
   updateControls(theme) {
     const isDark = theme === "dark";
-    const language = DOM.html.lang === "en" ? "en" : "fa";
+    const language = Utils.getLanguage();
 
     DOM.themeToggles.forEach((button) => {
       const icon = button.querySelector("i");
@@ -140,14 +173,21 @@ const ThemeController = {
   },
 };
 
+/* ==========================================================================
+   HERO DESCRIPTION
+   ========================================================================== */
+
 const HeroDescriptionController = {
   element: null,
   textElement: null,
+
   mediaQuery: null,
   reducedMotionQuery: null,
+
   desktopDescription: "",
   sentences: [],
   currentIndex: 0,
+
   animationFrameId: null,
   timeoutId: null,
 
@@ -155,44 +195,51 @@ const HeroDescriptionController = {
     mobileBreakpoint: 768,
     scrambleDuration: 1000,
     holdDuration: 2800,
-    latinCharacters:
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+
+    latinCharacters: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+
     numberCharacters: "0123456789",
-    persianCharacters:
-      "ابتثجحخدذرزسشصضطظعغفقکگلمنوهی",
+
+    persianCharacters: "ابتثجحخدذرزسشصضطظعغفقکگلمنوهی",
+
     symbols: "!@#$%&*+=?<>",
+
     staticCharacters: " \u00A0.,!?،؛:-–—()[]{}«»/\\",
   }),
 
   init() {
     this.element = document.querySelector(".hero-description");
-    this.textElement = this.element?.querySelector(
-      ".hero-description-text",
-    );
 
-    if (!this.element || !this.textElement) return;
+    this.textElement = this.element?.querySelector(".hero-description-text");
+
+    if (!this.element || !this.textElement) {
+      return;
+    }
 
     this.desktopDescription = this.element.dataset.heroDesktop ?? "";
 
     try {
       const value = JSON.parse(this.element.dataset.heroSentences ?? "[]");
-      this.sentences = Array.isArray(value) ? value.filter(Boolean) : [];
+
+      this.sentences = Array.isArray(value)
+        ? value.filter((sentence) => typeof sentence === "string" && sentence.length > 0)
+        : [];
     } catch {
       this.sentences = [];
     }
 
-    if (!this.desktopDescription && !this.sentences.length) return;
+    if (!this.desktopDescription && !this.sentences.length) {
+      return;
+    }
 
-    this.mediaQuery = window.matchMedia(
-      `(max-width: ${this.config.mobileBreakpoint}px)`,
-    );
+    this.mediaQuery = window.matchMedia(`(max-width: ${this.config.mobileBreakpoint}px)`);
 
-    this.reducedMotionQuery = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    );
+    this.reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     this.mediaQuery.addEventListener("change", () => this.refresh());
+
     this.reducedMotionQuery.addEventListener("change", () => this.refresh());
+
     document.addEventListener("visibilitychange", () => this.refresh());
 
     this.refresh();
@@ -221,14 +268,19 @@ const HeroDescriptionController = {
     }
 
     const target = this.sentences[this.currentIndex];
-    if (typeof target !== "string" || !target) return;
+
+    if (typeof target !== "string" || !target) {
+      this.renderDesktop();
+      return;
+    }
 
     this.animate(target);
   },
 
   animate(target) {
     this.cancelAnimation();
-    this.element.classList.add("is-scrambling");
+
+    this.element?.classList.add("is-scrambling");
 
     const characters = Array.from(target);
     const startTime = performance.now();
@@ -239,11 +291,10 @@ const HeroDescriptionController = {
         return;
       }
 
-      const progress = Math.min(
-        (now - startTime) / this.config.scrambleDuration,
-        1,
-      );
+      const progress = Math.min((now - startTime) / this.config.scrambleDuration, 1);
+
       const eased = 1 - Math.pow(1 - progress, 3);
+
       const resolvePoint = eased * characters.length;
 
       const output = characters.map((character, index) => {
@@ -258,15 +309,17 @@ const HeroDescriptionController = {
 
       if (progress < 1) {
         this.animationFrameId = requestAnimationFrame(frame);
+
         return;
       }
 
       this.render(target);
-      this.element.classList.remove("is-scrambling");
+
+      this.element?.classList.remove("is-scrambling");
 
       this.timeoutId = window.setTimeout(() => {
-        this.currentIndex =
-          (this.currentIndex + 1) % Math.max(this.sentences.length, 1);
+        this.currentIndex = (this.currentIndex + 1) % this.sentences.length;
+
         this.play();
       }, this.config.holdDuration);
     };
@@ -275,23 +328,30 @@ const HeroDescriptionController = {
   },
 
   render(value) {
-    if (this.textElement) this.textElement.textContent = value;
+    if (this.textElement) {
+      this.textElement.textContent = value;
+    }
   },
 
   renderDesktop() {
     this.element?.classList.remove("is-scrambling");
+
     this.render(this.desktopDescription);
   },
 
   randomCharacter(target) {
     const isPersian = /[\u0600-\u06FF]/.test(target);
+
     const pool = isPersian
       ? this.config.persianCharacters
-      : this.config.latinCharacters +
-        this.config.numberCharacters +
-        this.config.symbols;
+      : this.config.latinCharacters + this.config.numberCharacters + this.config.symbols;
+
+    if (!pool.length) {
+      return target;
+    }
 
     let character;
+
     do {
       character = pool[Math.floor(Math.random() * pool.length)];
     } while (character === target && pool.length > 1);
@@ -304,15 +364,13 @@ const HeroDescriptionController = {
   },
 
   isAnimated() {
-    return (
-      this.mediaQuery?.matches === true &&
-      this.reducedMotionQuery?.matches !== true
-    );
+    return this.mediaQuery?.matches === true && this.reducedMotionQuery?.matches !== true;
   },
 
   cancelAnimation() {
     if (this.animationFrameId !== null) {
       cancelAnimationFrame(this.animationFrameId);
+
       this.animationFrameId = null;
     }
 
@@ -324,9 +382,14 @@ const HeroDescriptionController = {
 
   stop() {
     this.cancelAnimation();
+
     this.element?.classList.remove("is-scrambling");
   },
 };
+
+/* ==========================================================================
+   MOBILE MENU
+   ========================================================================== */
 
 const MobileMenuController = {
   isOpen: false,
@@ -335,16 +398,17 @@ const MobileMenuController = {
   init() {
     if (!DOM.mobileMenu) return;
 
-    if ("inert" in DOM.mobileMenu) {
-      DOM.mobileMenu.inert = true;
-    }
-
     DOM.menuToggle?.addEventListener("click", () => this.toggle());
+
     DOM.mobileMenuClose?.addEventListener("click", () => this.close());
+
     DOM.mobileMenuLinks.forEach((link) => {
-      link.addEventListener("click", () => this.close());
+      link.addEventListener("click", () => {
+        this.close();
+      });
     });
-    DOM.mobileOverlay?.addEventListener("pointerdown", () => this.close());
+
+    DOM.mobileOverlay?.addEventListener("click", () => this.close());
 
     document.addEventListener("keydown", (event) => {
       if (!this.isOpen) return;
@@ -358,56 +422,91 @@ const MobileMenuController = {
       this.trapFocus(event);
     });
 
-    window.addEventListener(
-      "resize",
-      () => {
-        if (window.innerWidth >= CONFIG.desktopBreakpoint) this.close();
-      },
-      { passive: true },
-    );
+    this.desktopQuery = window.matchMedia(`(min-width: ${CONFIG.desktopBreakpoint}px)`);
+
+    this.desktopQuery.addEventListener("change", (event) => {
+      if (event.matches) {
+        this.close({
+          restoreFocus: false,
+        });
+      }
+    });
   },
 
   toggle() {
-    this.isOpen ? this.close() : this.open();
+    if (this.isOpen) {
+      this.close();
+      return;
+    }
+
+    this.open();
   },
 
   open() {
-    if (this.isOpen) return;
+    if (this.isOpen || !DOM.mobileMenu) {
+      return;
+    }
 
-    this.previousFocus = document.activeElement;
+    this.previousFocus =
+      document.activeElement instanceof HTMLElement ? document.activeElement : null;
+
     this.isOpen = true;
 
     DOM.body?.classList.add("menu-open");
-    DOM.menuToggle?.setAttribute("aria-expanded", "true");
-    DOM.mobileMenu?.setAttribute("aria-hidden", "false");
 
-    if (DOM.mobileMenu && "inert" in DOM.mobileMenu) {
-      DOM.mobileMenu.inert = false;
-    }
+    DOM.mobileMenu.setAttribute("aria-hidden", "false");
 
-    requestAnimationFrame(() => DOM.mobileMenuClose?.focus());
+    DOM.mobileMenu.removeAttribute("inert");
+
+    DOM.mobileOverlay?.setAttribute("aria-hidden", "false");
+
+    this.updateTriggerState(true);
+
+    requestAnimationFrame(() => {
+      if (this.isOpen) {
+        DOM.mobileMenuClose?.focus();
+      }
+    });
   },
 
-  close() {
+  close(options = {}) {
+    const { restoreFocus = true } = options;
+
     if (!this.isOpen) return;
 
     this.isOpen = false;
-    DOM.body?.classList.remove("menu-open");
-    DOM.mobileMenu?.setAttribute("aria-hidden", "true");
-    DOM.menuToggle?.setAttribute("aria-expanded", "false");
 
-    if (DOM.mobileMenu && "inert" in DOM.mobileMenu) {
-      DOM.mobileMenu.inert = true;
+    DOM.body?.classList.remove("menu-open");
+
+    DOM.mobileMenu?.setAttribute("aria-hidden", "true");
+
+    DOM.mobileMenu?.setAttribute("inert", "");
+
+    DOM.mobileOverlay?.setAttribute("aria-hidden", "true");
+
+    this.updateTriggerState(false);
+
+    if (restoreFocus) {
+      const focusTarget =
+        this.previousFocus instanceof HTMLElement && document.contains(this.previousFocus)
+          ? this.previousFocus
+          : DOM.menuToggle;
+
+      focusTarget?.focus();
     }
 
-    const focusTarget =
-      this.previousFocus instanceof HTMLElement &&
-      document.contains(this.previousFocus)
-        ? this.previousFocus
-        : DOM.menuToggle;
-
-    focusTarget?.focus();
     this.previousFocus = null;
+  },
+
+  updateTriggerState(open) {
+    const language = Utils.getLanguage();
+
+    DOM.menuToggle?.setAttribute("aria-expanded", String(open));
+
+    DOM.menuToggle?.setAttribute(
+      "aria-label",
+      language === "fa" ? (open ? "بستن منو" : "باز کردن منو") : open ? "Close menu" : "Open menu",
+    );
   },
 
   getFocusableElements() {
@@ -424,16 +523,14 @@ const MobileMenuController = {
           '[tabindex]:not([tabindex="-1"])',
         ].join(","),
       ),
-    ).filter(
-      (element) =>
-        element instanceof HTMLElement && element.offsetParent !== null,
-    );
+    ).filter((element) => element instanceof HTMLElement && element.getClientRects().length > 0);
   },
 
   trapFocus(event) {
     if (event.key !== "Tab") return;
 
     const focusable = this.getFocusableElements();
+
     if (!focusable.length) return;
 
     const first = focusable[0];
@@ -449,12 +546,24 @@ const MobileMenuController = {
   },
 };
 
+/* ==========================================================================
+   SCROLL
+   ========================================================================== */
+
 const ScrollController = {
   ticking: false,
 
   init() {
-    window.addEventListener("scroll", () => this.onScroll(), { passive: true });
+    window.addEventListener("scroll", () => this.onScroll(), {
+      passive: true,
+    });
+
     this.update();
+    this.updateActiveLinks();
+
+    window.addEventListener("popstate", () => {
+      this.updateActiveLinks();
+    });
   },
 
   onScroll() {
@@ -472,86 +581,164 @@ const ScrollController = {
     this.updateHeader();
     this.updateProgress();
     this.updateBackToTop();
-    this.updateActiveLinks();
   },
 
   updateHeader() {
-    DOM.header?.classList.toggle(
-      "is-scrolled",
-      window.scrollY > CONFIG.headerScrolled,
-    );
+    DOM.header?.classList.toggle("is-scrolled", window.scrollY > CONFIG.headerScrolled);
   },
 
   updateProgress() {
     if (!DOM.progressBar) return;
 
-    const scrollableHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
 
     const progress =
-      scrollableHeight > 0
-        ? Math.min(Math.max(window.scrollY / scrollableHeight, 0), 1)
-        : 0;
+      scrollableHeight > 0 ? Math.min(Math.max(window.scrollY / scrollableHeight, 0), 1) : 0;
 
     DOM.progressBar.style.transform = `scaleX(${progress})`;
   },
 
   updateBackToTop() {
-    DOM.backToTop?.classList.toggle(
-      "is-visible",
-      window.scrollY > CONFIG.backToTopOffset,
-    );
+    DOM.backToTop?.classList.toggle("is-visible", window.scrollY > CONFIG.backToTopOffset);
   },
 
   updateActiveLinks() {
-    if (!DOM.navItems.length || !DOM.sections.length) return;
+    if (!DOM.navItems.length) return;
 
-    const activationLine = Utils.getHeaderHeight() + 1;
-    let current = "";
-
-    for (const section of DOM.sections) {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= activationLine && rect.bottom > activationLine) {
-        current = section.id;
-        break;
-      }
-    }
+    const currentPath = Utils.normalizePath(window.location.pathname);
 
     DOM.navItems.forEach((link) => {
-      link.classList.toggle(
-        "is-active",
-        link.getAttribute("href") === `#${current}`,
-      );
+      const href = link.getAttribute("href");
+
+      if (!href) return;
+
+      let linkPath;
+
+      try {
+        const url = new URL(href, window.location.origin);
+
+        if (url.origin !== window.location.origin) {
+          link.classList.remove("is-active");
+
+          link.removeAttribute("aria-current");
+
+          return;
+        }
+
+        linkPath = Utils.normalizePath(url.pathname);
+      } catch {
+        link.classList.remove("is-active");
+
+        link.removeAttribute("aria-current");
+
+        return;
+      }
+
+      const isCurrent = linkPath === currentPath;
+
+      link.classList.toggle("is-active", isCurrent);
+
+      if (isCurrent) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
     });
   },
 };
 
-const RevealController = {
-  init() {
-    if (!DOM.revealItems.length) return;
+/* ==========================================================================
+   REVEAL ENGINE
+   ========================================================================== */
 
-    if (
-      Utils.prefersReducedMotion() ||
-      !("IntersectionObserver" in window)
-    ) {
-      DOM.revealItems.forEach((item) => item.classList.add("is-visible"));
+const RevealController = {
+  observer: null,
+  reducedMotionQuery: null,
+
+  config: Object.freeze({
+    root: null,
+    rootMargin: "0px 0px -8% 0px",
+    threshold: 0.12,
+
+    staggerStep: 80,
+    maxStaggerDelay: 480,
+  }),
+
+  init() {
+    const items = document.querySelectorAll("[data-reveal-item]");
+
+    if (!items.length) return;
+
+    this.reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if (this.reducedMotionQuery.matches || !("IntersectionObserver" in window)) {
+      this.showAll(items);
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
+    this.assignDelays(items);
+
+    this.observer = new IntersectionObserver(
+      (entries, observer) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
+          if (!entry.isIntersecting) {
+            return;
+          }
+
           entry.target.classList.add("is-visible");
+
           observer.unobserve(entry.target);
         });
       },
-      { threshold: CONFIG.revealThreshold },
+      {
+        root: this.config.root,
+        rootMargin: this.config.rootMargin,
+        threshold: this.config.threshold,
+      },
     );
 
-    DOM.revealItems.forEach((item) => observer.observe(item));
+    items.forEach((item) => {
+      this.observer.observe(item);
+    });
+  },
+
+  showAll(items) {
+    items.forEach((item) => {
+      item.classList.add("is-visible");
+    });
+  },
+
+  assignDelays(items) {
+    const groups = new Map();
+
+    items.forEach((item) => {
+      const group = item.closest("[data-reveal-group]");
+
+      if (!group) {
+        item.style.setProperty("--reveal-delay", "0ms");
+
+        return;
+      }
+
+      const groupItems = groups.get(group) ?? [];
+
+      groupItems.push(item);
+      groups.set(group, groupItems);
+    });
+
+    groups.forEach((groupItems) => {
+      groupItems.forEach((item, index) => {
+        const delay = Math.min(index * this.config.staggerStep, this.config.maxStaggerDelay);
+
+        item.style.setProperty("--reveal-delay", `${delay}ms`);
+      });
+    });
   },
 };
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
 
 const FAQController = {
   init() {
@@ -560,25 +747,40 @@ const FAQController = {
         if (!item.open) return;
 
         DOM.faqItems.forEach((other) => {
-          if (other !== item) other.open = false;
+          if (other !== item) {
+            other.open = false;
+          }
         });
       });
     });
   },
 };
 
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
 const NavigationController = {
   init() {
     DOM.pageLinks.forEach((link) => {
       link.addEventListener("click", (event) => {
         const href = link.getAttribute("href");
-        if (!href || href === "#") return;
 
-        const target = document.getElementById(href.slice(1));
+        if (!href || href === "#") {
+          return;
+        }
+
+        const targetId = href.slice(1);
+
+        const target = document.getElementById(targetId);
+
         if (!target) return;
 
         event.preventDefault();
-        if (MobileMenuController.isOpen) MobileMenuController.close();
+
+        if (MobileMenuController.isOpen) {
+          MobileMenuController.close();
+        }
 
         Utils.scrollTo(target);
 
@@ -590,27 +792,33 @@ const NavigationController = {
 
     DOM.backToTop?.addEventListener("click", (event) => {
       event.preventDefault();
+
       Utils.scrollToTop();
 
       if (history.replaceState) {
-        history.replaceState(
-          null,
-          "",
-          window.location.pathname + window.location.search,
-        );
+        history.replaceState(null, "", window.location.pathname + window.location.search);
       }
     });
   },
 };
 
+/* ==========================================================================
+   CURRENT YEAR
+   ========================================================================== */
+
 const CurrentYearController = {
   init() {
     const year = new Date().getFullYear();
+
     document.querySelectorAll("[data-current-year]").forEach((element) => {
       element.textContent = `© ${year}`;
     });
   },
 };
+
+/* ==========================================================================
+   APPLICATION
+   ========================================================================== */
 
 const App = {
   init() {
@@ -624,6 +832,10 @@ const App = {
     CurrentYearController.init();
   },
 };
+
+/* ==========================================================================
+   BOOTSTRAP
+   ========================================================================== */
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => App.init(), { once: true });

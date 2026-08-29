@@ -1,509 +1,787 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html data-theme="dark" dir="ltr" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Private Java, Spring, and Spring Boot training with a practical, project-based approach to backend and REST API development." name="description"/>
-<meta content="X Web Design" name="author"/>
-<meta content="strict-origin-when-cross-origin" name="referrer"/>
-<meta content="#0B1120" name="theme-color"/>
-<title>Private Java Training | Java, Spring &amp; Spring Boot</title>
-<link href="https://aryawebdesign.ir/en/training/java-spring-spring-boot/" rel="canonical"/><link href="https://aryawebdesign.ir/fa/training/java-spring-spring-boot/" hreflang="x-default" rel="alternate"/><link href="https://aryawebdesign.ir/en/training/java-spring-spring-boot/" hreflang="en" rel="alternate"/><link href="https://aryawebdesign.ir/fa/training/java-spring-spring-boot/" hreflang="fa" rel="alternate"/>
-<!-- Open Graph -->
-<meta content="website" property="og:type"/>
-<meta content="en_US" property="og:locale"/>
-<meta content="Private Java Training | Java, Spring &amp; Spring Boot" property="og:title"/>
-<meta content="Private Java, Spring, and Spring Boot training with a practical, project-based approach to backend and REST API development." property="og:description"/>
-<meta content="X Web Design" property="og:site_name"/>
-<meta content="https://aryawebdesign.ir/en/training/java-spring-spring-boot/" property="og:url"/>
-<!-- Twitter / X -->
-<meta content="summary" name="twitter:card"/>
-<meta content="Private Java Training | Java, Spring &amp; Spring Boot" name="twitter:title"/>
-<meta content="Private Java, Spring, and Spring Boot training with a practical, project-based approach to backend and REST API development." name="twitter:description"/>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
-<!-- Main CSS -->
-<link href="/css/style.css" rel="stylesheet"/>
-<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-<!-- Organization -->
-<!-- WebPage -->
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://aryawebdesign.ir/#organization",
-      "name": "X Web Design",
-      "alternateName": "طراحی سایت ایکس",
-      "url": "https://aryawebdesign.ir/",
-      "email": "mailto:ebrahim.sheyki@gmail.com",
-      "telephone": "+989193661477"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://aryawebdesign.ir/#website",
-      "url": "https://aryawebdesign.ir/",
-      "name": "X Web Design",
-      "publisher": {
-        "@id": "https://aryawebdesign.ir/#organization"
-      },
-      "inLanguage": "en-US"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://aryawebdesign.ir/en/training/java-spring-spring-boot/#webpage",
-      "url": "https://aryawebdesign.ir/en/training/java-spring-spring-boot/",
-      "name": "Private Java Training | Java, Spring & Spring Boot",
-      "description": "Private Java, Spring, and Spring Boot training with a practical, project-based approach to backend and REST API development.",
-      "isPartOf": {
-        "@id": "https://aryawebdesign.ir/#website"
-      },
-      "about": {
-        "@id": "https://aryawebdesign.ir/#organization"
-      },
-      "inLanguage": "en-US"
-    }
-  ]
-}</script></head>
-<body class="training-page">
-<!-- =====================================================
-         HEADER
-    ====================================================== -->
-<header class="header" id="mainHeader">
-<div aria-hidden="true" class="progress-bar" id="progressBar"></div>
-<div class="header-nav">
-<div class="container">
-<div class="header-inner">
-<a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
-<span aria-hidden="true" class="logo-mark"> ▲ </span>
-</a>
-<nav aria-label="ناوبری اصلی" class="desktop-nav">
-<ul class="desktop-nav-list">
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/services/">Services</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/process/">Our Process</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/why-us/">Why X Web Design</a>
-</li>
-<li class="nav-item">
-<a aria-current="page" class="desktop-nav-link" href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/faq/">FAQ</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/contact/">Contact</a>
-</li>
-</ul>
-</nav>
-<div class="header-actions">
-<div class="header-controls">
-<button aria-label="Toggle color theme" class="icon-btn theme-toggle" id="themeToggle" type="button">
-<i aria-hidden="true" class="fa-solid fa-sun"></i>
-</button>
-<a aria-label="Switch to Persian" class="icon-btn language-switcher" href="/fa/training/java-spring-spring-boot/">
-<i aria-hidden="true" class="fa-solid fa-globe"></i>
-<span class="language-label">FA</span>
-</a>
-</div>
-<a class="btn btn-primary navbar-cta" href="/en/contact/">Start Your Project</a>
-<button aria-controls="mobileMenu" aria-expanded="false" aria-haspopup="dialog" aria-label="Open menu" class="icon-btn menu-toggle" id="menuToggle" type="button">
-<span aria-hidden="true" class="menu-icon">
-<span></span>
-<span></span>
-</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</header>
-<!-- MOBILE OVERLAY -->
-<div aria-hidden="true" class="mobile-overlay" id="mobileOverlay"></div>
-<!-- MOBILE NAVIGATION -->
-<aside aria-hidden="true" aria-labelledby="mobileMenuTitle" aria-modal="true" class="mobile-menu" id="mobileMenu" inert="" role="dialog" tabindex="-1">
-<div class="mobile-menu-content">
-<div class="container">
-<div class="mobile-menu-header">
-<h2 class="visually-hidden" id="mobileMenuTitle">Site navigation</h2>
-<a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
-<span aria-hidden="true" class="logo-mark"> ▲ </span>
-</a>
-<button aria-label="Close menu" class="icon-btn mobile-menu-close" id="mobileMenuClose" type="button">
-<span aria-hidden="true" class="menu-icon">
-<span></span>
-<span></span>
-</span>
-</button>
-</div>
-</div>
-<nav aria-label="ناوبری موبایل" class="mobile-menu-nav">
-<ul class="mobile-menu-list">
-<li>
-<a href="/en/services/">Services</a>
-</li>
-<li>
-<a href="/en/process/">Our Process</a>
-</li>
-<li>
-<a href="/en/why-us/">Why X Web Design</a>
-</li>
-<li>
-<a aria-current="page" href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
-</li>
-<li>
-<a href="/en/faq/">FAQ</a>
-</li>
-<li>
-<a href="/en/contact/">Contact</a>
-</li>
-</ul>
-</nav>
-<div class="mobile-menu-footer">
-<div class="mobile-menu-controls">
-<button aria-label="Toggle color theme" class="icon-btn theme-toggle" id="mobileThemeToggle" type="button">
-<i aria-hidden="true" class="fa-solid fa-sun"></i>
-</button>
-<a aria-label="Switch to Persian" class="icon-btn language-switcher" href="/fa/training/java-spring-spring-boot/">
-<i aria-hidden="true" class="fa-solid fa-globe"></i>
-<span class="language-label">FA</span>
-</a>
-</div>
-<a class="btn btn-primary mobile-menu-cta" href="/en/contact/">Start Your Project</a>
-</div>
-</div>
-</aside>
-<!-- =====================================================
-         MAIN
-    ====================================================== -->
-<main id="main-content">
-<!-- HERO -->
-<section aria-labelledby="training-page-title" class="section training-hero" id="training-hero">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">Private Java Training</div>
-<h1 id="training-page-title">Private Training<span class="java-brand">Java</span>For a Professional Career Path</h1>
-<p class="section-subtitle">Build deep Java skills and learn to create real backend systems and REST APIs with Spring, Spring Boot, Spring Security, JPA, Hibernate, and database technologies.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#training-contact">Request Private Training</a>
-<a class="btn btn-secondary" href="#training-topics-title">View Course Topics</a>
-</div>
-</div>
-</div>
-</section>
-<!-- WHO IS IT FOR -->
-<section aria-labelledby="private-java-title" class="trust section">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">Training Tailored to You</div>
-<h2 class="section-title" id="private-java-title">Who Is Private Java Training For?</h2>
-<p class="section-subtitle">The training path is tailored to your current level, learning goal, and previous experience rather than using one fixed program for everyone.</p>
-</div>
-<div class="trust-pillars">
-<article class="trust-pillar ui-card reveal">
-<div class="trust-icon ui-icon">
-<i aria-hidden="true" class="fa-solid fa-seedling"></i>
-</div>
-<div class="trust-content">
-<h3>Start Learning Java</h3>
-<p>For people who want to learn Java from the fundamentals with a solid understanding of programming concepts.</p>
-</div>
-</article>
-<article class="trust-pillar ui-card reveal">
-<div class="trust-icon ui-icon">
-<i aria-hidden="true" class="fa-solid fa-code"></i>
-</div>
-<div class="trust-content">
-<h3>Strengthen Your Backend Skills</h3>
-<p>For developers who know Java and want to move into backend and API development.</p>
-</div>
-</article>
-<article class="trust-pillar ui-card reveal">
-<div class="trust-icon ui-icon">
-<i aria-hidden="true" class="fa-solid fa-rocket"></i>
-</div>
-<div class="trust-content">
-<h3>Learn Spring Boot</h3>
-<p>For people who want to use Java with Spring and Spring Boot in real projects.</p>
-</div>
-</article>
-</div>
-</div>
-</section>
-<!-- CURRICULUM -->
-<section aria-labelledby="training-topics-title" class="services section">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">Course Topics</div>
-<h2 class="section-title" id="training-topics-title">Java &amp; Spring Course Topics</h2>
-<p class="section-subtitle">The training path starts with Java Core and progresses to backend and API development with Spring and Spring Boot.</p>
-</div>
-<div class="services-grid services-grid--four">
-<article class="service-card featured-service ui-card reveal">
-<div class="service-icon ui-icon">
-<i aria-hidden="true" class="fa-brands fa-java"></i>
-</div>
-<h3>Java Core</h3>
-<p>Java fundamentals and object-oriented programming to build a strong foundation for backend development.</p>
-<ul>
-<li>Java fundamentals</li>
-<li>Object-Oriented Programming</li>
-<li>Collections</li>
-<li>Exception Handling</li>
-<li>Generics</li>
-</ul>
-</article>
-<article class="service-card ui-card reveal">
-<div class="service-icon ui-icon">
-<i aria-hidden="true" class="fa-solid fa-layer-group"></i>
-</div>
-<h3>Spring Framework</h3>
-<p>Understand core Spring concepts and how to use them in backend projects.</p>
-<ul>
-<li>IoC</li>
-<li>Dependency Injection</li>
-<li>Bean</li>
-<li>Configuration</li>
-</ul>
-</article>
-<article class="service-card ui-card reveal">
-<div class="service-icon ui-icon">
-<i aria-hidden="true" class="fa-solid fa-rocket"></i>
-</div>
-<h3>Spring Boot</h3>
-<p>Build applications and backend services with Spring Boot and prepare them for real-world use.</p>
-<ul>
-<li>REST API</li>
-<li>Validation</li>
-<li>Exception Handling</li>
-<li>Application Configuration</li>
-</ul>
-</article>
-<article class="service-card ui-card reveal">
-<div class="service-icon ui-icon">
-<i aria-hidden="true" class="fa-solid fa-server"></i>
-</div>
-<h3>REST APIs &amp; Backend</h3>
-<p>Move from Java and Spring to building real services and scalable backend systems.</p>
-<ul>
-<li>REST API</li>
-<li>Database Integration</li>
-<li>Authentication</li>
-<li>Authorization</li>
-</ul>
-</article>
-</div>
-</div>
-</section>
-<!-- TEACHING METHOD -->
-<section aria-labelledby="training-method-title" class="why-us section">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">Teaching Method</div>
-<h2 class="section-title" id="training-method-title">Training Is More Than Memorizing Syntax</h2>
-<p class="section-subtitle">The goal is to understand, analyze, and implement concepts in real projects.</p>
-</div>
-<div class="why-layout why-layout--four">
-<article class="why-card ui-card reveal">
-<h3>Training Matched to Your Level</h3>
-<p>Topics are tailored to your current knowledge and learning goals.</p>
-</article>
-<article class="why-card ui-card reveal">
-<h3>Project-Based Learning</h3>
-<p>Concepts are reinforced through examples and exercises that can be applied to real projects.</p>
-</article>
-<article class="why-card ui-card reveal">
-<h3>Understand Backend</h3>
-<p>The focus is not only on frameworks; backend and API architecture are taught as well.</p>
-</article>
-<article class="why-card ui-card reveal">
-<h3>Best Practice</h3>
-<p>We also discuss project structure, maintainability, and technical decisions.</p>
-</article>
-</div>
-</div>
-</section>
-<!-- PROJECT PATH -->
-<section aria-labelledby="training-project-title" class="process section">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">Practice &amp; Project</div>
-<h2 class="section-title" id="training-project-title">From Training to Real Software</h2>
-<p class="section-subtitle">The goal is not only to know Java, but to be able to build a real service with it.</p>
-</div>
-<div class="process-timeline">
-<article class="process-step reveal">
-<div class="process-marker">
-<span class="process-number"> 01 </span>
-</div>
-<div class="process-content">
-<h3>Concept</h3>
-<p>Learn and understand the topic.</p>
-</div>
-</article>
-<article class="process-step reveal">
-<div class="process-marker">
-<span class="process-number"> 02 </span>
-</div>
-<div class="process-content">
-<h3>Practice</h3>
-<p>Turn concepts into code.</p>
-</div>
-</article>
-<article class="process-step reveal">
-<div class="process-marker">
-<span class="process-number"> 03 </span>
-</div>
-<div class="process-content">
-<h3>Backend &amp; API</h3>
-<p>Implement a real service.</p>
-</div>
-</article>
-<article class="process-step reveal">
-<div class="process-marker">
-<span class="process-number"> 04 </span>
-</div>
-<div class="process-content">
-<h3>Project</h3>
-<p>Connect the concepts in a complete project.</p>
-</div>
-</article>
-</div>
-</div>
-</section>
-<!-- FAQ -->
-<section aria-labelledby="training-faq-title" class="faq section">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">Training FAQ</div>
-<h2 class="section-title" id="training-faq-title">Frequently Asked Questions About Private Java Training</h2>
-</div>
-<div class="faq-grid">
-<details class="faq-item reveal">
-<summary>
-<span>Do I need to know Java before starting private training?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>No. The path can start from Java fundamentals or move directly into more advanced topics based on your current level.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>Are Spring and Spring Boot included?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Yes. After the required Java fundamentals, Spring and Spring Boot concepts and their use in backend development are covered.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>Are REST APIs and backend development included?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Yes. The path is designed to move from Java into backend development and real API implementation.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>Is the training project-based?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Yes. Training combines examples and practice to turn theory into practical skills for projects close to real-world work.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>What skill levels is private training suitable for?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>The training can start with Java fundamentals or focus on strengthening Java, entering Spring, or backend development with Spring Boot based on your current level.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>Is the training available online?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Yes. Sessions are held online through Google Meet, and the learner can record sessions for review and later study.</p>
-</details>
-<details class="faq-item reveal">
-<summary>
-<span>How much does each private session cost and how long is it?</span>
-<i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
-</summary>
-<p>Each session costs approximately $15 and lasts about 90 minutes.</p>
-</details>
-</div>
-</div>
-</section>
-<!-- FINAL CTA -->
-<section aria-labelledby="training-cta-title" class="cta-banner section" id="training-contact">
-<div class="container">
-<div class="cta-surface reveal">
-<div class="cta-content">
-<div class="section-badge">Private Java Training</div>
-<h2 id="training-cta-title">Ready to Start Learning?</h2>
-<p>Share your current level and learning goal so we can define the right path for learning Java, Spring, and Spring Boot.</p>
-<div class="cta-actions">
-<a class="btn btn-primary" href="/en/contact/">Contact Us About Training</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- =====================================================
-         FOOTER
-    ====================================================== -->
-<footer class="footer">
-<div class="container">
-<div class="footer-grid">
-<div class="footer-brand">
-<a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
-<span aria-hidden="true" class="logo-mark"> ▲ </span>
-</a>
-</div>
-<nav aria-labelledby="footer-company-title" class="footer-links">
-<h2 id="footer-company-title">Company</h2>
-<a href="/en/process/">Our Process</a>
-<a href="/en/why-us/">Why X Web Design</a>
-<a href="/en/faq/">FAQ</a>
-<a href="/en/contact/">Contact Us</a>
-</nav>
-<nav aria-labelledby="footer-solutions-title" class="footer-links">
-<h2 id="footer-solutions-title">Services</h2>
-<a href="/en/services/">Website Development</a>
-<a href="/en/services/">E-commerce Solutions</a>
-<a href="/en/services/">Custom Software</a>
-<a aria-current="page" href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
-</nav>
-<address class="footer-contact">
-<h2>Contact</h2>
-<a class="footer-contact-item" href="tel:+989193661477">
-<i aria-hidden="true" class="fa-solid fa-phone"></i>
-<span dir="ltr"> +98 919 366 1477 </span>
-</a>
-<a aria-label="تماس با ما در WhatsApp" class="footer-contact-item" href="https://wa.me/989193661477" rel="noopener noreferrer" target="_blank">
-<i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
-<span> WhatsApp </span>
-</a>
-<div class="footer-contact-item">
-<i aria-hidden="true" class="fa-solid fa-location-dot"></i>
-<span> Tehran, Iran </span>
-</div>
-<a aria-label="LinkedIn" class="footer-contact-item" href="https://www.linkedin.com/in/EbrahimSheyki" rel="noopener noreferrer" target="_blank">
-<i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
-<span> LinkedIn </span>
-</a>
-</address>
-</div>
-</div>
-<div class="footer-bottom">All rights reserved.</div>
-</footer>
-<!-- JavaScript -->
-<script defer="" src="/js/app.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Private Java, Spring, and Spring Boot training with a practical, project-based approach to backend and REST API development."
+      name="description"
+    />
+    <meta content="X Web Design" name="author" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="#0B1120" name="theme-color" />
+    <title>Private Java Training | Java, Spring &amp; Spring Boot</title>
+
+    <link href="https://aryawebdesign.ir/en/training/java-spring-spring-boot/" rel="canonical" />
+    <link
+      href="https://aryawebdesign.ir/fa/training/java-spring-spring-boot/"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://aryawebdesign.ir/en/training/java-spring-spring-boot/"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://aryawebdesign.ir/fa/training/java-spring-spring-boot/"
+      hreflang="fa"
+      rel="alternate"
+    />
+
+    <!-- Open Graph -->
+    <meta content="website" property="og:type" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="Private Java Training | Java, Spring &amp; Spring Boot" property="og:title" />
+    <meta
+      content="Private Java, Spring, and Spring Boot training with a practical, project-based approach to backend and REST API development."
+      property="og:description"
+    />
+    <meta content="X Web Design" property="og:site_name" />
+    <meta
+      content="https://aryawebdesign.ir/en/training/java-spring-spring-boot/"
+      property="og:url"
+    />
+
+    <!-- Twitter / X -->
+    <meta content="summary" name="twitter:card" />
+    <meta content="Private Java Training | Java, Spring &amp; Spring Boot" name="twitter:title" />
+    <meta
+      content="Private Java, Spring, and Spring Boot training with a practical, project-based approach to backend and REST API development."
+      name="twitter:description"
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/assets/favicon.svg" rel="icon" type="image/svg+xml" />
+
+    <!-- Organization / Course -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://aryawebdesign.ir/#organization",
+            "name": "X Web Design",
+            "alternateName": "طراحی سایت ایکس",
+            "url": "https://aryawebdesign.ir/",
+            "email": "mailto:ebrahim.sheyki@gmail.com",
+            "telephone": "+989193661477"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://aryawebdesign.ir/#website",
+            "url": "https://aryawebdesign.ir/",
+            "name": "X Web Design",
+            "publisher": {
+              "@id": "https://aryawebdesign.ir/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Course",
+            "@id": "https://aryawebdesign.ir/en/training/java-spring-spring-boot/#webpage",
+            "url": "https://aryawebdesign.ir/en/training/java-spring-spring-boot/",
+            "name": "Private Java Training | Java, Spring & Spring Boot",
+            "description": "Private Java, Spring, and Spring Boot training with a practical, project-based approach to backend and REST API development.",
+            "isPartOf": {
+              "@id": "https://aryawebdesign.ir/#website"
+            },
+            "about": {
+              "@id": "https://aryawebdesign.ir/#organization"
+            },
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body class="training-page">
+    <!-- HEADER -->
+    <header class="header" id="mainHeader">
+      <div aria-hidden="true" class="progress-bar" id="progressBar"></div>
+
+      <div class="header-nav">
+        <div class="container">
+          <div class="header-inner">
+            <!-- Brand -->
+            <a aria-label="X Web Design — Home" class="logo" href="/en/">
+              <span aria-hidden="true" class="logo-mark">▲</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav aria-label="Main navigation" class="desktop-nav">
+              <ul class="desktop-nav-list">
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/services/">Services</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/process/">Our Process</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/why-us/">Why X Web Design</a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    aria-current="page"
+                    class="desktop-nav-link"
+                    href="/en/training/java-spring-spring-boot/"
+                  >
+                    Java &amp; Spring Training
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/faq/">FAQ</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/contact/">Contact</a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Header actions -->
+            <div class="header-actions">
+              <a class="btn btn-primary navbar-cta" href="/en/contact/">Get Started</a>
+
+              <div class="header-controls">
+                <button
+                  aria-label="Toggle color theme"
+                  class="icon-btn theme-toggle"
+                  id="themeToggle"
+                  type="button"
+                >
+                  <i aria-hidden="true" class="fa-solid fa-sun"></i>
+                </button>
+
+                <a aria-label="Switch to Persian" class="icon-btn language-switcher" href="/fa/">
+                  <i aria-hidden="true" class="fa-solid fa-globe"></i>
+                  <span class="language-label">FA</span>
+                </a>
+              </div>
+
+              <button
+                aria-controls="mobileMenu"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                aria-label="Open menu"
+                class="icon-btn menu-toggle"
+                id="menuToggle"
+                type="button"
+              >
+                <span aria-hidden="true" class="menu-icon">
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div aria-hidden="true" class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Mobile Navigation -->
+    <aside
+      aria-hidden="true"
+      aria-labelledby="mobileMenuTitle"
+      aria-modal="true"
+      class="mobile-menu"
+      id="mobileMenu"
+      inert
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="mobile-menu-content">
+        <div class="container mobile-menu-container">
+          <div class="mobile-menu-header">
+            <h2 class="visually-hidden" id="mobileMenuTitle">Main navigation</h2>
+
+            <a aria-label="X Web Design — Home" class="logo" href="/en/">
+              <span aria-hidden="true" class="logo-mark">▲</span>
+            </a>
+
+            <button
+              aria-label="Close menu"
+              class="icon-btn mobile-menu-close"
+              id="mobileMenuClose"
+              type="button"
+            >
+              <span aria-hidden="true" class="menu-icon">
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <nav aria-label="Mobile navigation" class="mobile-menu-nav">
+          <ul class="mobile-menu-list">
+            <li>
+              <a href="/en/services/">Services</a>
+            </li>
+
+            <li>
+              <a href="/en/process/">Our Process</a>
+            </li>
+
+            <li>
+              <a href="/en/why-us/">Why X Web Design</a>
+            </li>
+
+            <li>
+              <a aria-current="page" href="/en/training/java-spring-spring-boot/">
+                Java &amp; Spring Training
+              </a>
+            </li>
+
+            <li>
+              <a href="/en/faq/">FAQ</a>
+            </li>
+
+            <li>
+              <a href="/en/contact/">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu-footer">
+          <div class="mobile-menu-controls">
+            <button
+              aria-label="Toggle color theme"
+              class="icon-btn theme-toggle"
+              id="mobileThemeToggle"
+              type="button"
+            >
+              <i aria-hidden="true" class="fa-solid fa-sun"></i>
+            </button>
+
+            <a
+              aria-label="Switch to Persian"
+              class="icon-btn language-switcher"
+              href="/fa/training/java-spring-spring-boot/"
+            >
+              <i aria-hidden="true" class="fa-solid fa-globe"></i>
+              <span class="language-label">FA</span>
+            </a>
+          </div>
+
+          <a class="btn btn-primary mobile-menu-cta" href="/en/contact/"> Start Your Project </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main id="main-content">
+      <!-- TRAINING INTRO -->
+      <section aria-labelledby="training-page-title" class="section page-hero" id="training-hero">
+        <div class="container">
+          <div class="training-page-intro">
+            <p class="training-eyebrow">Private Java Training</p>
+
+            <h1 class="training-page-title" id="training-page-title">
+              Learn Java &amp; build real backend systems.
+            </h1>
+
+            <p class="training-page-description">
+              Private, project-based training in Java, Spring, Spring Boot, Spring Security, JPA,
+              Hibernate, databases, and REST APIs.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#training-contact"> Request Private Training </a>
+
+              <a class="btn btn-secondary" href="#training-topics-title"> View Course Topics </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHO IS IT FOR -->
+      <section aria-labelledby="private-java-title" class="trust section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-badge">Who It's For</p>
+
+            <h2 class="section-title" id="private-java-title">Training built around your level.</h2>
+
+            <p class="section-subtitle">
+              The path adapts to your current knowledge, experience, and learning goal.
+            </p>
+          </div>
+
+          <div class="trust-pillars" data-reveal-group>
+            <article class="trust-pillar ui-card" data-reveal-item>
+              <div class="trust-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-seedling"></i>
+              </div>
+
+              <div class="trust-content">
+                <h3>Start Learning Java</h3>
+
+                <p>Build a strong foundation in Java and core programming concepts.</p>
+              </div>
+            </article>
+
+            <article class="trust-pillar ui-card" data-reveal-item>
+              <div class="trust-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-code"></i>
+              </div>
+
+              <div class="trust-content">
+                <h3>Strengthen Backend Skills</h3>
+
+                <p>Move from Java knowledge into backend and API development.</p>
+              </div>
+            </article>
+
+            <article class="trust-pillar ui-card" data-reveal-item>
+              <div class="trust-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-rocket"></i>
+              </div>
+
+              <div class="trust-content">
+                <h3>Learn Spring Boot</h3>
+
+                <p>Apply Java, Spring, and Spring Boot to real backend projects.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CURRICULUM -->
+      <section aria-labelledby="training-topics-title" class="services section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-badge">Course Topics</p>
+
+            <h2 class="section-title" id="training-topics-title">
+              Java &amp; Spring course topics.
+            </h2>
+
+            <p class="section-subtitle">
+              Start with Java fundamentals, then progress into Spring, Spring Boot, backend
+              development, and REST APIs.
+            </p>
+          </div>
+
+          <div class="services-grid services-grid--four">
+            <article class="service-card ui-card" data-reveal-item>
+              <div class="service-icon ui-icon">
+                <i aria-hidden="true" class="fa-brands fa-java"></i>
+              </div>
+
+              <h2>Java Core</h2>
+
+              <p>
+                Build a strong foundation for backend development with Java fundamentals and
+                object-oriented programming.
+              </p>
+
+              <ul>
+                <li>Java fundamentals</li>
+                <li>Object-Oriented Programming</li>
+                <li>Collections</li>
+                <li>Exception Handling</li>
+                <li>Generics</li>
+              </ul>
+            </article>
+
+            <article class="service-card ui-card" data-reveal-item>
+              <div class="service-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-layer-group"></i>
+              </div>
+
+              <h2>Spring Framework</h2>
+
+              <p>Understand core Spring concepts and apply them in backend projects.</p>
+
+              <ul>
+                <li>IoC</li>
+                <li>Dependency Injection</li>
+                <li>Beans</li>
+                <li>Configuration</li>
+              </ul>
+            </article>
+
+            <article class="service-card ui-card" data-reveal-item>
+              <div class="service-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-rocket"></i>
+              </div>
+
+              <h2>Spring Boot</h2>
+
+              <p>Build applications and backend services with Spring Boot for real-world use.</p>
+
+              <ul>
+                <li>REST API</li>
+                <li>Validation</li>
+                <li>Exception Handling</li>
+                <li>Application Configuration</li>
+              </ul>
+            </article>
+
+            <article class="service-card ui-card" data-reveal-item>
+              <div class="service-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-server"></i>
+              </div>
+
+              <h2>REST APIs &amp; Backend</h2>
+
+              <p>Move from Java and Spring into real services and scalable backend systems.</p>
+
+              <ul>
+                <li>REST API</li>
+                <li>Database Integration</li>
+                <li>Authentication</li>
+                <li>Authorization</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEACHING METHOD -->
+      <section aria-labelledby="training-method-title" class="why-us section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-badge">Teaching Method</p>
+
+            <h2 class="section-title" id="training-method-title">
+              Learn by understanding and building.
+            </h2>
+
+            <p class="section-subtitle">
+              The goal is to understand concepts and apply them to real projects.
+            </p>
+          </div>
+
+          <div class="why-layout why-layout--four">
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Matched to Your Level</h3>
+              <p>Topics are adapted to your current knowledge and learning goals.</p>
+            </article>
+
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Project-Based Learning</h3>
+              <p>Examples and exercises turn concepts into practical skills.</p>
+            </article>
+
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Understand Backend</h3>
+              <p>Learn backend and API architecture, not only framework syntax.</p>
+            </article>
+
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Best Practices</h3>
+              <p>Cover structure, maintainability, and important technical decisions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECT PATH -->
+      <section aria-labelledby="training-project-title" class="process section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-badge">Practice &amp; Project</p>
+
+            <h2 class="section-title" id="training-project-title">
+              From learning to real software.
+            </h2>
+
+            <p class="section-subtitle">
+              The goal is to move from Java knowledge to building a real service.
+            </p>
+          </div>
+
+          <div class="process-timeline">
+            <article class="process-step" data-reveal-item>
+              <div class="process-marker">
+                <span class="process-number">01</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Concept</h3>
+                <p>Learn and understand the topic.</p>
+              </div>
+            </article>
+
+            <article class="process-step" data-reveal-item>
+              <div class="process-marker">
+                <span class="process-number">02</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Practice</h3>
+                <p>Turn concepts into code.</p>
+              </div>
+            </article>
+
+            <article class="process-step" data-reveal-item>
+              <div class="process-marker">
+                <span class="process-number">03</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Backend &amp; API</h3>
+                <p>Implement a real service.</p>
+              </div>
+            </article>
+
+            <article class="process-step" data-reveal-item>
+              <div class="process-marker">
+                <span class="process-number">04</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Project</h3>
+                <p>Connect the concepts in a complete project.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section aria-labelledby="training-faq-title" class="faq section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-badge">Training FAQ</p>
+
+            <h2 class="section-title" id="training-faq-title">
+              Questions about private Java training.
+            </h2>
+          </div>
+
+          <div class="faq-grid" data-reveal-group>
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>Do I need to know Java before starting?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+
+              <p>
+                No. Training can start with Java fundamentals or move directly into more advanced
+                topics based on your current level.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>Are Spring and Spring Boot included?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+
+              <p>
+                Yes. After the required Java fundamentals, Spring and Spring Boot concepts and their
+                use in backend development are covered.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>Are REST APIs and backend development included?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+
+              <p>
+                Yes. The path is designed to move from Java into backend development and real API
+                implementation.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>Is the training project-based?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+
+              <p>
+                Yes. Training combines examples and practice to turn theory into practical skills
+                for projects close to real-world work.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>What skill levels is private training suitable for?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+
+              <p>
+                Training can start with Java fundamentals or focus on strengthening Java, entering
+                Spring, or backend development with Spring Boot based on your level.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>Is the training available online?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+
+              <p>
+                Yes. Sessions are held online through Google Meet, and the learner can record
+                sessions for review and later study.
+              </p>
+            </details>
+
+            <details class="faq-item" data-reveal-item>
+              <summary>
+                <span>How much does each private session cost and how long is it?</span>
+                <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
+              </summary>
+
+              <p>Each session costs approximately $15 and lasts about 90 minutes.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section
+        aria-labelledby="training-cta-title"
+        class="cta-banner section"
+        id="training-contact"
+      >
+        <div class="container">
+          <div class="cta-surface" data-reveal-item>
+            <div class="cta-content">
+              <p class="section-badge">Next step</p>
+
+              <h2 id="training-cta-title">Ready to start learning?</h2>
+
+              <p>
+                Share your current level and learning goal so we can define the right path for Java,
+                Spring, and Spring Boot.
+              </p>
+
+              <div class="cta-actions">
+                <a class="btn btn-primary" href="/en/contact/"> Contact Us About Training </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a aria-label="X Web Design — Home" class="logo" href="/en/">
+              <span aria-hidden="true" class="logo-mark">▲</span>
+            </a>
+          </div>
+
+          <!-- Company -->
+          <nav aria-labelledby="footer-company-title" class="footer-links">
+            <h2 id="footer-company-title">Company</h2>
+
+            <a href="/en/process/">Our Process</a>
+            <a href="/en/why-us/">Why X Web Design</a>
+            <a href="/en/faq/">FAQ</a>
+            <a href="/en/contact/">Contact Us</a>
+          </nav>
+
+          <!-- Services -->
+          <nav aria-labelledby="footer-solutions-title" class="footer-links">
+            <h2 id="footer-solutions-title">Services</h2>
+
+            <a href="/en/services/">Website Development</a>
+            <a href="/en/services/">E-commerce Solutions</a>
+            <a href="/en/services/">Custom Software</a>
+            <a aria-current="page" href="/en/training/java-spring-spring-boot/">
+              Java &amp; Spring Training
+            </a>
+          </nav>
+
+          <!-- Contact -->
+          <address class="footer-contact">
+            <h2>Contact</h2>
+
+            <a class="footer-contact-item" href="tel:+989193661477">
+              <i aria-hidden="true" class="fa-solid fa-phone"></i>
+              <span dir="ltr">+98 919 366 1477</span>
+            </a>
+
+            <a
+              aria-label="Contact us on WhatsApp"
+              class="footer-contact-item"
+              href="https://wa.me/989193661477"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+
+            <div class="footer-contact-item">
+              <i aria-hidden="true" class="fa-solid fa-location-dot"></i>
+              <span>Tehran, Iran</span>
+            </div>
+
+            <a
+              aria-label="LinkedIn"
+              class="footer-contact-item"
+              href="https://www.linkedin.com/in/EbrahimSheyki"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p class="footer-copyright">
+            <span class="footer-copyright-year" data-current-year="" dir="ltr"></span>
+            <span class="footer-copyright-text">All rights reserved.</span>
+          </p>
+
+          <a
+            aria-label="Back to top"
+            class="footer-back-to-top"
+            href="#main-content"
+            id="backToTop"
+          >
+            <i aria-hidden="true" class="fa-solid fa-chevron-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script defer="" src="/js/app.js"></script>
+  </body>
 </html>
