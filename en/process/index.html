@@ -1,382 +1,497 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html data-theme="dark" dir="ltr" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Our process for digital projects, from discovery and solution design through development, deployment, and ongoing support." name="description"/>
-<meta content="X Web Design" name="author"/>
-<meta content="strict-origin-when-cross-origin" name="referrer"/>
-<meta content="#0B1120" name="theme-color"/>
-<title>Web Design &amp; Software Development Process | X Web Design</title>
-<link href="https://aryawebdesign.ir/en/process/" rel="canonical"/><link href="https://aryawebdesign.ir/fa/process/" hreflang="x-default" rel="alternate"/><link href="https://aryawebdesign.ir/en/process/" hreflang="en" rel="alternate"/><link href="https://aryawebdesign.ir/fa/process/" hreflang="fa" rel="alternate"/>
-<!-- Open Graph -->
-<meta content="website" property="og:type"/>
-<meta content="en_US" property="og:locale"/>
-<meta content="Web Design &amp; Software Development Process | X Web Design" property="og:title"/>
-<meta content="Our process for digital projects, from discovery and solution design through development, deployment, and ongoing support." property="og:description"/>
-<meta content="X Web Design" property="og:site_name"/>
-<meta content="https://aryawebdesign.ir/en/process/" property="og:url"/>
-<!-- Twitter / X -->
-<meta content="summary" name="twitter:card"/>
-<meta content="Web Design &amp; Software Development Process | X Web Design" name="twitter:title"/>
-<meta content="Our process for digital projects, from discovery and solution design through development, deployment, and ongoing support." name="twitter:description"/>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
-<!-- Main CSS -->
-<link href="/css/style.css" rel="stylesheet"/>
-<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-<!-- Organization -->
-<!-- WebPage -->
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://aryawebdesign.ir/#organization",
-      "name": "X Web Design",
-      "alternateName": "طراحی سایت ایکس",
-      "url": "https://aryawebdesign.ir/",
-      "email": "mailto:ebrahim.sheyki@gmail.com",
-      "telephone": "+989193661477"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://aryawebdesign.ir/#website",
-      "url": "https://aryawebdesign.ir/",
-      "name": "X Web Design",
-      "publisher": {
-        "@id": "https://aryawebdesign.ir/#organization"
-      },
-      "inLanguage": "en-US"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://aryawebdesign.ir/en/process/#webpage",
-      "url": "https://aryawebdesign.ir/en/process/",
-      "name": "Web Design & Software Development Process | X Web Design",
-      "description": "Our process for digital projects, from discovery and solution design through development, deployment, and ongoing support.",
-      "isPartOf": {
-        "@id": "https://aryawebdesign.ir/#website"
-      },
-      "about": {
-        "@id": "https://aryawebdesign.ir/#organization"
-      },
-      "inLanguage": "en-US"
-    }
-  ]
-}</script></head>
-<body>
-<!-- =====================================================
-         HEADER
-    ====================================================== -->
-<header class="header" id="mainHeader">
-<div aria-hidden="true" class="progress-bar" id="progressBar"></div>
-<div class="header-nav">
-<div class="container">
-<div class="header-inner">
-<!-- Brand -->
-<a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
-<span aria-hidden="true" class="logo-mark"> ▲ </span>
-</a>
-<!-- Desktop Navigation -->
-<nav aria-label="ناوبری اصلی" class="desktop-nav">
-<ul class="desktop-nav-list">
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/services/">Services</a>
-</li>
-<li class="nav-item">
-<a aria-current="page" class="desktop-nav-link" href="/en/process/">Our Process</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/why-us/">Why X Web Design</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/faq/">FAQ</a>
-</li>
-<li class="nav-item">
-<a class="desktop-nav-link" href="/en/contact/">Contact</a>
-</li>
-</ul>
-</nav>
-<!-- Header Actions -->
-<div class="header-actions">
-<div class="header-controls">
-<button aria-label="Toggle color theme" class="icon-btn theme-toggle" id="themeToggle" type="button">
-<i aria-hidden="true" class="fa-solid fa-sun"></i>
-</button>
-<a aria-label="Switch to Persian" class="icon-btn language-switcher" href="/fa/process/">
-<i aria-hidden="true" class="fa-solid fa-globe"></i>
-<span class="language-label">FA</span>
-</a>
-</div>
-<a class="btn btn-primary navbar-cta" href="/en/contact/">Start a Conversation</a>
-<button aria-controls="mobileMenu" aria-expanded="false" aria-haspopup="dialog" aria-label="Open menu" class="icon-btn menu-toggle" id="menuToggle" type="button">
-<span aria-hidden="true" class="menu-icon">
-<span></span>
-<span></span>
-</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</header>
-<!-- Mobile Overlay -->
-<div aria-hidden="true" class="mobile-overlay" id="mobileOverlay"></div>
-<!-- Mobile Navigation -->
-<aside aria-hidden="true" aria-labelledby="mobileMenuTitle" aria-modal="true" class="mobile-menu" id="mobileMenu" inert="" role="dialog" tabindex="-1">
-<div class="mobile-menu-content">
-<div class="container">
-<div class="mobile-menu-header">
-<h2 class="visually-hidden" id="mobileMenuTitle">Site navigation</h2>
-<a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
-<span aria-hidden="true" class="logo-mark"> ▲ </span>
-</a>
-<button aria-label="Close menu" class="icon-btn mobile-menu-close" id="mobileMenuClose" type="button">
-<span aria-hidden="true" class="menu-icon">
-<span></span>
-<span></span>
-</span>
-</button>
-</div>
-</div>
-<nav aria-label="ناوبری موبایل" class="mobile-menu-nav">
-<ul class="mobile-menu-list">
-<li>
-<a href="/en/services/">Services</a>
-</li>
-<li>
-<a aria-current="page" href="/en/process/">Our Process</a>
-</li>
-<li>
-<a href="/en/why-us/">Why X Web Design</a>
-</li>
-<li>
-<a href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
-</li>
-<li>
-<a href="/en/faq/">FAQ</a>
-</li>
-<li>
-<a href="/en/contact/">Contact Us</a>
-</li>
-</ul>
-</nav>
-<div class="mobile-menu-footer">
-<div class="mobile-menu-controls">
-<button aria-label="Toggle color theme" class="icon-btn theme-toggle" id="mobileThemeToggle" type="button">
-<i aria-hidden="true" class="fa-solid fa-sun"></i>
-</button>
-<a aria-label="Switch to Persian" class="icon-btn language-switcher" href="/fa/process/">
-<i aria-hidden="true" class="fa-solid fa-globe"></i>
-<span class="language-label">FA</span>
-</a>
-</div>
-<a class="btn btn-primary mobile-menu-cta" href="/en/contact/">Start a Conversation</a>
-</div>
-</div>
-</aside>
-<!-- =====================================================
-         MAIN
-    ====================================================== -->
-<main id="main-content">
-<!-- Page Introduction -->
-<section aria-labelledby="process-page-title" class="section process-hero">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">Our Process</div>
-<h1 class="section-title" id="process-page-title">Website &amp; Software Development: From Idea to Solution</h1>
-<p class="section-subtitle">Every project follows real business needs—from understanding the problem and designing the solution to development, testing, deployment, and post-launch support.</p>
-</div>
-</div>
-</section>
-<!-- Process -->
-<section aria-labelledby="process-steps-title" class="process section">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">Execution Path</div>
-<h2 class="section-title" id="process-steps-title">The X Web Design Process</h2>
-</div>
-<div class="process-timeline">
-<!-- 01 -->
-<article class="process-step reveal">
-<div class="process-marker">
-<span class="process-number"> 01 </span>
-</div>
-<div class="process-content">
-<h3>Discovery &amp; Analysis</h3>
-<p>We examine business goals, users, core requirements, workflows, and project constraints to define the problem clearly.</p>
-</div>
-</article>
-<!-- 02 -->
-<article class="process-step reveal">
-<div class="process-marker">
-<span class="process-number"> 02 </span>
-</div>
-<div class="process-content">
-<h3>Solution Design</h3>
-<p>We define the product structure, appropriate architecture, priorities, and delivery path around real business needs.</p>
-</div>
-</article>
-<!-- 03 -->
-<article class="process-step reveal">
-<div class="process-marker">
-<span class="process-number"> 03 </span>
-</div>
-<div class="process-content">
-<h3>Design &amp; Development</h3>
-<p>The interface and technical solution are implemented with a focus on user experience, code quality, security, performance, and maintainability.</p>
-</div>
-</article>
-<!-- 04 -->
-<article class="process-step reveal">
-<div class="process-marker">
-<span class="process-number"> 04 </span>
-</div>
-<div class="process-content">
-<h3>Testing &amp; Optimization</h3>
-<p>Core features, page behavior, performance, and important issues are reviewed so the final version is ready for release.</p>
-</div>
-</article>
-<!-- 05 -->
-<article class="process-step reveal">
-<div class="process-marker">
-<span class="process-number"> 05 </span>
-</div>
-<div class="process-content">
-<h3>Deployment</h3>
-<p>The release candidate is deployed to production and its real-world performance is checked after launch.</p>
-</div>
-</article>
-<!-- 06 -->
-<article class="process-step reveal">
-<div class="process-marker">
-<span class="process-number"> 06 </span>
-</div>
-<div class="process-content">
-<h3>Support &amp; Growth</h3>
-<p>After launch, we can continue with issue resolution, product improvements, and new capabilities as the business evolves.</p>
-</div>
-</article>
-</div>
-</div>
-</section>
-<!-- Principles -->
-<section aria-labelledby="process-principles-title" class="trust section">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">Delivery Principles</div>
-<h2 class="section-title" id="process-principles-title">Quality Throughout the Project</h2>
-<p class="section-subtitle">A good process is not only about the order of steps; the quality of decisions matters throughout the project.</p>
-</div>
-<div class="trust-pillars">
-<article class="trust-pillar ui-card reveal">
-<div class="trust-icon ui-icon">
-<i aria-hidden="true" class="fa-solid fa-bullseye"></i>
-</div>
-<div class="trust-content">
-<h3>Transparency</h3>
-<p>Goals, priorities, and project progress should remain clear and easy for you to follow.</p>
-</div>
-</article>
-<article class="trust-pillar ui-card reveal">
-<div class="trust-icon ui-icon">
-<i aria-hidden="true" class="fa-solid fa-shield-halved"></i>
-</div>
-<div class="trust-content">
-<h3>Quality</h3>
-<p>Security, performance, architecture, and maintainability are considered throughout the project.</p>
-</div>
-</article>
-<article class="trust-pillar ui-card reveal">
-<div class="trust-icon ui-icon">
-<i aria-hidden="true" class="fa-solid fa-arrow-trend-up"></i>
-</div>
-<div class="trust-content">
-<h3>Ready to Grow</h3>
-<p>The solution is built for today while leaving room for future growth.</p>
-</div>
-</article>
-</div>
-</div>
-</section>
-<!-- CTA -->
-<section aria-labelledby="process-cta-title" class="cta-banner section">
-<div class="container">
-<div class="cta-surface reveal">
-<div class="cta-content">
-<div class="section-badge">Start Your Project</div>
-<h2 id="process-cta-title">Start Your Project with a Simple Conversation</h2>
-<p>Tell us about your goals, needs, and project context so we can define the right path forward.</p>
-<div class="cta-actions">
-<a class="btn btn-primary" href="/en/contact/">Start a Conversation</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- =====================================================
-         SHARED FOOTER
-    ====================================================== -->
-<footer class="footer">
-<div class="container">
-<div class="footer-grid">
-<!-- Brand -->
-<div class="footer-brand">
-<a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
-<span aria-hidden="true" class="logo-mark"> ▲ </span>
-</a>
-</div>
-<!-- Company -->
-<nav aria-labelledby="footer-company-title" class="footer-links">
-<h2 id="footer-company-title">Company</h2>
-<a aria-current="page" href="/en/process/">Our Process</a>
-<a href="/en/why-us/">Why X Web Design</a>
-<a href="/en/faq/">FAQ</a>
-<a href="/en/contact/">Contact Us</a>
-</nav>
-<!-- Services -->
-<nav aria-labelledby="footer-solutions-title" class="footer-links">
-<h2 id="footer-solutions-title">Services</h2>
-<a href="/en/services/">Website Development</a>
-<a href="/en/services/">E-commerce Solutions</a>
-<a href="/en/services/">Custom Software</a>
-<a href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
-</nav>
-<!-- Contact -->
-<address class="footer-contact">
-<h2>Contact</h2>
-<a class="footer-contact-item" href="tel:+989193661477">
-<i aria-hidden="true" class="fa-solid fa-phone"></i>
-<span dir="ltr"> +98 919 366 1477 </span>
-</a>
-<a aria-label="تماس در WhatsApp" class="footer-contact-item" href="https://wa.me/989193661477" rel="noopener noreferrer" target="_blank">
-<i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
-<span> WhatsApp </span>
-</a>
-<div class="footer-contact-item">
-<i aria-hidden="true" class="fa-solid fa-location-dot"></i>
-<span> Tehran, Iran </span>
-</div>
-<a aria-label="LinkedIn" class="footer-contact-item" href="https://www.linkedin.com/in/EbrahimSheyki" rel="noopener noreferrer" target="_blank">
-<i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
-<span> LinkedIn </span>
-</a>
-</address>
-</div>
-</div>
-<div class="footer-bottom">All rights reserved.</div>
-</footer>
-<!-- JavaScript -->
-<script defer="" src="/js/app.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Our process for digital projects, from discovery and solution design through development, deployment, and ongoing support."
+      name="description"
+    />
+    <meta content="X Web Design" name="author" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="#0B1120" name="theme-color" />
+    <title>Web Design &amp; Software Development Process | X Web Design</title>
+    <link href="https://aryawebdesign.ir/en/process/" rel="canonical" />
+    <link href="https://aryawebdesign.ir/fa/process/" hreflang="x-default" rel="alternate" />
+    <link href="https://aryawebdesign.ir/en/process/" hreflang="en" rel="alternate" />
+    <link href="https://aryawebdesign.ir/fa/process/" hreflang="fa" rel="alternate" />
+    <!-- Open Graph -->
+    <meta content="website" property="og:type" />
+    <meta content="en_US" property="og:locale" />
+    <meta
+      content="Web Design &amp; Software Development Process | X Web Design"
+      property="og:title"
+    />
+    <meta
+      content="Our process for digital projects, from discovery and solution design through development, deployment, and ongoing support."
+      property="og:description"
+    />
+    <meta content="X Web Design" property="og:site_name" />
+    <meta content="https://aryawebdesign.ir/en/process/" property="og:url" />
+    <!-- Twitter / X -->
+    <meta content="summary" name="twitter:card" />
+    <meta
+      content="Web Design &amp; Software Development Process | X Web Design"
+      name="twitter:title"
+    />
+    <meta
+      content="Our process for digital projects, from discovery and solution design through development, deployment, and ongoing support."
+      name="twitter:description"
+    />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Main CSS -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/assets/favicon.svg" rel="icon" type="image/svg+xml" />
+    <!-- Organization -->
+    <!-- WebPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://aryawebdesign.ir/#organization",
+            "name": "X Web Design",
+            "alternateName": "طراحی سایت ایکس",
+            "url": "https://aryawebdesign.ir/",
+            "email": "mailto:ebrahim.sheyki@gmail.com",
+            "telephone": "+989193661477"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://aryawebdesign.ir/#website",
+            "url": "https://aryawebdesign.ir/",
+            "name": "X Web Design",
+            "publisher": {
+              "@id": "https://aryawebdesign.ir/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://aryawebdesign.ir/en/process/#webpage",
+            "url": "https://aryawebdesign.ir/en/process/",
+            "name": "Web Design & Software Development Process | X Web Design",
+            "description": "Our process for digital projects, from discovery and solution design through development, deployment, and ongoing support.",
+            "isPartOf": {
+              "@id": "https://aryawebdesign.ir/#website"
+            },
+            "about": {
+              "@id": "https://aryawebdesign.ir/#organization"
+            },
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="mainHeader">
+      <div aria-hidden="true" class="progress-bar" id="progressBar"></div>
+      <div class="header-nav">
+        <div class="container">
+          <div class="header-inner">
+            <!-- Brand -->
+            <a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
+              <span aria-hidden="true" class="logo-mark"> ▲ </span>
+            </a>
+            <!-- Desktop Navigation -->
+            <nav aria-label="ناوبری اصلی" class="desktop-nav">
+              <ul class="desktop-nav-list">
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/services/">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a aria-current="page" class="desktop-nav-link" href="/en/process/"
+                    >Our Process</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/why-us/">Why X Web Design</a>
+                </li>
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/training/java-spring-spring-boot/"
+                    >Java &amp; Spring Training</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/faq/">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="desktop-nav-link" href="/en/contact/">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Header actions -->
+            <div class="header-actions">
+              <a class="btn btn-primary navbar-cta" href="/en/contact/">Get Started</a>
+
+              <div class="header-controls">
+                <button
+                  aria-label="Toggle color theme"
+                  class="icon-btn theme-toggle"
+                  id="themeToggle"
+                  type="button"
+                >
+                  <i aria-hidden="true" class="fa-solid fa-sun"></i>
+                </button>
+
+                <a aria-label="Switch to Persian" class="icon-btn language-switcher" href="/fa/">
+                  <i aria-hidden="true" class="fa-solid fa-globe"></i>
+                  <span class="language-label">FA</span>
+                </a>
+              </div>
+
+              <button
+                aria-controls="mobileMenu"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                aria-label="Open menu"
+                class="icon-btn menu-toggle"
+                id="menuToggle"
+                type="button"
+              >
+                <span aria-hidden="true" class="menu-icon">
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Mobile Overlay -->
+    <div aria-hidden="true" class="mobile-overlay" id="mobileOverlay"></div>
+    <!-- Mobile Navigation -->
+    <aside
+      aria-hidden="true"
+      aria-labelledby="mobileMenuTitle"
+      aria-modal="true"
+      class="mobile-menu"
+      id="mobileMenu"
+      inert=""
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="mobile-menu-content">
+        <div class="container mobile-menu-container">
+          <div class="mobile-menu-header">
+            <h2 class="visually-hidden" id="mobileMenuTitle">Site navigation</h2>
+            <a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
+              <span aria-hidden="true" class="logo-mark"> ▲ </span>
+            </a>
+            <button
+              aria-label="Close menu"
+              class="icon-btn mobile-menu-close"
+              id="mobileMenuClose"
+              type="button"
+            >
+              <span aria-hidden="true" class="menu-icon">
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <nav aria-label="ناوبری موبایل" class="mobile-menu-nav">
+          <ul class="mobile-menu-list">
+            <li>
+              <a href="/en/services/">Services</a>
+            </li>
+            <li>
+              <a aria-current="page" href="/en/process/">Our Process</a>
+            </li>
+            <li>
+              <a href="/en/why-us/">Why X Web Design</a>
+            </li>
+            <li>
+              <a href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
+            </li>
+            <li>
+              <a href="/en/faq/">FAQ</a>
+            </li>
+            <li>
+              <a href="/en/contact/">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+          <div class="mobile-menu-controls">
+            <button
+              aria-label="Toggle color theme"
+              class="icon-btn theme-toggle"
+              id="mobileThemeToggle"
+              type="button"
+            >
+              <i aria-hidden="true" class="fa-solid fa-sun"></i>
+            </button>
+            <a
+              aria-label="Switch to Persian"
+              class="icon-btn language-switcher"
+              href="/fa/process/"
+            >
+              <i aria-hidden="true" class="fa-solid fa-globe"></i>
+              <span class="language-label">FA</span>
+            </a>
+          </div>
+          <a class="btn btn-primary mobile-menu-cta" href="/en/contact/">Start a Conversation</a>
+        </div>
+      </div>
+    </aside>
+    <!-- MAIN  -->
+    <main id="main-content">
+      <!-- Process -->
+      <section aria-labelledby="process-page-title" class="process section page-hero">
+        <div class="container">
+          <div class="process-page-intro">
+            <p class="process-eyebrow">Process</p>
+
+            <h1 class="process-page-title" id="process-page-title">
+              Website &amp; Software Development: From Idea to Solution
+            </h1>
+
+            <p class="process-page-description">
+              Every project follows real business needs—from understanding the problem and designing
+              the solution to development, testing, deployment, and post-launch support.
+            </p>
+          </div>
+
+          <div class="process-steps-header">
+            <h2 class="section-title" id="process-steps-title">The X Web Design Process</h2>
+          </div>
+
+          <ol class="process-timeline" data-reveal-group>
+            <li class="process-step" data-reveal-item>
+              <div class="process-marker" aria-hidden="true">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <div class="process-content">
+                <h3>Discovery &amp; Analysis</h3>
+                <p>
+                  We examine business goals, users, core requirements, workflows, and project
+                  constraints to define the problem clearly.
+                </p>
+              </div>
+            </li>
+            <li class="process-step" data-reveal-item>
+              <div class="process-marker" aria-hidden="true">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+
+              <div class="process-content">
+                <h3>Solution Design</h3>
+                <p>
+                  We define the product structure, appropriate architecture, priorities, and
+                  delivery path around real business needs.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step" data-reveal-item>
+              <div class="process-marker" aria-hidden="true">
+                <i class="fa-solid fa-code"></i>
+              </div>
+
+              <div class="process-content">
+                <h3>Design &amp; Development</h3>
+                <p>
+                  The interface and technical solution are implemented with a focus on user
+                  experience, code quality, security, performance, and maintainability.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step" data-reveal-item>
+              <div class="process-marker" aria-hidden="true">
+                <i class="fa-solid fa-flask-vial"></i>
+              </div>
+
+              <div class="process-content">
+                <h3>Testing &amp; Optimization</h3>
+                <p>
+                  Core features, page behavior, performance, and important issues are reviewed so
+                  the final version is ready for release.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step" data-reveal-item>
+              <div class="process-marker" aria-hidden="true">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+
+              <div class="process-content">
+                <h3>Deployment</h3>
+                <p>
+                  The release candidate is deployed to production and its real-world performance is
+                  checked after launch.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step" data-reveal-item>
+              <div class="process-marker" aria-hidden="true">
+                <i class="fa-solid fa-gears"></i>
+              </div>
+
+              <div class="process-content">
+                <h3>Support &amp; Growth</h3>
+                <p>
+                  After launch, we can continue with issue resolution, product improvements, and new
+                  capabilities as the business evolves.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Principles -->
+      <section aria-labelledby="process-principles-title" class="trust section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Delivery Principles</div>
+            <h2 class="section-title" id="process-principles-title">
+              Quality Throughout the Project
+            </h2>
+            <p class="section-subtitle">
+              A good process is not only about the order of steps; the quality of decisions matters
+              throughout the project.
+            </p>
+          </div>
+          <div class="trust-pillars">
+            <article class="trust-pillar ui-card" data-reveal-item>
+              <div class="trust-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-bullseye"></i>
+              </div>
+              <div class="trust-content">
+                <h3>Transparency</h3>
+                <p>
+                  Goals, priorities, and project progress should remain clear and easy for you to
+                  follow.
+                </p>
+              </div>
+            </article>
+            <article class="trust-pillar ui-card" data-reveal-item>
+              <div class="trust-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="trust-content">
+                <h3>Quality</h3>
+                <p>
+                  Security, performance, architecture, and maintainability are considered throughout
+                  the project.
+                </p>
+              </div>
+            </article>
+            <article class="trust-pillar ui-card" data-reveal-item>
+              <div class="trust-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-arrow-trend-up"></i>
+              </div>
+              <div class="trust-content">
+                <h3>Ready to Grow</h3>
+                <p>The solution is built for today while leaving room for future growth.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- CTA -->
+      <section aria-labelledby="process-cta-title" class="cta-banner section">
+        <div class="container">
+          <div class="cta-surface" data-reveal-item>
+            <div class="cta-content">
+              <div class="section-badge">Start your project</div>
+              <h2 id="process-cta-title">Start Your Project with a Simple Conversation</h2>
+              <p>
+                Tell us about your goals, needs, and project context so we can define the right path
+                forward.
+              </p>
+              <div class="cta-actions">
+                <a class="btn btn-primary" href="/en/contact/">Start a Conversation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--  SHARED FOOTER  -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a aria-label="طراحی سایت ایکس - صفحه اصلی" class="logo" href="/en/">
+              <span aria-hidden="true" class="logo-mark"> ▲ </span>
+            </a>
+          </div>
+          <!-- Company -->
+          <nav aria-labelledby="footer-company-title" class="footer-links">
+            <h2 id="footer-company-title">Company</h2>
+            <a aria-current="page" href="/en/process/">Our Process</a>
+            <a href="/en/why-us/">Why X Web Design</a>
+            <a href="/en/faq/">FAQ</a>
+            <a href="/en/contact/">Contact Us</a>
+          </nav>
+          <!-- Services -->
+          <nav aria-labelledby="footer-solutions-title" class="footer-links">
+            <h2 id="footer-solutions-title">Services</h2>
+            <a href="/en/services/">Website Development</a>
+            <a href="/en/services/">E-commerce Solutions</a>
+            <a href="/en/services/">Custom Software</a>
+            <a href="/en/training/java-spring-spring-boot/">Java &amp; Spring Training</a>
+          </nav>
+          <!-- Contact -->
+          <address class="footer-contact">
+            <h2>Contact</h2>
+            <a class="footer-contact-item" href="tel:+989193661477">
+              <i aria-hidden="true" class="fa-solid fa-phone"></i>
+              <span dir="ltr"> +98 919 366 1477 </span>
+            </a>
+            <a
+              aria-label="تماس در WhatsApp"
+              class="footer-contact-item"
+              href="https://wa.me/989193661477"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
+              <span> WhatsApp </span>
+            </a>
+            <div class="footer-contact-item">
+              <i aria-hidden="true" class="fa-solid fa-location-dot"></i>
+              <span> Tehran, Iran </span>
+            </div>
+            <a
+              aria-label="LinkedIn"
+              class="footer-contact-item"
+              href="https://www.linkedin.com/in/EbrahimSheyki"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
+              <span> LinkedIn </span>
+            </a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">All rights reserved.</div>
+    </footer>
+    <!-- JavaScript -->
+    <script defer="" src="/js/app.js"></script>
+  </body>
 </html>

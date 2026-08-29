@@ -1,0 +1,25 @@
+{
+  "name": "aryawebdesign",
+  "version": "1.0.0",
+  "description": "Static two-language website for Arya Web Design (X Web Design), implemented with semantic HTML, modern CSS, and vanilla JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebrahimsheyki/aryawebdesign.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ebrahimsheyki/aryawebdesign/issues"
+  },
+  "homepage": "https://github.com/ebrahimsheyki/aryawebdesign#readme",
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}
