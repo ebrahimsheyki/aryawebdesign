@@ -1374,6 +1374,7 @@ body.menu-open .mobile-overlay {
 /* ==========================================================================
    FOOTER
    ========================================================================== */
+
 .footer {
   position: relative;
   margin-block-start: var(--space-15);
@@ -1381,41 +1382,46 @@ body.menu-open .mobile-overlay {
   background: var(--color-bg);
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-10);
-}
-
 .footer-brand {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-5);
-  min-inline-size: 0;
+  justify-content: flex-start;
+
+  margin-block-end: var(--space-10);
+
   direction: ltr;
 }
 
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-3);
-  min-inline-size: 0;
+.footer-logo {
+  inline-size: 2.35rem;
+  block-size: 2.35rem;
+  transform: translateX(1rem);
 }
 
+.footer-logo .logo-mark {
+  font-size: 1.4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-10);
+  max-inline-size: 64rem;
+}
+
+.footer-links,
 .footer-contact {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-3);
   min-inline-size: 0;
   margin: 0;
+  direction: rtl;
 }
 
 .footer-links h2,
 .footer-contact h2 {
-  margin: 0 0 var(--space-4);
+  margin-block-end: var(--space-4);
   color: var(--color-text);
   font-size: 0.95rem;
   font-weight: 600;
@@ -1449,10 +1455,6 @@ body.menu-open .mobile-overlay {
   font-size: var(--fs-small);
   line-height: 1.6;
   text-decoration: none;
-  white-space: nowrap;
-  transition:
-    color var(--duration-fast) var(--ease-standard),
-    transform var(--duration-fast) var(--ease-standard);
 }
 
 .footer-contact-item i {
@@ -1464,7 +1466,6 @@ body.menu-open .mobile-overlay {
 
 .footer-contact-item span {
   min-inline-size: 0;
-  flex: 0 1 auto;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1477,23 +1478,16 @@ body.menu-open .mobile-overlay {
 .footer-bottom-inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-block-size: 5rem;
   padding-block: var(--space-5);
   gap: var(--space-6);
   flex-wrap: wrap;
-  text-align: center;
-}
-
-.footer-bottom p {
-  color: var(--color-text-soft);
-  font-size: 0.875rem;
 }
 
 .footer-copyright {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 0.35rem;
   color: var(--color-text-soft);
   font-size: 0.875rem;
@@ -1519,41 +1513,35 @@ body.menu-open .mobile-overlay {
   }
 }
 
-@media (min-width: 48rem) {
+@media (max-width: 47.999rem) {
   .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: clamp(3rem, 5vw, 5rem);
-  }
-}
-
-@media (min-width: 64rem) {
-  .footer-grid {
-    grid-template-columns:
-      minmax(280px, 1.8fr)
-      repeat(3, minmax(160px, 1fr));
-    align-items: start;
-    column-gap: clamp(3rem, 5vw, 6rem);
-    direction: ltr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: var(--space-3);
+    row-gap: var(--space-6);
   }
 
   .footer-links,
   .footer-contact {
-    direction: rtl;
-  }
-}
-
-@media (max-width: 47.999rem) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-10);
+    min-inline-size: 0;
   }
 
-  .footer-brand {
-    grid-column: 1 / -1;
+  .footer-links a,
+  .footer-contact-item {
+    min-inline-size: 0;
+    white-space: normal;
   }
 
   .footer-bottom-inner {
+    justify-content: center;
     flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-8);
   }
 }
 /* ==========================================================================
