@@ -2173,6 +2173,7 @@ PAGES HERO
 .page-hero {
   padding-block-start: clamp(9rem, 15vw, 12rem);
 }
+
 /* ==========================================================================
    TRAINING JAVA
    ========================================================================== */
@@ -2187,26 +2188,28 @@ PAGES HERO
   color: var(--color-text-muted);
   font-size: var(--fs-small);
   font-weight: 600;
+  line-height: 1.5;
+  text-wrap: balance;
 }
 
 .training-page-title {
-  max-inline-size: 16ch;
+  max-inline-size: 18ch;
   margin-inline: auto;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  line-height: 1.06;
+  line-height: 1.08;
   letter-spacing: -0.04em;
   text-wrap: balance;
 }
 
 .training-page-description {
-  max-inline-size: 56ch;
+  max-inline-size: 58ch;
   margin-block-start: var(--space-5);
   margin-inline: auto;
   color: var(--color-text-muted);
   font-size: clamp(1rem, 1.3vw, 1.125rem);
-  line-height: 1.75;
-  text-wrap: balance;
+  line-height: 1.8;
+  text-wrap: pretty;
 }
 
 .training-hero .hero-actions {
@@ -2217,19 +2220,84 @@ PAGES HERO
   margin-block-start: var(--space-7);
 }
 
+/* --------------------------------------------------------------------------
+   TRAINING SECTION HEADERS
+   -------------------------------------------------------------------------- */
+
+.training-page .section-header {
+  max-inline-size: 60rem;
+  margin-inline: auto;
+}
+
+.training-page .section-header .section-subtitle {
+  max-inline-size: 66ch;
+  margin-inline: auto;
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   TRAINING CARDS — CONSISTENT SIZING
+   -------------------------------------------------------------------------- */
+
+.training-page .trust-pillars,
+.training-page .why-layout--four,
+.training-page .services-grid.services-grid--four {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+.training-page .trust-pillar,
+.training-page .why-card,
+.training-page .service-card {
+  min-inline-size: 0;
+  block-size: 100%;
+}
+
+/* Keep card content vertically consistent. */
+.training-page .trust-pillar,
+.training-page .why-card,
+.training-page .service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------------------------------------------------
+   TRUST / WHO IT'S FOR
+   -------------------------------------------------------------------------- */
+
+.training-page .trust-content {
+  min-inline-size: 0;
+}
+
+.training-page .trust-content h3 {
+  text-wrap: balance;
+}
+
+.training-page .trust-content p {
+  max-inline-size: 42ch;
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   CURRICULUM
+   -------------------------------------------------------------------------- */
+
 .training-page .service-card h2 {
   margin-block-end: var(--space-4);
   font-size: var(--fs-card-title);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.3;
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
 
 .training-page .service-card p {
-  max-inline-size: 44ch;
+  max-inline-size: 48ch;
   color: var(--color-text-muted);
   line-height: 1.8;
+  text-wrap: pretty;
 }
 
 .training-page .service-card ul {
@@ -2241,25 +2309,38 @@ PAGES HERO
   line-height: 1.7;
 }
 
+.training-page .service-card li {
+  min-inline-size: 0;
+  text-wrap: pretty;
+}
+
 .training-page .service-card li::marker {
   color: var(--color-primary);
 }
 
-.training-page .trust-content h3,
-.training-page .why-card h3,
-.training-page .process-content h3 {
+/* --------------------------------------------------------------------------
+   WHY PRIVATE TRAINING / TEACHING METHOD
+   -------------------------------------------------------------------------- */
+
+.training-page .why-card {
+  justify-content: flex-start;
+}
+
+.training-page .why-card h3 {
+  margin-block-end: var(--space-3);
   text-wrap: balance;
 }
 
-.training-page .why-layout--four {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-5);
+.training-page .why-card p {
+  margin-block: 0;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  text-wrap: pretty;
 }
 
-.training-page .why-card {
-  block-size: 100%;
-}
+/* --------------------------------------------------------------------------
+   PROJECT PATH
+   -------------------------------------------------------------------------- */
 
 .training-page .process-timeline {
   inline-size: 100%;
@@ -2273,26 +2354,62 @@ PAGES HERO
   min-inline-size: 0;
 }
 
+.training-page .process-content h3 {
+  text-wrap: balance;
+}
+
+.training-page .process-content p {
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   FAQ
+   -------------------------------------------------------------------------- */
+
 .training-page .faq-grid {
   max-inline-size: 56rem;
+  margin-inline: auto;
 }
 
 .training-page .faq-item summary > span {
   min-inline-size: 0;
+  text-wrap: balance;
 }
+
+.training-page .faq-item p {
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   CTA
+   -------------------------------------------------------------------------- */
 
 .training-page .cta-content {
   max-inline-size: 56rem;
   margin-inline: auto;
 }
 
+.training-page .cta-content h2,
+.training-page .cta-content p {
+  text-wrap: balance;
+}
+
+/* --------------------------------------------------------------------------
+   OTHER
+   -------------------------------------------------------------------------- */
+
 .training-page .java-brand {
   white-space: nowrap;
 }
 
+/* Keep the first content section visually close to the hero. */
 .training-page > main > .trust.section {
   padding-block-start: var(--space-8);
 }
+
+/* --------------------------------------------------------------------------
+   HOVER
+   -------------------------------------------------------------------------- */
 
 @media (hover: hover) {
   .training-page .service-card {
@@ -2305,6 +2422,10 @@ PAGES HERO
     border-color: color-mix(in srgb, var(--color-primary) 28%, var(--color-border));
   }
 }
+
+/* --------------------------------------------------------------------------
+   MOBILE
+   -------------------------------------------------------------------------- */
 
 @media (max-width: 47.99rem) {
   .training-page-intro {
@@ -2332,7 +2453,10 @@ PAGES HERO
     inline-size: 100%;
   }
 
-  .training-page .why-layout--four {
+  .training-page .trust-pillars,
+  .training-page .why-layout--four,
+  .training-page .services-grid.services-grid--four {
+    grid-template-columns: 1fr;
     gap: var(--space-4);
   }
 
@@ -2341,15 +2465,16 @@ PAGES HERO
   }
 }
 
-@media (min-width: 48rem) {
-  .training-page .why-layout--four {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+/* --------------------------------------------------------------------------
+   TABLET + DESKTOP
+   -------------------------------------------------------------------------- */
 
-@media (min-width: 64rem) {
-  .training-page .why-layout--four {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+@media (min-width: 48rem) {
+  .training-page .trust-pillars,
+  .training-page .why-layout--four,
+  .training-page .services-grid.services-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
   }
 }
 /* ==========================================================================
