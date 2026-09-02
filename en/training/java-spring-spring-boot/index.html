@@ -54,7 +54,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
@@ -70,7 +70,7 @@
     <link href="/css/style.css" rel="stylesheet" />
     <link href="/assets/favicon.svg" rel="icon" type="image/svg+xml" />
 
-    <!-- Organization / WebSite / WebPage -->
+    <!-- Organization / Person / WebSite / WebPage -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -85,6 +85,21 @@
             "telephone": "+989193661477"
           },
           {
+            "@type": "Person",
+            "@id": "https://aryawebdesign.ir/en/training/java-spring-spring-boot/#instructor",
+            "name": "Ebrahim Sheyki",
+            "url": "https://aryawebdesign.ir/en/training/java-spring-spring-boot/",
+            "jobTitle": "Senior Java Developer and Private Java Tutor",
+            "image": "https://aryawebdesign.ir/assets/ebrahim-sheyki.webp",
+            "worksFor": {
+              "@id": "https://aryawebdesign.ir/#organization"
+            },
+            "sameAs": [
+              "https://github.com/ebrahimsheyki",
+              "https://www.linkedin.com/in/ebrahim-sheyki/"
+            ]
+          },
+          {
             "@type": "WebSite",
             "@id": "https://aryawebdesign.ir/#website",
             "url": "https://aryawebdesign.ir/",
@@ -92,7 +107,7 @@
             "publisher": {
               "@id": "https://aryawebdesign.ir/#organization"
             },
-            "inLanguage": "en-US"
+            "inLanguage": "en"
           },
           {
             "@type": "WebPage",
@@ -100,13 +115,21 @@
             "url": "https://aryawebdesign.ir/en/training/java-spring-spring-boot/",
             "name": "Private Java Training | Java & Spring | X Web Design",
             "description": "Private Java training online and project-based; learn Java, Spring, Spring Boot, Spring Security, JPA, Hibernate, and REST APIs based on your level and goals.",
+            "author": {
+              "@id": "https://aryawebdesign.ir/en/training/java-spring-spring-boot/#instructor"
+            },
             "isPartOf": {
               "@id": "https://aryawebdesign.ir/#website"
             },
-            "about": {
-              "@id": "https://aryawebdesign.ir/#organization"
-            },
-            "inLanguage": "en-US"
+            "about": [
+              {
+                "@id": "https://aryawebdesign.ir/#organization"
+              },
+              {
+                "@id": "https://aryawebdesign.ir/en/training/java-spring-spring-boot/#instructor"
+              }
+            ],
+            "inLanguage": "en"
           }
         ]
       }
@@ -168,7 +191,7 @@
                     class="desktop-nav-link"
                     href="/en/training/java-spring-spring-boot/"
                   >
-                    Java &amp; Spring Training
+                    Private Java Training
                   </a>
                 </li>
 
@@ -279,7 +302,7 @@
 
             <li>
               <a aria-current="page" href="/en/training/java-spring-spring-boot/">
-                Java &amp; Spring Training
+                Private Java Training
               </a>
             </li>
 
@@ -314,7 +337,9 @@
             </a>
           </div>
 
-          <a class="btn btn-primary mobile-menu-cta" href="/en/contact/">Start Your Project</a>
+          <a class="btn btn-primary mobile-menu-cta" href="/en/contact/">
+            Request Private Training
+          </a>
         </div>
       </div>
     </aside>
@@ -332,15 +357,129 @@
             </h1>
 
             <p class="training-page-description">
-              Private, online, project-based Java training tailored to your level and goals, from
-              Java Core and object-oriented programming to Spring, Spring Boot, Spring Security,
-              JPA, Hibernate, databases, and REST APIs.
+              Private, online, one-to-one Java training tailored to your level and goals, from Java
+              Core and object-oriented programming to Spring, Spring Boot, Spring Security, JPA,
+              Hibernate, databases, and REST APIs. Training is delivered by Ebrahim Sheyki, a Senior
+              Java Developer with 10 years of professional software development experience.
             </p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#training-contact"> Request Private Training </a>
+              <a class="btn btn-primary" href="#training-contact">Request Private Training</a>
 
-              <a class="btn btn-secondary" href="#training-topics-title"> View Course Topics </a>
+              <a class="btn btn-secondary" href="#training-topics-title">View Course Topics</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INSTRUCTOR -->
+      <section aria-labelledby="java-instructor-title" class="section training-instructor">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-badge">Private Java Tutor</p>
+
+            <h2 class="section-title" id="java-instructor-title">
+              Learn Java from a Senior Developer with real-world experience
+            </h2>
+
+            <p class="section-subtitle">
+              Private Java training is delivered by a Senior Java Developer with 10 years of
+              professional software development experience across enterprise, banking-related, and
+              international projects.
+            </p>
+
+            <p class="section-subtitle">
+              Instructor: <strong>Ebrahim Sheyki</strong> — Senior Java Developer and Private Java
+              Tutor
+            </p>
+          </div>
+
+          <figure class="training-instructor-image">
+            <img
+              src="/assets/ebrahim-sheyki.webp"
+              alt="Portrait of Ebrahim Sheyki, private Java tutor"
+              width="640"
+              height="640"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Ebrahim Sheyki, Senior Java Developer and private Java tutor</figcaption>
+          </figure>
+
+          <div class="why-layout why-layout--four">
+            <article class="why-card ui-card">
+              <h3>10 Years of Professional Experience</h3>
+
+              <p>
+                Professional software development experience with a strong focus on Java, backend
+                development, and enterprise software.
+              </p>
+            </article>
+
+            <article class="why-card ui-card">
+              <h3>Enterprise and Banking Experience</h3>
+
+              <p>
+                Experience as a Senior Java Developer with organizations including Top Tours,
+                Caspian, Sadad, and Arisa Group, working on enterprise and banking-related software.
+              </p>
+            </article>
+
+            <article class="why-card ui-card">
+              <h3>International Project Experience</h3>
+
+              <p>
+                Remote international experience as a Java Developer with
+                <strong>Amiri Trading Enterprises</strong> in Oman.
+              </p>
+            </article>
+
+            <article class="why-card ui-card">
+              <h3>Java and Backend Focus</h3>
+
+              <p>
+                Training focuses on Java, Spring, Spring Boot, Spring Security, JPA, Hibernate, REST
+                APIs, and practical backend development skills.
+              </p>
+            </article>
+          </div>
+
+          <div class="section-header">
+            <p class="section-badge">Professional Background</p>
+
+            <p class="section-subtitle">
+              I studied Java, Spring, and Spring Boot at Sharif Institute of Technology, Kish Campus
+              and achieved a 100/100 GPA in the program.
+            </p>
+
+            <p class="section-subtitle">
+              The training can also focus on building practical Java and backend skills for
+              international career opportunities, including European job markets.
+            </p>
+
+            <p class="section-subtitle">
+              My coding approach is inspired by official Oracle documentation and Java standards,
+              with experience across the evolution of Java up to Java 24.
+            </p>
+
+            <p class="section-subtitle">
+              <a href="https://github.com/ebrahimsheyki" rel="noopener noreferrer" target="_blank">
+                View my Java profile and projects on GitHub
+              </a>
+
+              <span aria-hidden="true"> · </span>
+
+              <a
+                href="https://www.linkedin.com/in/ebrahim-sheyki/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View my professional LinkedIn profile
+              </a>
+            </p>
+
+            <div class="cta-actions">
+              <a class="btn btn-primary" href="/en/contact/">Request Private Java Training</a>
             </div>
           </div>
         </div>
@@ -360,7 +499,7 @@
               Training starts with Java Core and programming fundamentals and can progress to
               Spring, Spring Boot, Spring Security, JPA, Hibernate, REST APIs, and backend
               development based on your level and goals. Sessions focus on understanding concepts,
-              problem-solving, coding, and building real projects.
+              problem-solving, and coding.
             </p>
           </div>
         </div>
@@ -435,6 +574,63 @@
         </div>
       </section>
 
+      <!-- LEARNING GOALS -->
+      <section aria-labelledby="java-learning-goals-title" class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-badge">Learning Goals</p>
+
+            <h2 class="section-title" id="java-learning-goals-title">
+              Java training based on your goals
+            </h2>
+
+            <p class="section-subtitle">
+              The training path can change according to your goals, from learning Java from scratch
+              and strengthening programming fundamentals to backend development, Spring Boot,
+              project work, and technical interview preparation.
+            </p>
+          </div>
+
+          <div class="why-layout why-layout--four">
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Learn Java from the Beginning</h3>
+
+              <p>
+                Start with core Java and object-oriented programming and progress step by step
+                toward more advanced topics.
+              </p>
+            </article>
+
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Strengthen Existing Skills</h3>
+
+              <p>
+                Focus on topics that need review or deeper understanding, supported by exercises and
+                code review.
+              </p>
+            </article>
+
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Prepare for Projects and Interviews</h3>
+
+              <p>
+                Practice Java and backend concepts through problem-solving, code reading, coding,
+                and technical scenarios related to projects and interviews.
+              </p>
+            </article>
+
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Move into Backend Development</h3>
+
+              <p>
+                Progress from Java Core to Spring, Spring Boot, REST APIs, databases, and backend
+                security.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- CURRICULUM -->
       <section aria-labelledby="training-topics-title" class="services section">
         <div class="container">
@@ -442,12 +638,13 @@
             <p class="section-badge">Course Topics</p>
 
             <h2 class="section-title" id="training-topics-title">
-              Private Java &amp; Spring training topics
+              Complete Java, Spring, and Backend training topics
             </h2>
 
             <p class="section-subtitle">
-              Topics start with Java Core and can progress to Spring, Spring Boot, Spring Security,
-              JPA, Hibernate, REST APIs, and backend development based on your level and goals.
+              Topics are adapted to the student's level and goals. The learning path can start with
+              Java Core and object-oriented programming and continue through Spring, Spring Boot,
+              Spring Security, JPA, Hibernate, REST APIs, and backend development.
             </p>
           </div>
 
@@ -457,19 +654,25 @@
                 <i aria-hidden="true" class="fa-brands fa-java"></i>
               </div>
 
-              <h2>Java Core</h2>
+              <h3>Java Core &amp; Programming</h3>
 
               <p>
-                Build a strong Java foundation for backend development and object-oriented
-                programming.
+                Learn Java fundamentals and build a strong foundation for backend development and
+                object-oriented programming.
               </p>
 
               <ul>
-                <li>Java fundamentals</li>
-                <li>Object-Oriented Programming</li>
-                <li>Collections &amp; Generics</li>
+                <li>Java syntax, variables, and data types</li>
+                <li>Conditions, loops, and methods</li>
+                <li>Classes and Objects</li>
+                <li>OOP: Encapsulation, Inheritance, Polymorphism, and Abstraction</li>
+                <li>Interfaces and code design fundamentals</li>
+                <li>Collections and Generics</li>
                 <li>Exception Handling</li>
-                <li>Lambda &amp; Stream API</li>
+                <li>Lambda Expressions and Stream API</li>
+                <li>Optional and Date/Time API</li>
+                <li>Multithreading and concurrency fundamentals</li>
+                <li>JVM fundamentals and Java execution</li>
               </ul>
             </article>
 
@@ -478,16 +681,19 @@
                 <i aria-hidden="true" class="fa-solid fa-layer-group"></i>
               </div>
 
-              <h2>Spring Framework</h2>
+              <h3>Spring Framework</h3>
 
-              <p>Understand core Spring concepts and apply them correctly in backend projects.</p>
+              <p>Understand core Spring concepts and use them correctly in backend applications.</p>
 
               <ul>
-                <li>IoC</li>
-                <li>Dependency Injection</li>
-                <li>Beans</li>
-                <li>Configuration</li>
-                <li>Application Context</li>
+                <li>IoC and Dependency Injection</li>
+                <li>Beans and Bean Lifecycle</li>
+                <li>ApplicationContext</li>
+                <li>Component Scanning</li>
+                <li>Configuration and Profiles</li>
+                <li>Dependency Management</li>
+                <li>Spring Components</li>
+                <li>AOP fundamentals</li>
               </ul>
             </article>
 
@@ -496,16 +702,23 @@
                 <i aria-hidden="true" class="fa-solid fa-rocket"></i>
               </div>
 
-              <h2>Spring Boot</h2>
+              <h3>Spring Boot</h3>
 
-              <p>Build backend applications and services with Spring Boot for real-world use.</p>
+              <p>
+                Build backend applications and services with Spring Boot and turn Spring concepts
+                into real applications.
+              </p>
 
               <ul>
-                <li>REST APIs</li>
+                <li>Spring Boot project structure</li>
+                <li>Maven and Gradle</li>
+                <li>Configuration and Profiles</li>
+                <li>REST Controllers and request handling</li>
                 <li>Validation</li>
-                <li>Exception Handling</li>
-                <li>Application Configuration</li>
-                <li>Project Structure</li>
+                <li>Global Exception Handling</li>
+                <li>Logging</li>
+                <li>Testing</li>
+                <li>Actuator and application management</li>
               </ul>
             </article>
 
@@ -514,15 +727,23 @@
                 <i aria-hidden="true" class="fa-solid fa-shield-halved"></i>
               </div>
 
-              <h2>Spring Security</h2>
+              <h3>Spring Security &amp; Authentication</h3>
 
-              <p>Learn backend security concepts and implement authentication and authorization.</p>
+              <p>
+                Learn backend security and implement authentication and authorization in Spring Boot
+                applications.
+              </p>
 
               <ul>
-                <li>Authentication</li>
-                <li>Authorization</li>
-                <li>Security Configuration</li>
-                <li>JWT</li>
+                <li>Authentication and Authorization</li>
+                <li>Security Filter Chain</li>
+                <li>Roles and Authorities</li>
+                <li>PasswordEncoder</li>
+                <li>Session and Stateless Security</li>
+                <li>JWT Authentication</li>
+                <li>Role-based Authorization</li>
+                <li>Method Security</li>
+                <li>OAuth 2.0 fundamentals</li>
               </ul>
             </article>
 
@@ -531,15 +752,22 @@
                 <i aria-hidden="true" class="fa-solid fa-database"></i>
               </div>
 
-              <h2>JPA &amp; Hibernate</h2>
+              <h3>JPA, Hibernate &amp; Databases</h3>
 
-              <p>Work with databases and persistence in Java backend applications.</p>
+              <p>
+                Work with persistence and databases in Java applications using JPA and Hibernate.
+              </p>
 
               <ul>
-                <li>JPA</li>
-                <li>Hibernate</li>
+                <li>JPA and Hibernate</li>
                 <li>Entity Mapping</li>
-                <li>Repositories</li>
+                <li>One-to-One and One-to-Many</li>
+                <li>Many-to-One and Many-to-Many</li>
+                <li>Fetch Types and Cascade</li>
+                <li>Repositories and Queries</li>
+                <li>JPQL</li>
+                <li>Transaction Management</li>
+                <li>Pagination and Sorting</li>
                 <li>Database Integration</li>
               </ul>
             </article>
@@ -549,37 +777,81 @@
                 <i aria-hidden="true" class="fa-solid fa-server"></i>
               </div>
 
-              <h2>REST APIs &amp; Backend</h2>
+              <h3>REST APIs &amp; Backend Development</h3>
 
-              <p>Move from Java and Spring into real backend services and API development.</p>
+              <p>
+                Move from Java and Spring into practical backend services and REST API development.
+              </p>
 
               <ul>
-                <li>REST APIs</li>
+                <li>REST APIs and HTTP</li>
                 <li>API Design</li>
+                <li>Requests and Responses</li>
+                <li>DTOs and Data Mapping</li>
+                <li>Error Handling and API Responses</li>
+                <li>Validation and Pagination</li>
+                <li>Authentication and Authorization</li>
                 <li>Database Integration</li>
-                <li>Authentication</li>
-                <li>Authorization</li>
+                <li>API Testing</li>
+                <li>Microservices fundamentals</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- HOW IT WORKS -->
+      <!-- TRAINING FORMAT -->
       <section aria-labelledby="private-java-class-title" class="section">
         <div class="container">
           <div class="section-header">
             <p class="section-badge">How It Works</p>
 
             <h2 class="section-title" id="private-java-class-title">
-              How do private Java training sessions work?
+              How are private Java training sessions conducted?
             </h2>
 
             <p class="section-subtitle">
-              Sessions are held online and privately. Each session is adapted to your current level,
-              learning goal, and specific needs, combining explanation, coding, practice, and
-              problem-solving.
+              Private Java classes are delivered one-to-one and online. Each session is adapted to
+              the student's current level, learning goals, and specific needs.
             </p>
+          </div>
+
+          <div class="why-layout why-layout--four">
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Private and Online</h3>
+
+              <p>
+                Sessions are held one-to-one and online, with time available for explanation,
+                coding, problem-solving, and project work.
+              </p>
+            </article>
+
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>For Students in Iran and Abroad</h3>
+
+              <p>
+                Online sessions can be arranged for students in Iran and other countries. Session
+                times are coordinated around the student's location and schedule.
+              </p>
+            </article>
+
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Session Duration</h3>
+
+              <p>
+                Each session is approximately 90 minutes and can be planned around the subject and
+                learning needs of the student.
+              </p>
+            </article>
+
+            <article class="why-card ui-card" data-reveal-item>
+              <h3>Private Java Training Price</h3>
+
+              <p>
+                Each session costs approximately $15. Before training begins, the student's learning
+                goals and required topics are reviewed to define the appropriate path.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -595,9 +867,8 @@
             </h2>
 
             <p class="section-subtitle">
-              Private training can be adapted to your current level, goals, and specific topics. You
-              can focus on Java Core, object-oriented programming, Spring, Spring Boot, or backend
-              development while receiving direct guidance on difficult topics and questions.
+              Private training can be adapted to your current level, goals, and specific topics.
+              Session time can focus directly on the areas you need to understand and practice.
             </p>
           </div>
 
@@ -611,16 +882,13 @@
             <article class="why-card ui-card" data-reveal-item>
               <h3>Focus on Weak Areas</h3>
 
-              <p>Difficult topics and your questions are addressed directly through practice.</p>
+              <p>Difficult topics, coding errors, and your questions are addressed directly.</p>
             </article>
 
             <article class="why-card ui-card" data-reveal-item>
               <h3>Practical Learning</h3>
 
-              <p>
-                Java and backend concepts become practical skills through coding, practice, and
-                projects.
-              </p>
+              <p>Review questions, code, and difficult topics directly through focused practice.</p>
             </article>
 
             <article class="why-card ui-card" data-reveal-item>
@@ -630,6 +898,87 @@
                 The training can progress from Java Core to Spring Boot, REST APIs, and backend
                 development.
               </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAREER PATH -->
+      <section aria-labelledby="java-career-path-title" class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-badge">Career Path</p>
+
+            <h2 class="section-title" id="java-career-path-title">
+              Prepare for a Java and Backend career path
+            </h2>
+
+            <p class="section-subtitle">
+              Training can focus not only on learning Java, but also on skills that matter in
+              professional backend development, from readable code and database work to REST APIs,
+              application security, and understanding the structure of real projects.
+            </p>
+          </div>
+
+          <div class="trust-pillars" data-reveal-group>
+            <article class="trust-pillar ui-card" data-reveal-item>
+              <div class="trust-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-code"></i>
+              </div>
+
+              <div class="trust-content">
+                <h3>Practical Java Skills</h3>
+
+                <p>
+                  Focus on understanding Java and solving problems instead of memorizing syntax,
+                  supported by coding and code review.
+                </p>
+              </div>
+            </article>
+
+            <article class="trust-pillar ui-card" data-reveal-item>
+              <div class="trust-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-server"></i>
+              </div>
+
+              <div class="trust-content">
+                <h3>Backend Development</h3>
+
+                <p>
+                  Progress from Java Core to Spring Boot, REST APIs, databases, and core backend
+                  concepts.
+                </p>
+              </div>
+            </article>
+
+            <article class="trust-pillar ui-card" data-reveal-item>
+              <div class="trust-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <div class="trust-content">
+                <h3>Practical Technical Skills</h3>
+
+                <p>
+                  Practice Spring Security, JWT, JPA, Hibernate, testing, and API design through
+                  training scenarios.
+                </p>
+              </div>
+            </article>
+
+            <article class="trust-pillar ui-card" data-reveal-item>
+              <div class="trust-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-globe"></i>
+              </div>
+
+              <div class="trust-content">
+                <h3>International Career Preparation</h3>
+
+                <p>
+                  The training path can focus on strengthening Java and backend skills for
+                  international career opportunities, including European job markets.
+                </p>
+              </div>
             </article>
           </div>
         </div>
@@ -646,8 +995,9 @@
             </h2>
 
             <p class="section-subtitle">
-              The goal is not only to learn syntax, but to turn concepts into practical skills
-              through coding, problem-solving, and real projects.
+              In Java training, the focus is on understanding why a concept is used, how it connects
+              to code, and how to apply it in different situations instead of memorizing syntax or
+              copying code.
             </p>
 
             <p class="section-subtitle">
@@ -698,12 +1048,13 @@
             </h2>
 
             <p class="section-subtitle">
-              The training path moves from learning Java concepts to practice, backend
-              implementation, REST API development, and completing a real project.
+              Each topic moves from understanding the concept to coding, problem-solving, and
+              reviewing the result. The sequence is adapted to the student's level and learning
+              goals.
             </p>
           </div>
 
-          <div class="process-timeline">
+          <div class="process-timeline" data-reveal-group>
             <article class="process-step" data-reveal-item>
               <div class="process-marker">
                 <span class="process-number">01</span>
@@ -751,6 +1102,190 @@
         </div>
       </section>
 
+      <!-- SAMPLE LESSON -->
+      <section aria-labelledby="sample-java-lesson-title" class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-badge">Sample Lesson</p>
+
+            <h2 class="section-title" id="sample-java-lesson-title">
+              What can a private Java training session look like?
+            </h2>
+
+            <p class="section-subtitle">
+              Each session is adapted to the student's level and goals. The example below shows one
+              possible learning scenario for Spring Security and JWT.
+            </p>
+          </div>
+
+          <div class="process-timeline" data-reveal-group>
+            <article class="process-step" data-reveal-item>
+              <div class="process-marker">
+                <span class="process-number">01</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Review Level and Goal</h3>
+
+                <p>
+                  First, the student's Java knowledge, experience, and learning goal are reviewed so
+                  the session topic can match the actual need.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-step" data-reveal-item>
+              <div class="process-marker">
+                <span class="process-number">02</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Understand the Concept</h3>
+
+                <p>
+                  Concepts such as Authentication, Authorization, and the Security Filter Chain are
+                  explained and connected to the Spring Security architecture.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-step" data-reveal-item>
+              <div class="process-marker">
+                <span class="process-number">03</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Implement with Code</h3>
+
+                <p>
+                  The concepts are implemented in a Spring Boot REST API, from login and JWT
+                  generation to protected endpoints and access control.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-step" data-reveal-item>
+              <div class="process-marker">
+                <span class="process-number">04</span>
+              </div>
+
+              <div class="process-content">
+                <h3>Practice and Review</h3>
+
+                <p>
+                  The code and exercises are reviewed, including project structure, code
+                  readability, and possible errors that should be addressed in the next stage.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRACTICAL PROJECTS -->
+      <section aria-labelledby="training-project-examples-title" class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-badge">Practical Projects</p>
+
+            <h2 class="section-title" id="training-project-examples-title">
+              Practice Java and Spring through practical projects
+            </h2>
+
+            <p class="section-subtitle">
+              Depending on the student's level and goals, different Java and backend scenarios can
+              be used, from APIs and databases to authentication and Spring Boot project structure.
+            </p>
+          </div>
+
+          <div class="services-grid services-grid--four" data-reveal-group>
+            <article class="service-card ui-card" data-reveal-item>
+              <div class="service-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-cart-shopping"></i>
+              </div>
+
+              <h3>Store REST API</h3>
+
+              <p>
+                Build a sample backend for managing users, products, orders, and database
+                integration.
+              </p>
+
+              <ul>
+                <li>Java and Spring Boot</li>
+                <li>REST APIs</li>
+                <li>JPA and Hibernate</li>
+                <li>MySQL</li>
+                <li>DTOs and Validation</li>
+              </ul>
+            </article>
+
+            <article class="service-card ui-card" data-reveal-item>
+              <div class="service-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <h3>Secure Backend with JWT</h3>
+
+              <p>
+                Implement Authentication and Authorization for a REST API with a focus on backend
+                security.
+              </p>
+
+              <ul>
+                <li>Spring Security</li>
+                <li>Authentication</li>
+                <li>Authorization</li>
+                <li>JWT</li>
+                <li>Roles and Authorities</li>
+              </ul>
+            </article>
+
+            <article class="service-card ui-card" data-reveal-item>
+              <div class="service-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-database"></i>
+              </div>
+
+              <h3>Java and Database</h3>
+
+              <p>
+                Practice connecting a Java application to a database and working with persistence
+                through JPA and Hibernate.
+              </p>
+
+              <ul>
+                <li>Entity Mapping</li>
+                <li>Relationships</li>
+                <li>Repositories</li>
+                <li>Queries and JPQL</li>
+                <li>Transactions</li>
+              </ul>
+            </article>
+
+            <article class="service-card ui-card" data-reveal-item>
+              <div class="service-icon ui-icon">
+                <i aria-hidden="true" class="fa-solid fa-diagram-project"></i>
+              </div>
+
+              <h3>Step-by-Step Backend Project</h3>
+
+              <p>
+                Combine Java, Spring Boot, databases, REST APIs, and security in one structured
+                training project.
+              </p>
+
+              <ul>
+                <li>Project structure</li>
+                <li>API implementation</li>
+                <li>Database integration</li>
+                <li>Authentication and Authorization</li>
+                <li>Testing and code review</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- FAQ -->
       <section aria-labelledby="training-faq-title" class="faq section">
         <div class="container">
@@ -762,8 +1297,8 @@
             </h2>
 
             <p class="section-subtitle">
-              Answers to common questions about skill levels, course topics, online sessions,
-              international students, and pricing.
+              Answers to important questions about starting level, course content, class format,
+              projects, and pricing.
             </p>
           </div>
 
@@ -775,68 +1310,75 @@
               </summary>
 
               <p>
-                No. Training can start with Java fundamentals and programming, then progress to more
-                advanced topics, Spring, Spring Boot, and backend development based on your
-                prerequisites and goals.
+                No. Training can start with Java fundamentals and programming or focus directly on
+                topics such as OOP, Collections, Stream API, Spring Boot, and backend development
+                based on your current knowledge.
               </p>
             </details>
 
             <details class="faq-item" data-reveal-item>
               <summary>
-                <span>Are Spring and Spring Boot included?</span>
+                <span>What topics are covered in private Java training?</span>
                 <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
               </summary>
 
               <p>
-                Yes. After the required Java fundamentals, Spring and Spring Boot concepts and their
-                use in backend development are covered.
+                The training path can include Java Core, object-oriented programming, Collections,
+                Generics, Exception Handling, Lambda and Stream API, Spring, Spring Boot, Spring
+                Security, JWT, JPA, Hibernate, REST APIs, and backend development.
               </p>
             </details>
 
             <details class="faq-item" data-reveal-item>
               <summary>
-                <span>Are REST APIs and backend development included?</span>
+                <span>Are Spring Boot and backend development included?</span>
                 <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
               </summary>
 
               <p>
-                Yes. The training path moves from Java into backend development and real REST API
-                implementation.
+                Yes. When needed, the training can progress from Java to Spring and Spring Boot,
+                including REST APIs, Validation, exception handling, database integration, and
+                backend services.
               </p>
             </details>
 
             <details class="faq-item" data-reveal-item>
               <summary>
-                <span>Is the training project-based?</span>
+                <span>Are Spring Security, JWT, and OAuth 2.0 included?</span>
                 <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
               </summary>
 
               <p>
-                Yes. Training combines explanation, examples, coding, and practice to turn theory
-                into practical skills for projects close to real-world development.
+                Yes. Depending on the student's level and goals, backend security topics can include
+                Authentication, Authorization, Security Filter Chain, Roles and Authorities, JWT,
+                and OAuth 2.0 fundamentals.
               </p>
             </details>
 
             <details class="faq-item" data-reveal-item>
               <summary>
-                <span>What skill levels is private Java training suitable for?</span>
+                <span>Is private Java training project-based?</span>
                 <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
               </summary>
 
               <p>
-                Training can start with Java fundamentals or focus on strengthening Java, learning
-                Spring, or developing backend applications with Spring Boot based on your current
-                level.
+                Training can be project-based. Concepts are combined with coding, exercises, and
+                practical scenarios, and different Java and backend topics can be connected within
+                one structured project.
               </p>
             </details>
 
             <details class="faq-item" data-reveal-item>
               <summary>
-                <span>Is the training available online?</span>
+                <span>How are private Java training sessions conducted?</span>
                 <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
               </summary>
 
-              <p>Yes. Sessions are held online and privately through Google Meet.</p>
+              <p>
+                Sessions are held privately and online. Session times are coordinated around your
+                schedule, and each session is adapted to your level, goals, and specific learning
+                needs.
+              </p>
             </details>
 
             <details class="faq-item" data-reveal-item>
@@ -857,7 +1399,11 @@
                 <i aria-hidden="true" class="fa-solid fa-chevron-down faq-chevron"></i>
               </summary>
 
-              <p>Each session costs approximately $15 and lasts about 90 minutes.</p>
+              <p>
+                Each session costs approximately $15 and lasts about 90 minutes. Before training
+                begins, your current level and learning goals are reviewed to define the appropriate
+                topics.
+              </p>
             </details>
           </div>
         </div>
@@ -882,7 +1428,7 @@
               </p>
 
               <div class="cta-actions">
-                <a class="btn btn-primary" href="/en/contact/"> Request Private Java Training </a>
+                <a class="btn btn-primary" href="/en/contact/">Request Private Java Training</a>
               </div>
             </div>
           </div>
@@ -890,9 +1436,7 @@
       </section>
     </main>
 
-    <!-- =====================================================
-     FOOTER
-    ====================================================== -->
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
         <!-- Brand -->
@@ -904,41 +1448,43 @@
 
         <div class="footer-grid">
           <!-- Contact -->
-          <address class="footer-contact">
-            <h2>Contact</h2>
+          <div>
+            <h2 id="footer-contact-title">Contact</h2>
 
-            <a class="footer-contact-item" href="tel:+989193661477">
-              <i aria-hidden="true" class="fa-solid fa-phone"></i>
-              <span dir="ltr">+98 919 366 1477</span>
-            </a>
+            <address class="footer-contact">
+              <a class="footer-contact-item" href="tel:+989193661477">
+                <i aria-hidden="true" class="fa-solid fa-phone"></i>
+                <span dir="ltr">+98&nbsp;919&nbsp;366&nbsp;1477</span>
+              </a>
 
-            <a
-              aria-label="Contact us on WhatsApp"
-              class="footer-contact-item"
-              href="https://wa.me/989193661477"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
-              <span>WhatsApp</span>
-            </a>
+              <a
+                aria-label="Contact us on WhatsApp"
+                class="footer-contact-item"
+                href="https://wa.me/989193661477"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp</span>
+              </a>
 
-            <div class="footer-contact-item">
-              <i aria-hidden="true" class="fa-solid fa-location-dot"></i>
-              <span>Tehran, Iran</span>
-            </div>
+              <div class="footer-contact-item">
+                <i aria-hidden="true" class="fa-solid fa-location-dot"></i>
+                <span>Tehran, Iran</span>
+              </div>
 
-            <a
-              aria-label="LinkedIn"
-              class="footer-contact-item"
-              href="https://www.linkedin.com/in/EbrahimSheyki"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
-              <span>LinkedIn</span>
-            </a>
-          </address>
+              <a
+                aria-label="LinkedIn"
+                class="footer-contact-item"
+                href="https://www.linkedin.com/in/EbrahimSheyki"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+            </address>
+          </div>
 
           <!-- Company -->
           <nav aria-labelledby="footer-company-title" class="footer-links">
@@ -983,6 +1529,6 @@
       </div>
     </footer>
 
-    <script defer="" src="/js/app.js"></script>
+    <script defer src="/js/app.js"></script>
   </body>
 </html>

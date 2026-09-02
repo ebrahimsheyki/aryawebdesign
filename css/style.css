@@ -2177,6 +2177,7 @@ PAGES HERO
 /* ==========================================================================
    TRAINING JAVA
    ========================================================================== */
+
 .training-page-intro {
   max-inline-size: 56rem;
   margin-inline: auto;
@@ -2236,7 +2237,40 @@ PAGES HERO
 }
 
 /* --------------------------------------------------------------------------
-   TRAINING CARDS — CONSISTENT SIZING
+   TRAINING INSTRUCTOR
+   -------------------------------------------------------------------------- */
+
+/* Keep the first content section visually close to the hero. */
+.training-page .training-instructor {
+  padding-block-start: var(--space-8);
+}
+
+.training-page .training-instructor-image {
+  inline-size: min(100%, 24rem);
+  margin: 0 auto var(--space-7);
+  text-align: center;
+}
+
+.training-page .training-instructor-image img {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 640 / 450;
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+}
+
+.training-page .training-instructor-image figcaption {
+  margin-block-start: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   TRAINING CARDS
    -------------------------------------------------------------------------- */
 
 .training-page .trust-pillars,
@@ -2253,12 +2287,6 @@ PAGES HERO
 .training-page .service-card {
   min-inline-size: 0;
   block-size: 100%;
-}
-
-/* Keep card content vertically consistent. */
-.training-page .trust-pillar,
-.training-page .why-card,
-.training-page .service-card {
   display: flex;
   flex-direction: column;
 }
@@ -2284,7 +2312,7 @@ PAGES HERO
    CURRICULUM
    -------------------------------------------------------------------------- */
 
-.training-page .service-card h2 {
+.training-page .service-card h3 {
   margin-block-end: var(--space-4);
   font-size: var(--fs-card-title);
   font-weight: 700;
@@ -2346,10 +2374,7 @@ PAGES HERO
   inline-size: 100%;
 }
 
-.training-page .process-step {
-  min-inline-size: 0;
-}
-
+.training-page .process-step,
 .training-page .process-content {
   min-inline-size: 0;
 }
@@ -2392,19 +2417,6 @@ PAGES HERO
 .training-page .cta-content h2,
 .training-page .cta-content p {
   text-wrap: balance;
-}
-
-/* --------------------------------------------------------------------------
-   OTHER
-   -------------------------------------------------------------------------- */
-
-.training-page .java-brand {
-  white-space: nowrap;
-}
-
-/* Keep the first content section visually close to the hero. */
-.training-page > main > .trust.section {
-  padding-block-start: var(--space-8);
 }
 
 /* --------------------------------------------------------------------------
