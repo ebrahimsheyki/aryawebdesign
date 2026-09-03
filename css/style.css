@@ -389,6 +389,13 @@ em {
   line-height: 1.8;
   text-wrap: pretty;
 }
+
+.section-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: var(--space-8);
+}
 /* ==========================================================================
    HEADER
    ========================================================================== */
@@ -1060,8 +1067,7 @@ body.menu-open .mobile-overlay {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  min-inline-size: 0;
-  flex: 0 1 auto;
+  flex: 0 0 auto;
   color: var(--color-text);
   font-family: Inter, Vazirmatn, system-ui, sans-serif;
   font-size: clamp(0.78rem, 0.82rem + 0.18vw, 0.96rem);
@@ -1107,6 +1113,7 @@ body.menu-open .mobile-overlay {
     inline-size: max-content;
     min-inline-size: max-content;
     justify-content: flex-start;
+    flex: 0 0 auto;
     gap: 2rem;
     padding-inline-end: 2rem;
   }
@@ -1602,6 +1609,22 @@ body.menu-open .mobile-overlay {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.website-design-intro .trust-pillars {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .website-design-intro .trust-pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .website-design-intro .trust-pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 /* ==========================================================================
    SERVICES
    ========================================================================== */
@@ -2053,6 +2076,42 @@ body.menu-open .mobile-overlay {
     color-mix(in srgb, var(--color-primary) 12%, transparent),
     transparent 70%
   );
+}
+/* ==========================================================================
+   SEO
+   ========================================================================== */
+.homepage-seo .trust-pillars {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .homepage-seo .trust-pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .homepage-seo .trust-pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* ==========================================================================
+   PRICING
+   ========================================================================== */
+.homepage-pricing .trust-pillars {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .homepage-pricing .trust-pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .homepage-pricing .trust-pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 /* ==========================================================================
    CONTACT
